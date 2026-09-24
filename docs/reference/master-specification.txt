@@ -1,0 +1,749 @@
+SONDA should feel:
+-  Minimal 
+-  Clean 
+-  Modern 
+-  Calm 
+-  Easy to understand 
+-  Professional 
+-  Not visually overwhelming 
+-  Focused on important information rather than displaying massive amounts of raw data 
+The attached dashboard design represents the intended visual language.
+Use:
+-  Large amounts of whitespace 
+-  Soft shadows 
+-  Light neutral backgrounds 
+-  Rounded but not excessively rounded containers 
+-  Minimal icons 
+-  Small amounts of color 
+-  Green only for healthy/success states 
+-  Yellow for warnings 
+-  Red for errors 
+-  Blue only where useful for workflow/status information 
+Do not turn the dashboard into a traditional cluttered enterprise monitoring dashboard.
+The Home page should answer:
+1.  Is everything healthy? 
+2.  How much activity has SONDA processed? 
+3.  Is anything currently wrong? 
+4.  Which applications have problems? 
+5.  What incidents require attention? 
+Detailed investigation belongs in deeper screens.
+SONDA monitors log files.
+However, SONDA should not treat every log line independently.
+Each monitored application receives a Log Profile configured by the user.
+The profile teaches SONDA:
+-  Where the logs are located 
+-  How an Application Run Cycle starts 
+-  How an Application Run Cycle ends 
+-  How successful cycles are identified 
+-  How failed cycles are identified 
+-  How individual orders/transactions begin 
+-  How orders/transactions end 
+-  How orders are identified 
+-  What different error messages mean 
+-  Which messages should be treated as Error, Warning, or Ignore 
+-  How multiple log lines should be grouped together 
+SONDA therefore becomes a configurable interpretation engine for logs.
+Every monitored log/application must have its own Profile.
+Applications do NOT all behave the same.
+For example:
+-  CAM may have one run-cycle format. 
+-  UNITELLER may have another. 
+-  DIGICEL may use different text. 
+-  TERRAPAY may use another structure entirely. 
+The user must configure each profile independently.
+A profile should conceptually contain:
+Basic application information.
+Examples:
+-  Application name 
+-  Description 
+-  Enabled/disabled 
+-  Profile identifier 
+Defines where SONDA should find the logs.
+A profile may eventually support one or multiple paths.
+Defines how SONDA recognizes the execution cycle of the application.
+Defines how SONDA reconstructs a complete transaction/order from multiple log entries.
+Defines patterns SONDA should recognize and how they should be categorized.
+Configuration related to failures, incomplete runs, and monitoring behavior.
+The configuration UI should make this understandable without requiring the user to be a programmer.
+Advanced pattern/regex support may exist, but common configuration should be possible through a simple interface.
+The File Location configuration tells SONDA where the logs for an application are stored.
+SONDA uses these paths to continuously monitor/read the appropriate logs.
+Each profile owns its own file-location configuration.
+Do not assume all logs exist in one directory.
+Architect this so multiple file locations can eventually be supported by one profile if needed.
+This concept is extremely important.
+The applications SONDA monitors are not constantly executing.
+Instead, an application may run:
+-  every few seconds, 
+-  every few minutes, 
+-  or according to another recurring process. 
+One complete execution is called an:
+Application Run Cycle
+For example, logs might contain patterns conceptually similar to:
+Application starts
+ → performs work
+ → processes transactions
+ → finishes
+The exact text used to determine the beginning/end/result of a cycle is configured by the user for each Profile.
+Do NOT hardcode specific phrases.
+A profile should allow configuration such as:
+Application Run Start:
+-  Pattern A 
+-  OR Pattern B 
+-  OR regex 
+Application Run Success:
+-  Pattern A 
+-  OR Pattern B 
+Application Run Failure:
+-  Pattern A 
+-  OR Pattern B 
+Multiple alternatives must be supported.
+Application errors are valid in the context of the current Application Run Cycle.
+Example:
+Cycle #105:
+ Application fails.
+SONDA creates an error.
+The incident becomes:
+Severity:
+ Error
+Status:
+ Active
+Then Cycle #106 runs successfully.
+At that moment, the previous application error is no longer currently affecting the application.
+SONDA must automatically change the previous incident to:
+Resolved
+It must NOT delete the incident.
+Historical incidents are important.
+Therefore:
+Failed Application Cycle
+ → Active Error
+then:
+Next Successful Application Cycle
+ → previous error becomes Resolved
+The incident remains available in historical data.
+SONDA has three detection classifications:
+An application-level failure or configured condition requiring immediate attention.
+Typical meaning:
+Immediate attention may be required.
+An individual order/transaction failed or another configured condition occurred, while the application itself may still be operating.
+Typical meaning:
+Attention may be needed soon.
+A log pattern that SONDA intentionally recognizes but should not treat as an incident.
+Ignored patterns should not negatively affect System Health.
+Users configure these classifications.
+SONDA must NOT assume that every message containing words such as "error" is an Error.
+The user teaches SONDA which patterns mean what.
+For example, a profile might contain:
+Pattern:
+ Error obtaining exchange rate
+Classification:
+ Warning
+or:
+Pattern:
+ Database connection unavailable
+Classification:
+ Error
+or:
+Pattern:
+ Retrying connection
+Classification:
+ Ignore
+The classification engine should therefore be configuration-driven.
+Every important detection rule should be capable of containing multiple alternatives.
+Example:
+Match ANY:
+- "Finding order" 
+- "Searching order" 
+- "Processing transaction" 
+-  regex pattern 
+SONDA should interpret these alternatives as logical OR conditions.
+The same concept applies to:
+-  Run Begin 
+-  Run End 
+-  Success 
+-  Failure 
+-  Errors 
+-  Warnings 
+-  Ignore patterns 
+Design the internal data model accordingly.
+Do not build the system assuming each rule contains only one string.
+A major SONDA feature is Order Log Piling / Order Grouping.
+A single business transaction may generate many log lines.
+SONDA should not force the user to investigate each line individually.
+Instead, SONDA reconstructs those lines into an:
+Order Run
+For example:
+Finding order #93822
+ Connecting to payer
+ Getting exchange rate
+ Sending request
+ Receiving response
+ Order sent successfully
+These entries should be treated as one logical transaction.
+The profile configuration must define how SONDA identifies an order.
+Examples might include:
+-  Order ID 
+-  Transaction ID 
+-  Reference ID 
+-  Confirmation ID 
+-  another configured identifier 
+Do not assume the field is always called Order ID.
+The user defines the grouping identifier.
+Conceptually:
+Group By: TransactionID
+SONDA uses that identifier to associate log entries belonging to the same transaction.
+Each Profile can define:
+The pattern(s) indicating that an order/transaction started.
+Example:
+Finding order
+The pattern(s) indicating that an order completed successfully.
+Example:
+Order sent
+Pattern(s) indicating that the transaction failed.
+Example:
+Unable to send order
+Defines how related log entries are matched together.
+Example:
+Transaction ID
+These are configured manually by the user.
+An Order Run has a detection result.
+Use the following conceptual results:
+-  Success 
+-  Failure 
+-  Undefined 
+These are different from incident workflow statuses.
+Do NOT mix them.
+If SONDA detects:
+Run Begin
+ → related logs
+ → Success condition
+the Order Run is:
+Success
+It should count as successful for System Health.
+If SONDA detects:
+Run Begin
+ → related logs
+ → configured Failure condition
+the Order Run is:
+Failure
+Normally this generates a:
+Warning
+because an individual transaction failed while the application may still be functioning.
+The specific classification can also be influenced by configured detection rules where appropriate.
+If SONDA finds an Order Run beginning but never discovers either:
+-  a valid success condition 
+-  OR a valid failure condition 
+then the Order Run becomes:
+Undefined
+This should appear in the Error Logs / incident system.
+Important:
+Undefined is NOT an incident workflow status.
+Keep these concepts separate.
+Example:
+Detection Result:
+ Undefined
+Severity:
+ Warning or Error according to configured rules
+Incident Status:
+ Active
+This architecture must remain separate throughout the system.
+SONDA must recognize when a previously failed order succeeds during a later Application Run Cycle.
+Example:
+Application Cycle #40:
+Order:
+ #93822
+Result:
+ Failure
+SONDA creates a warning incident.
+Later:
+Application Cycle #41:
+Order:
+ #93822
+Result:
+ Success
+Because the configured grouping identifier is identical, SONDA recognizes that this is the same order.
+The previous incident automatically becomes:
+Resolved
+Do NOT create a disconnected successful order without resolving the corresponding failure.
+The history should preserve:
+-  original failure 
+-  subsequent successful retry 
+-  resolution time 
+-  relevant cycles 
+-  related log entries 
+This behavior is a core SONDA feature.
+Incident workflow status has exactly these primary states:
+The problem currently exists.
+A user has acknowledged the incident and is investigating it.
+The condition no longer exists or the user has resolved it.
+These are workflow states.
+Do not confuse them with:
+-  Error 
+-  Warning 
+-  Success 
+-  Failure 
+-  Undefined 
+Those describe severity or detection results.
+Maintain strict separation between these concepts.
+-  Error 
+-  Warning 
+-  Ignore 
+-  Success 
+-  Failure 
+-  Undefined 
+-  Active 
+-  Investigating 
+-  Resolved 
+These should NOT be collapsed into a single database field.
+The database architecture should reflect this distinction.
+The Home dashboard contains a:
+System Health
+percentage.
+System Health represents TODAY ONLY.
+The calculation resets logically with each new day.
+It uses:
+-  Order Runs 
+-  Application Run Cycles 
+from today.
+Warnings and Errors are considered equally unsuccessful for the health calculation.
+The basic formula is:
+Successful evaluated runs / Total evaluated runs × 100
+For example:
+1,000 successful runs
+ 20 warning/failing runs
+ 5 error application cycles
+Total evaluated:
+1,025
+Successful:
+1,000
+System Health:
+1000 / 1025 × 100
+≈ 97.56%
+Display appropriately rounded.
+Warnings and Errors both count as unsuccessful.
+Ignore rules do not count negatively toward health.
+Architect the calculation so it can later support different periods even though the Home page currently uses Today.
+The dashboard contains:
+Logs Today
+Despite the name, this should NOT represent raw individual text lines.
+It represents processed/grouped logical records, primarily:
+-  Order Runs 
+-  other logical run records SONDA recognizes 
+Do not simply count every line read from every file.
+The Logs Today card contains a small trend graph.
+Show:
+Today + previous 4 days
+Total:
+5 days
+The mini graph represents daily grouped-record/order-run volume.
+It is intended to quickly show whether activity has increased or decreased.
+Keep the graph visually minimal.
+The Home page has an:
+Active Incidents
+card.
+It should display the number of currently unresolved incidents requiring attention.
+For example:
+1
+with contextual messaging such as:
+Attention may be needed soon
+The card can visually reflect the highest active severity.
+Examples:
+No incidents:
+ Healthy/stable presentation.
+Warning incidents:
+ Yellow warning presentation.
+Error incidents:
+ Red presentation where appropriate.
+Do not make the UI visually aggressive.
+The Home design contains a right-side panel showing monitored applications.
+Example:
+CAM ●
+ UNITELLER ●
+ DIGICEL ●
+ TERRAPAY ●
+The dot represents the current application health.
+Stable
+Warning
+Error
+This status is derived from the application's current state.
+A successful subsequent Application Run Cycle should allow an application to return to Stable when the conditions causing the problem have resolved.
+The list should reflect current state, not historical worst state.
+The Home dashboard contains a compact Error Logs table.
+The current concept includes columns similar to:
+-  Application 
+-  Time 
+-  Severity 
+-  Message 
+-  Status 
+Example:
+CAM | 10:23 AM | Warning | message | Resolved
+ 24XOro | 08:58 AM | Error | message | Active
+ TRANSNETWORK | 4:45 AM | Error | message | Investigating
+Keep the Home version lightweight.
+Clicking/selecting an incident should eventually open deeper information.
+Detailed investigation can show:
+-  full incident information 
+-  related Application Run Cycle 
+-  grouped Order Run 
+-  all associated log entries 
+-  timestamps 
+-  grouping ID 
+-  detection rule that triggered 
+-  history 
+-  status changes 
+-  retry/resolution information 
+Never destroy meaningful incident history when something becomes healthy.
+SONDA should preserve:
+-  Detection time 
+-  Application 
+-  Profile 
+-  Application Run Cycle 
+-  Related order 
+-  Severity 
+-  Detection result 
+-  Original log evidence 
+-  Status history 
+-  Resolution time 
+-  Whether resolution was automatic or manual 
+-  Related successful retry if applicable 
+Historical analysis is important.
+Users can manually change incident workflow status.
+Allowed statuses:
+-  Active 
+-  Investigating 
+-  Resolved 
+Track status changes.
+Eventually the audit information should allow SONDA to know:
+-  who changed the status 
+-  old status 
+-  new status 
+-  timestamp 
+Design the database so this is possible even if authentication/auditing is not implemented immediately.
+SONDA supports both.
+Example:
+Failed order #93822
+ → same order succeeds during next/later cycle
+ → warning becomes Resolved
+Or:
+Application Cycle fails
+ → next Application Cycle succeeds
+ → previous application error becomes Resolved
+A user explicitly marks an incident Resolved.
+The system should record which resolution method occurred.
+Each monitored log/application requires a Profile.
+The Configuration section should roughly contain:
+Application/profile information.
+Files/directories SONDA monitors.
+Configure:
+-  Cycle Begin 
+-  Cycle Success 
+-  Cycle Failure 
+-  optional End conditions 
+Configure:
+-  Identifier extraction 
+-  Run Begin 
+-  Run Success 
+-  Run Failure 
+-  grouping behavior 
+Configure patterns and assign:
+-  Error 
+-  Warning 
+-  Ignore 
+Additional behavior associated with the application's state.
+Do not dump raw JSON configuration onto normal users.
+Create a visual editor.
+Advanced users may eventually have an advanced regex editor.
+Build a reusable detection engine.
+Patterns should eventually support at minimum:
+-  Simple text contains 
+-  Exact text where appropriate 
+-  Regular expressions 
+Architect it so pattern types are extensible.
+Patterns should be stored as configuration/data.
+Avoid scattering hardcoded detection strings throughout the backend.
+Conceptually, SONDA should process information something like:
+Log Source
+ ↓
+ Read new log entries
+ ↓
+ Normalize entries
+ ↓
+ Associate with Profile
+ ↓
+ Detect Application Run Cycle
+ ↓
+ Extract Order/Transaction Identifier
+ ↓
+ Group related entries
+ ↓
+ Evaluate configured patterns
+ ↓
+ Determine Order Result
+ ↓
+ Determine severity
+ ↓
+ Create/update incident if necessary
+ ↓
+ Check previous incidents for retry/recovery
+ ↓
+ Update application current state
+ ↓
+ Update aggregated metrics
+ ↓
+ Display information in dashboard
+Do not necessarily implement this exact structure if the technical stack suggests something cleaner, but preserve the logical behavior.
+Each monitored application should have a current health state.
+At minimum:
+-  Stable 
+-  Warning 
+-  Error 
+This should power the colored status indicator shown in the Logs Monitored panel.
+Application state should reflect the current situation, while incidents preserve historical information.
+Design the database carefully before building significant application logic.
+Likely concepts/entities include something similar to:
+-  Application/Profile 
+-  Log Source / File Location 
+-  Detection Pattern 
+-  Run Cycle Configuration 
+-  Order Group Configuration 
+-  Application Run 
+-  Order Run 
+-  Raw/Normalized Log Entry 
+-  Incident 
+-  Incident Status History 
+-  Daily Metrics 
+You may improve these names or relationships if necessary.
+However, preserve the logical distinctions defined in this specification.
+Do NOT place everything in a single Logs table.
+SONDA may store or reference raw log entries.
+However:
+Raw Log Entry ≠ Order Run
+Raw Log Entry ≠ Application Run Cycle
+Incident ≠ Raw Log Entry
+SONDA exists specifically to create meaningful structure from raw logs.
+Maintain those layers separately.
+Use the attached design image as the design reference.
+The current Home page consists roughly of:
+Minimal icon-based navigation.
+Current page indicator and small utility controls.
+Example:
+Good Morning, Salvador
+with subtle supporting text.
+Large health percentage.
+Example:
+97%
+Small status indicator:
+Stable
+Minimal progress visualization.
+Example:
+125,000
+Small five-day chart.
+Example:
+1
+with severity/context.
+Large but clean incident table.
+Right-side panel showing applications and green/yellow/red current-state indicators.
+Preserve the proportions and visual feeling of the attached design.
+Do not redesign the dashboard unless I specifically request it.
+Design SONDA primarily as a desktop application/dashboard.
+However, structure the frontend so responsive behavior is possible.
+Do not let responsive implementation destroy the desktop layout.
+This is a completely new application.
+There is no existing SONDA codebase.
+Before writing lots of code:
+1.  Understand the entire specification. 
+2.  Design the architecture. 
+3.  Determine an appropriate technology stack. 
+4.  Design the project folder structure. 
+5.  Design the database schema. 
+6.  Define the processing pipeline. 
+7.  Define frontend/backend responsibilities. 
+8.  Build the foundation. 
+9.  Implement features incrementally. 
+10.  Test the underlying logic using realistic sample logs. 
+Do not jump directly into making pretty frontend components while ignoring the log-processing architecture.
+SONDA's value is primarily in its interpretation engine.
+Logic correctness is more important than implementation speed.
+Whenever implementing features involving:
+-  Application Run Cycles 
+-  Order Runs 
+-  Retry detection 
+-  Automatic resolution 
+-  Severity 
+-  Incident status 
+-  System Health 
+trace through example scenarios before finalizing the implementation.
+Do not silently make assumptions.
+If something in this specification is genuinely ambiguous and would materially affect SONDA's behavior, ask me before choosing the behavior yourself.
+Although SONDA currently has a relatively focused feature set, avoid architectural decisions that prevent future additions such as:
+-  Notifications 
+-  Email alerts 
+-  Teams/Slack alerts 
+-  Multiple servers 
+-  Remote agents 
+-  Saved searches 
+-  Advanced analytics 
+-  Incident comments 
+-  User accounts 
+-  Permissions 
+-  AI-assisted log explanations 
+-  On-premise AI 
+-  Additional pattern types 
+-  Dashboard customization 
+-  Longer-term historical analytics 
+-  API integrations 
+Do NOT implement all of these now unless requested.
+Simply avoid architecture that makes them unnecessarily difficult later.
+Use this scenario to validate the implementation.
+Application:
+CAM
+Profile configuration:
+Application Run Begin:
+ CAM process started
+Application Run Success:
+ CAM process completed
+Application Run Failure:
+ CAM process failed
+Order Begin:
+ Finding order
+Order Success:
+ Order sent
+Order Failure:
+ Unable to send order
+Group By:
+ OrderID
+Now logs contain:
+CAM process started
+Finding order OrderID=93822
+Connecting to payer OrderID=93822
+Unable to send order OrderID=93822
+CAM process completed
+Expected result:
+Application Cycle:
+ Successful
+Order #93822:
+ Failure
+Severity:
+ Warning
+Incident:
+ Active
+Application current health:
+ Warning
+On the next Application Run Cycle:
+CAM process started
+Finding order OrderID=93822
+Connecting to payer OrderID=93822
+Order sent OrderID=93822
+CAM process completed
+Expected result:
+New Application Cycle:
+ Successful
+Order #93822:
+ Success
+Previous incident associated with Order #93822:
+ Resolved automatically
+Application state returns to:
+Stable
+assuming there are no other current problems.
+The previous failure remains in history.
+Logs:
+CAM process started
+Database unavailable
+CAM process failed
+Expected:
+Application Run Cycle:
+ Failure
+Severity:
+ Error
+Incident:
+ Active
+Application state:
+ Error
+Later:
+CAM process started
+CAM process completed
+Expected:
+New cycle:
+ Success
+Previous application-level error:
+ Resolved automatically
+Application state:
+ Stable
+assuming no other active conditions exist.
+Logs:
+CAM process started
+Finding order OrderID=77482
+Connecting to payer OrderID=77482
+Then no configured success or failure condition is discovered for that Order Run.
+Expected:
+Order:
+ 77482
+Detection Result:
+ Undefined
+Incident:
+ created/displayed in Error Logs
+Workflow Status:
+ Active
+Do not call Undefined an incident status.
+Today SONDA processes:
+980 successful Order Runs
+ 20 failed/warning Order Runs
+ 5 successful Application Run Cycles
+ 1 failed Application Run Cycle
+Successful evaluated runs:
+985
+Total evaluated runs:
+1006
+Health:
+985 / 1006 × 100
+Display the resulting percentage on the System Health card.
+Warnings and Errors count equally as unsuccessful for this metric.
+Keep the codebase:
+-  Modular 
+-  Readable 
+-  Well named 
+-  Maintainable 
+-  Documented where logic is non-obvious 
+-  Easy for another developer to understand 
+Avoid unnecessary abstraction.
+Avoid giant files.
+Avoid embedding business logic directly inside UI components.
+Centralize SONDA domain logic appropriately.
+Use these terms consistently in the code and UI.
+SONDA
+ The overall application.
+Profile
+ Configuration describing how a specific application's logs should be interpreted.
+Application Run Cycle
+ One complete execution of a monitored application.
+Order Run
+ A grouped logical business transaction reconstructed from multiple log entries.
+Pattern
+ A user-configured expression SONDA uses to recognize something in a log.
+Incident
+ A problem SONDA detected and tracks.
+Severity
+ Error / Warning / Ignore.
+Detection Result
+ Success / Failure / Undefined.
+Incident Status
+ Active / Investigating / Resolved.
+System Health
+ Today's ratio of successful evaluated runs to all evaluated runs.
+Use these definitions instead of inventing alternate meanings.
+Do not immediately generate the entire application.
+First:
+1.  Read this entire specification. 
+2.  Examine the attached SONDA Home Page design. 
+3.  Explain back to me your understanding of how SONDA works. 
+4.  Identify the major components/services the application requires. 
+5.  Propose the application architecture and technology stack. 
+6.  Propose the database/domain model. 
+7.  Explain how you would implement the log-processing engine. 
+8.  Explain how Application Run Cycles and Order Runs will be detected. 
+9.  Explain how incident creation/resolution will work. 
+10.  Explain how the System Health calculation will be generated. 
+11.  Propose the project folder structure. 
+12.  Give me an implementation roadmap. 
+Do not begin implementing the entire application until we agree on this architecture.
+If you find an actual ambiguity in the SONDA business rules that could affect implementation, ask me about it instead of silently deciding.

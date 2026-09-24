@@ -1,0 +1,282 @@
+{
+  "provenance": {
+    "reportSchemaVersion": "1",
+    "engineVersion": "phase1.1",
+    "profileHash": "9512EEE1FE59EA580C176BE3C301CCF100A3DC00C9127B3FDFE72C046F5C030F",
+    "sampleHash": "C4BFE8FE6BB79631388C3AF1878835E3B5B5A624B95308667F972AB791B2CF3D",
+    "requestHash": "4AB94612C0D0376B15224BC88C624EB8559F30E8D4EACEE1E01A70C46681B2F9",
+    "seed": "priority-ignore",
+    "serverTimeZoneId": "America/New_York",
+    "asOf": "2026-09-23T16:00:00+00:00"
+  },
+  "complete": true,
+  "diagnostics": [
+    {
+      "code": "RuleOverlap",
+      "level": "Warning",
+      "message": "Rules broad-error and specific-ignore can overlap; the higher configured priority wins.",
+      "profileId": "cam",
+      "line": null
+    },
+    {
+      "code": "RuleOverlap",
+      "level": "Warning",
+      "message": "Matching rules [specific-ignore, broad-error] compete on Application.",
+      "profileId": "cam",
+      "line": 2
+    }
+  ],
+  "entries": [
+    {
+      "line": 1,
+      "profileId": "cam",
+      "raw": "CAM process started",
+      "parsed": {
+        "line": 1,
+        "profileId": "cam",
+        "raw": "CAM process started",
+        "message": "CAM process started",
+        "eventAt": "2026-09-23T14:00:00+00:00",
+        "processedAt": "2026-09-23T14:00:00+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "cycle-begin",
+          "role": "CycleBegin",
+          "target": "Application",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        }
+      ],
+      "actions": [
+        "CycleStarted:priority-ignore:cam:cycle:0001"
+      ],
+      "problemDecisions": [],
+      "diagnostics": []
+    },
+    {
+      "line": 2,
+      "profileId": "cam",
+      "raw": "optional service connection failed",
+      "parsed": {
+        "line": 2,
+        "profileId": "cam",
+        "raw": "optional service connection failed",
+        "message": "optional service connection failed",
+        "eventAt": "2026-09-23T14:00:01+00:00",
+        "processedAt": "2026-09-23T14:00:01+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "broad-error",
+          "role": "Detection",
+          "target": "Application",
+          "priority": 5,
+          "classification": "Error",
+          "alternatives": [
+            0
+          ],
+          "selection": "Suppressed"
+        },
+        {
+          "ruleKey": "specific-ignore",
+          "role": "Detection",
+          "target": "Application",
+          "priority": 20,
+          "classification": "Ignore",
+          "alternatives": [
+            0
+          ],
+          "selection": "Winner"
+        }
+      ],
+      "actions": [
+        "Ignored:specific-ignore"
+      ],
+      "problemDecisions": [],
+      "diagnostics": [
+        {
+          "code": "RuleOverlap",
+          "level": "Warning",
+          "message": "Matching rules [specific-ignore, broad-error] compete on Application.",
+          "profileId": "cam",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "profileId": "cam",
+      "raw": "CAM process completed",
+      "parsed": {
+        "line": 3,
+        "profileId": "cam",
+        "raw": "CAM process completed",
+        "message": "CAM process completed",
+        "eventAt": "2026-09-23T14:00:02+00:00",
+        "processedAt": "2026-09-23T14:00:02+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "cycle-success",
+          "role": "CycleSuccess",
+          "target": "Application",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        }
+      ],
+      "actions": [
+        "CycleFinalized:priority-ignore:cam:cycle:0001:Success"
+      ],
+      "problemDecisions": [],
+      "diagnostics": []
+    }
+  ],
+  "applicationRuns": [
+    {
+      "id": "priority-ignore:cam:cycle:0001",
+      "profileId": "cam",
+      "scope": "Application",
+      "cycleSequence": 1,
+      "applicationRunId": null,
+      "identifier": null,
+      "attemptNumber": 1,
+      "startedEventAt": "2026-09-23T14:00:00+00:00",
+      "lifecycle": "Finalized",
+      "result": "Success",
+      "completedEventAt": "2026-09-23T14:00:02+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:02+00:00",
+      "terminalReason": "ConfiguredCycleCompletion",
+      "evidenceLines": [
+        1,
+        2,
+        3
+      ],
+      "diagnosticProblemKeys": [],
+      "observedSuccess": true,
+      "observedFailure": false
+    }
+  ],
+  "orderRuns": [],
+  "incidents": [],
+  "currentStates": [
+    {
+      "profileId": "cam",
+      "lastKnownBusinessHealth": "Stable",
+      "interpretationComplete": true
+    }
+  ],
+  "metricFacts": [
+    {
+      "runId": "priority-ignore:cam:cycle:0001",
+      "scope": "Application",
+      "result": "Success",
+      "completedEventAt": "2026-09-23T14:00:02+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:02+00:00"
+    }
+  ],
+  "ruleCoverage": [
+    {
+      "profileId": "cam",
+      "ruleKey": "cycle-begin",
+      "matchingEntries": 1,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "cycle-success",
+      "matchingEntries": 1,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "cycle-failure",
+      "matchingEntries": 0,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "order-begin",
+      "matchingEntries": 0,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "order-success",
+      "matchingEntries": 0,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "order-failure",
+      "matchingEntries": 0,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "order-warning",
+      "matchingEntries": 0,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "broad-error",
+      "matchingEntries": 1,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "specific-ignore",
+      "matchingEntries": 1,
+      "winningEntries": 1
+    }
+  ],
+  "metrics": {
+    "successfulEvaluatedRuns": 1,
+    "totalEvaluatedRuns": 1,
+    "systemHealthPercentage": 100,
+    "completedOrderRunsProcessedToday": 0,
+    "fiveDayHistory": [
+      {
+        "date": "2026-09-19",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-20",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-21",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-22",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-23",
+        "completedOrderRunsProcessedCount": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="f62da84e-be27-45f1-a6a6-7363eb87a1b4" name="sapro@ASUSPROART 2026-09-24 17:24:49" runUser="ASUSPROART\sapro" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-24T17:24:49.8804580-04:00" queuing="2026-09-24T17:24:49.8804590-04:00" start="2026-09-24T17:24:47.8403385-04:00" finish="2026-09-24T17:24:49.9909379-04:00" />
+  <TestSettings name="default" id="76b307b2-f2e6-47f2-844a-49ab35f1e30c">
+    <Deployment runDeploymentRoot="sapro_ASUSPROART_2026-09-24_17_24_49" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="773b29e0-2c5e-449e-9234-d60e62550d1e" testId="e2ae4fba-cd6a-39cb-dea2-277f06f3f11d" testName="Sonda.Acquisition.Tests.WindowsFileTests.Real_file_append_and_truncation_are_read_only_observations" computerName="ASUSPROART" duration="00:00:00.0082342" startTime="2026-09-24T17:24:49.6018976-04:00" endTime="2026-09-24T17:24:49.6020986-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="773b29e0-2c5e-449e-9234-d60e62550d1e" />
+    <UnitTestResult executionId="737c46a5-7887-4a4c-8337-02ad38704830" testId="526136e3-0f30-e82b-44a3-bdb51f7f207f" testName="Sonda.Acquisition.Tests.SourceSafetyTests.Invalid_capacity_and_ambiguous_manifest_are_rejected_without_reading_sources" computerName="ASUSPROART" duration="00:00:00.0123611" startTime="2026-09-24T17:24:49.8074748-04:00" endTime="2026-09-24T17:24:49.8075851-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="737c46a5-7887-4a4c-8337-02ad38704830" />
+    <UnitTestResult executionId="1071ea69-8964-4215-9728-8985cecac07e" testId="5a7c241f-50d7-02e7-6303-5c0e022dd910" testName="Sonda.Acquisition.Tests.FramingTests.Prior_complete_records_survive_later_decode_error_in_same_read" computerName="ASUSPROART" duration="00:00:00.0007464" startTime="2026-09-24T17:24:49.6615807-04:00" endTime="2026-09-24T17:24:49.6621086-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1071ea69-8964-4215-9728-8985cecac07e" />
+    <UnitTestResult executionId="28232924-1bc2-49b5-910a-5db499dc22fd" testId="804d135e-39b8-f6b5-4ae6-d0f2a292a101" testName="Sonda.Acquisition.Tests.FramingTests.Every_split_preserves_exact_bytes_offsets_and_partial_tail(kind: Utf16LittleEndian)" computerName="ASUSPROART" duration="00:00:00.0026414" startTime="2026-09-24T17:24:49.6572272-04:00" endTime="2026-09-24T17:24:49.6596960-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28232924-1bc2-49b5-910a-5db499dc22fd" />
+    <UnitTestResult executionId="39b29b6a-1daa-4fa9-bf9f-8b25ab38a21c" testId="2bc0811c-98e3-ace9-3ebf-c94d1f0ed709" testName="Sonda.Acquisition.Tests.FramingTests.Every_split_preserves_exact_bytes_offsets_and_partial_tail(kind: Utf8)" computerName="ASUSPROART" duration="00:00:00.1396044" startTime="2026-09-24T17:24:49.5133393-04:00" endTime="2026-09-24T17:24:49.6530051-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="39b29b6a-1daa-4fa9-bf9f-8b25ab38a21c" />
+    <UnitTestResult executionId="7de96e1f-351f-45b9-9f13-e9621cae9c39" testId="7e6754f5-4756-9327-8996-167eb9c129ec" testName="Sonda.Acquisition.Tests.SourceSafetyTests.Recursive_filters_and_root_containment_are_enforced" computerName="ASUSPROART" duration="00:00:00.0286741" startTime="2026-09-24T17:24:49.8065625-04:00" endTime="2026-09-24T17:24:49.8067429-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7de96e1f-351f-45b9-9f13-e9621cae9c39" />
+    <UnitTestResult executionId="01f41f68-0641-446c-b6fa-4ad7f7fd7d7e" testId="fb64b677-4a71-684a-8b78-32f14a2c75f0" testName="Sonda.Acquisition.Tests.FramingTests.Every_split_preserves_exact_bytes_offsets_and_partial_tail(kind: Utf16BigEndian)" computerName="ASUSPROART" duration="00:00:00.0036931" startTime="2026-09-24T17:24:49.6533613-04:00" endTime="2026-09-24T17:24:49.6568725-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="01f41f68-0641-446c-b6fa-4ad7f7fd7d7e" />
+    <UnitTestResult executionId="368c43af-6f69-4930-bb1a-2b31f2579f08" testId="8df70ffb-cd71-503e-30b7-10326a0199a2" testName="Sonda.Acquisition.Tests.SourceSafetyTests.Real_windows_junction_is_not_followed" computerName="ASUSPROART" duration="00:00:00.2249310" startTime="2026-09-24T17:24:49.4832678-04:00" endTime="2026-09-24T17:24:49.7176688-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="368c43af-6f69-4930-bb1a-2b31f2579f08" />
+    <UnitTestResult executionId="f982d028-6168-420e-83e8-888af72ca569" testId="e6e4b2cb-78ce-bb5c-8217-8446548c33ba" testName="Sonda.Acquisition.Tests.WindowsFileTests.Actual_windows_handle_survives_rename_but_recreation_is_distinct" computerName="ASUSPROART" duration="00:00:00.0851544" startTime="2026-09-24T17:24:49.4896336-04:00" endTime="2026-09-24T17:24:49.5739926-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f982d028-6168-420e-83e8-888af72ca569" />
+    <UnitTestResult executionId="b4f20c7d-9930-46e2-871d-b1d54f2fa462" testId="c835dd8b-7e36-7682-512c-93ba65a08c2f" testName="Sonda.Acquisition.Tests.FramingTests.Byte_at_a_time_bom_and_code_units_do_not_emit_partial_records" computerName="ASUSPROART" duration="00:00:00.0009457" startTime="2026-09-24T17:24:49.6624963-04:00" endTime="2026-09-24T17:24:49.6632866-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b4f20c7d-9930-46e2-871d-b1d54f2fa462" />
+    <UnitTestResult executionId="724d5c73-3f0c-4d25-9cb1-5024ed17ccda" testId="2d6677d8-3d50-3758-7a09-ce1f6cd30099" testName="Sonda.Acquisition.Tests.FramingTests.Malformed_or_wrong_bom_and_over_limit_fail_without_skipping" computerName="ASUSPROART" duration="00:00:00.0013763" startTime="2026-09-24T17:24:49.6601615-04:00" endTime="2026-09-24T17:24:49.6611894-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="724d5c73-3f0c-4d25-9cb1-5024ed17ccda" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Sonda.Acquisition.Tests.FramingTests.Byte_at_a_time_bom_and_code_units_do_not_emit_partial_records" storage="c:\saproductions\sonda\tests\sonda.acquisition.tests\bin\release\net10.0\sonda.acquisition.tests.dll" id="c835dd8b-7e36-7682-512c-93ba65a08c2f">
+      <Execution id="b4f20c7d-9930-46e2-871d-b1d54f2fa462" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Acquisition.Tests.FramingTests" name="Byte_at_a_time_bom_and_code_units_do_not_emit_partial_records" />
+    </UnitTest>
+    <UnitTest name="Sonda.Acquisition.Tests.FramingTests.Every_split_preserves_exact_bytes_offsets_and_partial_tail(kind: Utf8)" storage="c:\saproductions\sonda\tests\sonda.acquisition.tests\bin\release\net10.0\sonda.acquisition.tests.dll" id="2bc0811c-98e3-ace9-3ebf-c94d1f0ed709">
+      <Execution id="39b29b6a-1daa-4fa9-bf9f-8b25ab38a21c" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Acquisition.Tests.FramingTests" name="Every_split_preserves_exact_bytes_offsets_and_partial_tail" />
+    </UnitTest>
+    <UnitTest name="Sonda.Acquisition.Tests.FramingTests.Malformed_or_wrong_bom_and_over_limit_fail_without_skipping" storage="c:\saproductions\sonda\tests\sonda.acquisition.tests\bin\release\net10.0\sonda.acquisition.tests.dll" id="2d6677d8-3d50-3758-7a09-ce1f6cd30099">
+      <Execution id="724d5c73-3f0c-4d25-9cb1-5024ed17ccda" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Acquisition.Tests.FramingTests" name="Malformed_or_wrong_bom_and_over_limit_fail_without_skipping" />
+    </UnitTest>
+    <UnitTest name="Sonda.Acquisition.Tests.SourceSafetyTests.Real_windows_junction_is_not_followed" storage="c:\saproductions\sonda\tests\sonda.acquisition.tests\bin\release\net10.0\sonda.acquisition.tests.dll" id="8df70ffb-cd71-503e-30b7-10326a0199a2">
+      <Execution id="368c43af-6f69-4930-bb1a-2b31f2579f08" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Acquisition.Tests.SourceSafetyTests" name="Real_windows_junction_is_not_followed" />
+    </UnitTest>
+    <UnitTest name="Sonda.Acquisition.Tests.SourceSafetyTests.Invalid_capacity_and_ambiguous_manifest_are_rejected_without_reading_sources" storage="c:\saproductions\sonda\tests\sonda.acquisition.tests\bin\release\net10.0\sonda.acquisition.tests.dll" id="526136e3-0f30-e82b-44a3-bdb51f7f207f">
+      <Execution id="737c46a5-7887-4a4c-8337-02ad38704830" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Acquisition.Tests.SourceSafetyTests" name="Invalid_capacity_and_ambiguous_manifest_are_rejected_without_reading_sources" />
+    </UnitTest>
+    <UnitTest name="Sonda.Acquisition.Tests.SourceSafetyTests.Recursive_filters_and_root_containment_are_enforced" storage="c:\saproductions\sonda\tests\sonda.acquisition.tests\bin\release\net10.0\sonda.acquisition.tests.dll" id="7e6754f5-4756-9327-8996-167eb9c129ec">
+      <Execution id="7de96e1f-351f-45b9-9f13-e9621cae9c39" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Acquisition.Tests.SourceSafetyTests" name="Recursive_filters_and_root_containment_are_enforced" />
+    </UnitTest>
+    <UnitTest name="Sonda.Acquisition.Tests.WindowsFileTests.Real_file_append_and_truncation_are_read_only_observations" storage="c:\saproductions\sonda\tests\sonda.acquisition.tests\bin\release\net10.0\sonda.acquisition.tests.dll" id="e2ae4fba-cd6a-39cb-dea2-277f06f3f11d">
+      <Execution id="773b29e0-2c5e-449e-9234-d60e62550d1e" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Acquisition.Tests.WindowsFileTests" name="Real_file_append_and_truncation_are_read_only_observations" />
+    </UnitTest>
+    <UnitTest name="Sonda.Acquisition.Tests.FramingTests.Prior_complete_records_survive_later_decode_error_in_same_read" storage="c:\saproductions\sonda\tests\sonda.acquisition.tests\bin\release\net10.0\sonda.acquisition.tests.dll" id="5a7c241f-50d7-02e7-6303-5c0e022dd910">
+      <Execution id="1071ea69-8964-4215-9728-8985cecac07e" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Acquisition.Tests.FramingTests" name="Prior_complete_records_survive_later_decode_error_in_same_read" />
+    </UnitTest>
+    <UnitTest name="Sonda.Acquisition.Tests.FramingTests.Every_split_preserves_exact_bytes_offsets_and_partial_tail(kind: Utf16LittleEndian)" storage="c:\saproductions\sonda\tests\sonda.acquisition.tests\bin\release\net10.0\sonda.acquisition.tests.dll" id="804d135e-39b8-f6b5-4ae6-d0f2a292a101">
+      <Execution id="28232924-1bc2-49b5-910a-5db499dc22fd" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Acquisition.Tests.FramingTests" name="Every_split_preserves_exact_bytes_offsets_and_partial_tail" />
+    </UnitTest>
+    <UnitTest name="Sonda.Acquisition.Tests.FramingTests.Every_split_preserves_exact_bytes_offsets_and_partial_tail(kind: Utf16BigEndian)" storage="c:\saproductions\sonda\tests\sonda.acquisition.tests\bin\release\net10.0\sonda.acquisition.tests.dll" id="fb64b677-4a71-684a-8b78-32f14a2c75f0">
+      <Execution id="01f41f68-0641-446c-b6fa-4ad7f7fd7d7e" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Acquisition.Tests.FramingTests" name="Every_split_preserves_exact_bytes_offsets_and_partial_tail" />
+    </UnitTest>
+    <UnitTest name="Sonda.Acquisition.Tests.WindowsFileTests.Actual_windows_handle_survives_rename_but_recreation_is_distinct" storage="c:\saproductions\sonda\tests\sonda.acquisition.tests\bin\release\net10.0\sonda.acquisition.tests.dll" id="e6e4b2cb-78ce-bb5c-8217-8446548c33ba">
+      <Execution id="f982d028-6168-420e-83e8-888af72ca569" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Acquisition.Tests.WindowsFileTests" name="Actual_windows_handle_survives_rename_but_recreation_is_distinct" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="e2ae4fba-cd6a-39cb-dea2-277f06f3f11d" executionId="773b29e0-2c5e-449e-9234-d60e62550d1e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="526136e3-0f30-e82b-44a3-bdb51f7f207f" executionId="737c46a5-7887-4a4c-8337-02ad38704830" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5a7c241f-50d7-02e7-6303-5c0e022dd910" executionId="1071ea69-8964-4215-9728-8985cecac07e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="804d135e-39b8-f6b5-4ae6-d0f2a292a101" executionId="28232924-1bc2-49b5-910a-5db499dc22fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2bc0811c-98e3-ace9-3ebf-c94d1f0ed709" executionId="39b29b6a-1daa-4fa9-bf9f-8b25ab38a21c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7e6754f5-4756-9327-8996-167eb9c129ec" executionId="7de96e1f-351f-45b9-9f13-e9621cae9c39" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb64b677-4a71-684a-8b78-32f14a2c75f0" executionId="01f41f68-0641-446c-b6fa-4ad7f7fd7d7e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8df70ffb-cd71-503e-30b7-10326a0199a2" executionId="368c43af-6f69-4930-bb1a-2b31f2579f08" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e6e4b2cb-78ce-bb5c-8217-8446548c33ba" executionId="f982d028-6168-420e-83e8-888af72ca569" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c835dd8b-7e36-7682-512c-93ba65a08c2f" executionId="b4f20c7d-9930-46e2-871d-b1d54f2fa462" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2d6677d8-3d50-3758-7a09-ce1f6cd30099" executionId="724d5c73-3f0c-4d25-9cb1-5024ed17ccda" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="11" executed="11" passed="11" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.1+bf6400fd51 (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.22]   Discovering: Sonda.Acquisition.Tests&#xD;
+[xUnit.net 00:00:00.35]   Discovered:  Sonda.Acquisition.Tests&#xD;
+[xUnit.net 00:00:00.45]   Starting:    Sonda.Acquisition.Tests&#xD;
+[xUnit.net 00:00:00.85]   Finished:    Sonda.Acquisition.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

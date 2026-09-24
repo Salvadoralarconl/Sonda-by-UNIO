@@ -1,0 +1,57 @@
+{
+  "fresh": {
+    "profile": "cam",
+    "availability": {
+      "businessHealth": null,
+      "availability": "Fresh",
+      "lastSuccessfulRead": "2026-09-23T16:00:00+00:00",
+      "lastRunCompleted": null,
+      "asOf": "2026-09-23T16:00:00+00:00",
+      "reason": "All required checks pass.",
+      "healthyNow": false
+    },
+    "sources": [
+      {
+        "source": "file",
+        "enabled": true,
+        "required": true,
+        "state": "Following",
+        "reason": "read",
+        "committedBytes": 0,
+        "bytesBehind": 0
+      }
+    ],
+    "pendingCommand": false,
+    "leaseExpiresAt": "2026-09-24T21:27:53.82524+00:00",
+    "fenceEpoch": 1,
+    "deadlineStatus": "Deferred: completeness unproven"
+  },
+  "disabled": {
+    "profile": "cam",
+    "availability": {
+      "businessHealth": null,
+      "availability": "Unknown",
+      "lastSuccessfulRead": "2026-09-23T16:00:02+00:00",
+      "lastRunCompleted": null,
+      "asOf": "2026-09-23T16:00:02+00:00",
+      "reason": "Required acquisition source is disabled, blocked or uncertain.",
+      "healthyNow": false
+    },
+    "sources": [
+      {
+        "source": "file",
+        "enabled": false,
+        "required": true,
+        "state": "Disabled",
+        "reason": "recovered",
+        "committedBytes": 0,
+        "bytesBehind": null
+      }
+    ],
+    "pendingCommand": false,
+    "leaseExpiresAt": "2026-09-24T21:27:53.82524+00:00",
+    "fenceEpoch": 1,
+    "deadlineStatus": "Deferred: completeness unproven"
+  },
+  "sourceFailuresCreateBusinessFacts": false
+}

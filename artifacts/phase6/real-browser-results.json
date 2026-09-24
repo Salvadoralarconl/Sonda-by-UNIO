@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "transport": "loopback HTTPS with test-only ephemeral certificate",
+  "persistence": "real disposable PostgreSQL",
+  "checks": [
+    "cookie sign-in",
+    "authenticated display name",
+    "Admin Application creation",
+    "Admin Draft creation",
+    "inactive Draft publication gate",
+    "disabled approved-root source creation",
+    "structured rule editing",
+    "validation",
+    "simulation",
+    "publication",
+    "activation without ingestion",
+    "missing CSRF rejection",
+    "logout clears protected UI"
+  ],
+  "certificateValidation": "disabled only in disposable test browser context; no production configuration change"
+}

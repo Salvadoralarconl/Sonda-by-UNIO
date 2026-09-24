@@ -1,0 +1,100 @@
+Phase 4 is approved.
+The proposed production file acquisition architecture, checkpoint model, rotation handling, source completeness rules, fenced worker ownership, transaction protocol, availability integration, Windows service model, and acceptance matrix are approved for implementation.
+Preserve all 237 Phase 1–3 tests as regression gates.
+Phase 4 explicitly requires additive migration 003.
+You are authorized to update only the existing exact migration-chain assertion so that it verifies the exact ordered three-migration chain after the real migration 003 identifier is generated:
+1. 20260924023552_DurablePersistence 
+2. 20260924032911_InterpretationPolicies 
+3.  the generated Phase 4 acquisition migration ID 
+Preserve the migration reapplication/no-op test, PostgreSQL version validation, migration-history visibility, and the integrity of migrations 001 and 002.
+Do not weaken or alter any other accepted regression assertion.
+Implement the proposal exactly around these principles:
+1. Checkpoint safety
+A durable file checkpoint must never exceed the longest contiguous byte range whose raw evidence, processing receipt, interpretation effects and checkpoint advancement have committed successfully.
+Reading ahead is not checkpoint advancement.
+Observed file length is not checkpoint advancement.
+A volatile buffer is not checkpoint advancement.
+2. At-least-once acquisition, exactly-once interpretation effects
+File records may be reread after crashes or retries.
+Existing durable identities and processing receipts must guarantee that rereading committed bytes does not duplicate:
+-  Application Runs 
+-  Order Runs 
+-  Incidents 
+-  Occurrences 
+-  Recoveries 
+-  metric contributions 
+-  Logs Today 
+3. Stable physical evidence identity
+Physical record identity must derive from the source/file generation and byte position, never from log text, current path, modification time, line number or Profile Version.
+Two identical legitimate lines at different offsets remain separate evidence.
+4. File path is not file identity
+Rotation, renames, recreation, truncation and aliases must use the approved file-object/generation model.
+Never attach an old checkpoint to a new file merely because the pathname is identical.
+5. Ambiguous rotation must fail safe
+If SONDA cannot prove continuity or determine what happened to unread bytes, create an operational gap/identity uncertainty condition.
+Do not skip bytes and do not claim source completeness.
+6. Partial records
+Do not interpret or checkpoint an incomplete physical record.
+Preserve exact byte offsets across:
+-  UTF-8 multibyte characters 
+-  UTF-16 code units 
+-  split CRLF 
+-  split BOM 
+-  partial final writes 
+7. Source failures are not business failures
+Missing files, unavailable UNC shares, access denied, reader failures, encoding failures or database outages must never fabricate an Application Failure or business Error.
+Feed them into operational/source availability state.
+8. No unsafe deadline inference
+EOF, quiet time, wall-clock elapsed time, file age, latest timestamp, successful empty read and a caught-up byte offset do not by themselves prove semantic completeness.
+Default production completeness remains None.
+Without a validated completeness contract, report deadline evaluation as deferred rather than generating a false timeout.
+9. Deadline scheduler
+The production scheduler must submit the existing deterministic AdvanceTime command only after a valid durable completeness certificate exists.
+The scheduler callback itself must not contain business outcome logic.
+10. Worker ownership
+Maintain one fenced active ingestion owner per Application.
+A stale worker may finish an operating-system read but must be incapable of committing evidence, advancing a checkpoint or issuing a deadline command after its fence is lost.
+11. Backlog
+Processing after downtime must resume from durable checkpoints and remain bounded.
+Do not reset to EOF, silently discard history, or use an unbounded memory queue.
+12. Profile behavior
+Do not add a second interpretation engine.
+File acquisition feeds the already accepted Domain/Application/PostgreSQL pipeline.
+Existing Profile version pinning, retry behavior, incident resolution, System Health and Logs Today rules remain authoritative.
+Proceed with the approved sequence:
+1.  acquisition domain/contracts and byte/framing fixtures 
+2.  migration 003 and checkpoint/fencing persistence 
+3.  shared PostgreSQL unit-of-work refactor 
+4.  Windows local-file reader 
+5.  UNC/SMB reader behavior 
+6.  rotation/reconciliation 
+7.  bounded continuous ingestion 
+8.  operational/source observations 
+9.  completeness certificates 
+10.  deterministic deadline dispatcher integration 
+11.  Windows Worker/Service lifecycle 
+12.  full regression/crash/race/restore verification 
+13.  pilot manifest/readiness tooling 
+Do not access any real GiroSol file location during Phase 4 implementation.
+Real GiroSol access remains a separately authorized read-only pilot action.
+Do not guess a GiroSol path, filename, encoding, timezone, rotation policy or log phrase.
+Do not report Phase 4 complete until:
+-  all 237 legacy regression tests pass 
+-  applicable P4-01 through P4-42 tests pass 
+-  real PostgreSQL ingestion tests pass 
+-  byte/checkpoint traces prove the contiguous checkpoint invariant 
+-  crash-before-COMMIT recovery passes 
+-  crash-after-COMMIT recovery produces zero duplicates 
+-  rotation/truncation/partial-write behavior is verified 
+-  backlog and fencing behavior is verified 
+-  frontier/deadline safety is verified 
+-  migration 003 upgrade/fresh-schema/reapplication tests pass 
+-  dump/restore continuation passes 
+-  simulator versus real-byte-ingestion parity is demonstrated 
+-  service lifecycle testing is documented 
+-  UNC/SMB capability is either genuinely verified or explicitly reported as environmentally blocked 
+Do not substitute mocks for required real PostgreSQL/Windows/SMB proof and claim those capabilities passed.
+Keep environmental blockers explicit.
+At completion, stop and provide the Phase 4 review package.
+Do not start Phase 5 without approval.
+@Canva → Sonda Home Page Design remains the approved visual authority and must remain untouched during Phase 4.

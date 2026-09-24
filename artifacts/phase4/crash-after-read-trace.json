@@ -1,0 +1,727 @@
+{
+  "exit": 76,
+  "contiguous": 120,
+  "records": [
+    {
+      "startOffset": 0,
+      "endOffset": 20,
+      "receiptId": "a1c8fd15-edc8-4667-9fd0-4df7d4331d97"
+    },
+    {
+      "startOffset": 20,
+      "endOffset": 44,
+      "receiptId": "2d7baa82-35be-41ef-9d5b-cc92648e4088"
+    },
+    {
+      "startOffset": 44,
+      "endOffset": 75,
+      "receiptId": "9da6b61b-bcb8-46e0-b7d9-214b8c5f3ab0"
+    },
+    {
+      "startOffset": 75,
+      "endOffset": 99,
+      "receiptId": "9275b3f6-2f9c-42d3-8fd3-0d285a2b274f"
+    },
+    {
+      "startOffset": 99,
+      "endOffset": 120,
+      "receiptId": "b82b6a88-4e2f-447c-acbf-dcb8214c46fa"
+    }
+  ],
+  "state": {
+    "seed": "mixed-orders",
+    "counter": 5,
+    "nextSequence": 6,
+    "lastProcessedAt": "2026-09-24T21:25:41.0824186+00:00",
+    "frontier": null,
+    "interpreter": {
+      "format": 1,
+      "profileId": "cam",
+      "cycleSequence": 1,
+      "runs": [
+        {
+          "id": "mixed-orders:cam:cycle:0001",
+          "profileId": "cam",
+          "scope": "Application",
+          "cycleSequence": 1,
+          "applicationRunId": null,
+          "identifier": null,
+          "attemptNumber": 1,
+          "startedEventAt": "2026-09-24T21:25:41.0824186+00:00",
+          "lifecycle": "Running",
+          "result": null,
+          "completedEventAt": null,
+          "completedProcessedAt": null,
+          "terminalReason": null,
+          "evidenceLines": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "diagnosticProblemKeys": [],
+          "observedSuccess": false,
+          "observedFailure": false,
+          "policyContext": {
+            "profileVersion": 1,
+            "recoveryCompatibility": "orders",
+            "correlationKey": null,
+            "previousAttemptId": null,
+            "startedSequence": 1,
+            "startedProcessedAt": "2026-09-24T21:25:41.0824186+00:00",
+            "deadlineAnchor": "2026-09-24T21:25:41.0824186+00:00",
+            "deadline": null,
+            "overdueAt": null,
+            "completionTimeKind": "Evidence",
+            "completedSequence": null
+          }
+        },
+        {
+          "id": "mixed-orders:cam:order:0002",
+          "profileId": "cam",
+          "scope": "Order",
+          "cycleSequence": 1,
+          "applicationRunId": "mixed-orders:cam:cycle:0001",
+          "identifier": "x",
+          "attemptNumber": 1,
+          "startedEventAt": "2026-09-24T21:25:41.0824186+00:00",
+          "lifecycle": "Finalized",
+          "result": "Failure",
+          "completedEventAt": "2026-09-24T21:25:41.0824186+00:00",
+          "completedProcessedAt": "2026-09-24T21:25:41.0824186+00:00",
+          "terminalReason": "ConfiguredOrderOutcome",
+          "evidenceLines": [
+            2,
+            3
+          ],
+          "diagnosticProblemKeys": [],
+          "observedSuccess": false,
+          "observedFailure": false,
+          "policyContext": {
+            "profileVersion": 1,
+            "recoveryCompatibility": "orders",
+            "correlationKey": null,
+            "previousAttemptId": null,
+            "startedSequence": 2,
+            "startedProcessedAt": "2026-09-24T21:25:41.0824186+00:00",
+            "deadlineAnchor": "2026-09-24T21:25:41.0824186+00:00",
+            "deadline": null,
+            "overdueAt": null,
+            "completionTimeKind": "Evidence",
+            "completedSequence": 3
+          }
+        },
+        {
+          "id": "mixed-orders:cam:order:0005",
+          "profileId": "cam",
+          "scope": "Order",
+          "cycleSequence": 1,
+          "applicationRunId": "mixed-orders:cam:cycle:0001",
+          "identifier": "x",
+          "attemptNumber": 2,
+          "startedEventAt": "2026-09-24T21:25:41.0824186+00:00",
+          "lifecycle": "Finalized",
+          "result": "Success",
+          "completedEventAt": "2026-09-24T21:25:41.0824186+00:00",
+          "completedProcessedAt": "2026-09-24T21:25:41.0824186+00:00",
+          "terminalReason": "ConfiguredOrderOutcome",
+          "evidenceLines": [
+            4,
+            5
+          ],
+          "diagnosticProblemKeys": [],
+          "observedSuccess": false,
+          "observedFailure": false,
+          "policyContext": {
+            "profileVersion": 1,
+            "recoveryCompatibility": "orders",
+            "correlationKey": null,
+            "previousAttemptId": "mixed-orders:cam:order:0002",
+            "startedSequence": 4,
+            "startedProcessedAt": "2026-09-24T21:25:41.0824186+00:00",
+            "deadlineAnchor": "2026-09-24T21:25:41.0824186+00:00",
+            "deadline": null,
+            "overdueAt": null,
+            "completionTimeKind": "Evidence",
+            "completedSequence": 5
+          }
+        }
+      ],
+      "incidents": [
+        {
+          "id": "mixed-orders:cam:incident:0003",
+          "problem": {
+            "teamId": "policy-8bbb4740677f4a0faacd2da4147fede0",
+            "applicationId": "app-cam",
+            "profileId": "cam",
+            "scope": "Order",
+            "streamKey": "default",
+            "identifierNamespace": "cam-order-v1",
+            "identifier": "x",
+            "conditionKey": "order-outcome",
+            "incidentKey": "problem:v1:[\u0022policy-8bbb4740677f4a0faacd2da4147fede0\u0022,\u0022app-cam\u0022,\u0022cam\u0022,\u0022Order\u0022,\u0022default\u0022,\u0022cam-order-v1\u0022,\u0022x\u0022,\u0022order-outcome\u0022]"
+          },
+          "recoveryPolicy": "NextSuccessfulRun",
+          "severity": "Warning",
+          "status": "Resolved",
+          "occurrences": [
+            {
+              "id": "mixed-orders:cam:occurrence:0004",
+              "runId": "mixed-orders:cam:order:0002",
+              "applicationRunId": "mixed-orders:cam:cycle:0001",
+              "cycleSequence": 1,
+              "result": "Failure",
+              "severity": "Warning",
+              "detectedAt": "2026-09-24T21:25:41.0824186+00:00",
+              "evidenceLines": [
+                2,
+                3
+              ]
+            }
+          ],
+          "recoveries": [
+            {
+              "runId": "mixed-orders:cam:order:0005",
+              "applicationRunId": "mixed-orders:cam:cycle:0001",
+              "cycleSequence": 1,
+              "recoveredAt": "2026-09-24T21:25:41.0824186+00:00",
+              "method": "Automatic",
+              "evidenceLines": [
+                4,
+                5
+              ]
+            }
+          ],
+          "history": [
+            {
+              "from": null,
+              "to": "Active",
+              "at": "2026-09-24T21:25:41.0824186+00:00",
+              "reason": "First occurrence"
+            },
+            {
+              "from": "Active",
+              "to": "Resolved",
+              "at": "2026-09-24T21:25:41.0824186+00:00",
+              "reason": "Later causally eligible successful run"
+            }
+          ],
+          "policyContext": {
+            "episode": 1,
+            "profileVersion": 1,
+            "recoveryCompatibility": "orders",
+            "revision": 1,
+            "resolutionKind": "Automatic",
+            "actor": null,
+            "reason": null,
+            "observations": []
+          }
+        }
+      ],
+      "versions": {
+        "activeVersion": 1,
+        "published": [
+          {
+            "policy": {
+              "revision": 2,
+              "undefinedApplicationSeverity": "Error",
+              "cycleMode": "Serial",
+              "unexpectedBegin": "RejectAmbiguousBegin",
+              "deadlineClock": "Processing",
+              "orderFallbackEnabled": false,
+              "correlationExpression": "",
+              "correlationCapture": "cycle",
+              "correlationEpoch": "",
+              "routingContract": "serial",
+              "recoveryCompatibility": "orders",
+              "applicationWideRules": [],
+              "lateObservationRules": [],
+              "readFreshness": null,
+              "runCadence": null
+            },
+            "teamId": "policy-8bbb4740677f4a0faacd2da4147fede0",
+            "applicationId": "app-cam",
+            "id": "cam",
+            "version": 1,
+            "name": "CAM synthetic sample",
+            "streamKey": "default",
+            "completionMode": "TerminalMarker",
+            "parsing": {
+              "entryPattern": "",
+              "timestampFormat": "",
+              "timestampHasDate": true,
+              "timestampHasOffset": false,
+              "sourceTimeZoneId": "UTC"
+            },
+            "identifier": {
+              "kind": "KeyValue",
+              "name": "Order ID",
+              "namespace": "cam-order-v1",
+              "expression": "OrderID",
+              "captureName": "id",
+              "caseSensitive": false
+            },
+            "cycleFailureSeverity": "Error",
+            "orderFailureSeverity": "Warning",
+            "undefinedOrderSeverity": "Warning",
+            "cycleTiming": {
+              "expectedDuration": null,
+              "gracePeriod": null,
+              "fallbackTimeout": null,
+              "requested": false
+            },
+            "orderTiming": {
+              "expectedDuration": null,
+              "gracePeriod": null,
+              "fallbackTimeout": null,
+              "requested": false
+            },
+            "rules": [
+              {
+                "key": "cycle-begin",
+                "role": "CycleBegin",
+                "target": "Application",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Exact",
+                    "expression": "CAM process started",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "cycle-success",
+                "role": "CycleSuccess",
+                "target": "Application",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Exact",
+                    "expression": "CAM process completed",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "cycle-failure",
+                "role": "CycleFailure",
+                "target": "Application",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Exact",
+                    "expression": "CAM process failed",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "order-begin",
+                "role": "OrderBegin",
+                "target": "Order",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Contains",
+                    "expression": "Finding order",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "order-success",
+                "role": "OrderSuccess",
+                "target": "Order",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Contains",
+                    "expression": "Order sent",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "order-failure",
+                "role": "OrderFailure",
+                "target": "Order",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Contains",
+                    "expression": "Unable to send order",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "order-warning",
+                "role": "Detection",
+                "target": "Order",
+                "enabled": true,
+                "priority": 10,
+                "classification": "Warning",
+                "conditionKey": "order-outcome",
+                "recovery": "NextSuccessfulRun",
+                "alternatives": [
+                  {
+                    "kind": "Contains",
+                    "expression": "Unable to send order",
+                    "caseSensitive": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "receipts": [
+      {
+        "id": "a1c8fd15-edc8-4667-9fd0-4df7d4331d97",
+        "fingerprint": "9C33759F17238EA7EC0F9A620456F756914C4DE138A23B9A95E9FE6AEA4A0CBD",
+        "command": {
+          "id": "a1c8fd15-edc8-4667-9fd0-4df7d4331d97",
+          "sequence": 1,
+          "kind": "Evidence",
+          "processedAt": "2026-09-24T21:25:41.0824186+00:00",
+          "effectiveAt": "0001-01-01T00:00:00+00:00",
+          "raw": "CAM process started",
+          "evidenceKey": "{\u0022schema\u0022:1,\u0022source\u0022:\u0022fixture-file\u0022,\u0022generation\u0022:\u0022719972c1-8d6e-416a-9184-f5806eaeac16\u0022,\u0022offset\u0022:0}",
+          "sampleDate": null,
+          "frontier": null,
+          "incidentId": "",
+          "expectedRevision": 0,
+          "targetStatus": "Active",
+          "actor": "",
+          "reason": "",
+          "profile": null,
+          "source": "",
+          "readSuccess": false
+        },
+        "profileVersion": 1,
+        "disposition": "Applied",
+        "interpretation": {
+          "matches": [
+            {
+              "ruleKey": "cycle-begin",
+              "role": "CycleBegin",
+              "target": "Application",
+              "priority": 0,
+              "classification": null,
+              "alternatives": [
+                0
+              ],
+              "selection": "Matched"
+            }
+          ],
+          "actions": [
+            "CycleStarted:mixed-orders:cam:cycle:0001"
+          ],
+          "problemDecisions": [],
+          "diagnostics": []
+        },
+        "diagnostics": [],
+        "partition": "serial",
+        "normalized": {
+          "line": 1,
+          "profileId": "cam",
+          "raw": "CAM process started",
+          "message": "CAM process started",
+          "eventAt": "2026-09-24T21:25:41.0824186+00:00",
+          "processedAt": "2026-09-24T21:25:41.0824186+00:00",
+          "timestampQuality": "ProcessingTimeFallback",
+          "fields": {},
+          "identifier": null
+        }
+      },
+      {
+        "id": "2d7baa82-35be-41ef-9d5b-cc92648e4088",
+        "fingerprint": "4AB7DAF5BF9111619268FDEC7827EF779A0C636B903ACEA0209987A99147048B",
+        "command": {
+          "id": "2d7baa82-35be-41ef-9d5b-cc92648e4088",
+          "sequence": 2,
+          "kind": "Evidence",
+          "processedAt": "2026-09-24T21:25:41.0824186+00:00",
+          "effectiveAt": "0001-01-01T00:00:00+00:00",
+          "raw": "Finding order OrderID=x",
+          "evidenceKey": "{\u0022schema\u0022:1,\u0022source\u0022:\u0022fixture-file\u0022,\u0022generation\u0022:\u0022719972c1-8d6e-416a-9184-f5806eaeac16\u0022,\u0022offset\u0022:20}",
+          "sampleDate": null,
+          "frontier": null,
+          "incidentId": "",
+          "expectedRevision": 0,
+          "targetStatus": "Active",
+          "actor": "",
+          "reason": "",
+          "profile": null,
+          "source": "",
+          "readSuccess": false
+        },
+        "profileVersion": 1,
+        "disposition": "Applied",
+        "interpretation": {
+          "matches": [
+            {
+              "ruleKey": "order-begin",
+              "role": "OrderBegin",
+              "target": "Order",
+              "priority": 0,
+              "classification": null,
+              "alternatives": [
+                0
+              ],
+              "selection": "Matched"
+            }
+          ],
+          "actions": [
+            "OrderStarted:mixed-orders:cam:order:0002"
+          ],
+          "problemDecisions": [],
+          "diagnostics": []
+        },
+        "diagnostics": [],
+        "partition": "serial",
+        "normalized": {
+          "line": 2,
+          "profileId": "cam",
+          "raw": "Finding order OrderID=x",
+          "message": "Finding order OrderID=x",
+          "eventAt": "2026-09-24T21:25:41.0824186+00:00",
+          "processedAt": "2026-09-24T21:25:41.0824186+00:00",
+          "timestampQuality": "ProcessingTimeFallback",
+          "fields": {},
+          "identifier": "x"
+        }
+      },
+      {
+        "id": "9da6b61b-bcb8-46e0-b7d9-214b8c5f3ab0",
+        "fingerprint": "ADB740E7E93189A5CA164CA20404808899BB825720365CC439E3C320BC25ADED",
+        "command": {
+          "id": "9da6b61b-bcb8-46e0-b7d9-214b8c5f3ab0",
+          "sequence": 3,
+          "kind": "Evidence",
+          "processedAt": "2026-09-24T21:25:41.0824186+00:00",
+          "effectiveAt": "0001-01-01T00:00:00+00:00",
+          "raw": "Unable to send order OrderID=x",
+          "evidenceKey": "{\u0022schema\u0022:1,\u0022source\u0022:\u0022fixture-file\u0022,\u0022generation\u0022:\u0022719972c1-8d6e-416a-9184-f5806eaeac16\u0022,\u0022offset\u0022:44}",
+          "sampleDate": null,
+          "frontier": null,
+          "incidentId": "",
+          "expectedRevision": 0,
+          "targetStatus": "Active",
+          "actor": "",
+          "reason": "",
+          "profile": null,
+          "source": "",
+          "readSuccess": false
+        },
+        "profileVersion": 1,
+        "disposition": "Applied",
+        "interpretation": {
+          "matches": [
+            {
+              "ruleKey": "order-failure",
+              "role": "OrderFailure",
+              "target": "Order",
+              "priority": 0,
+              "classification": null,
+              "alternatives": [
+                0
+              ],
+              "selection": "Matched"
+            },
+            {
+              "ruleKey": "order-warning",
+              "role": "Detection",
+              "target": "Order",
+              "priority": 10,
+              "classification": "Warning",
+              "alternatives": [
+                0
+              ],
+              "selection": "Winner"
+            }
+          ],
+          "actions": [
+            "OrderFinalized:mixed-orders:cam:order:0002:Failure"
+          ],
+          "problemDecisions": [
+            {
+              "line": 3,
+              "incidentKey": "problem:v1:[\u0022policy-8bbb4740677f4a0faacd2da4147fede0\u0022,\u0022app-cam\u0022,\u0022cam\u0022,\u0022Order\u0022,\u0022default\u0022,\u0022cam-order-v1\u0022,\u0022x\u0022,\u0022order-outcome\u0022]",
+              "incidentId": "mixed-orders:cam:incident:0003",
+              "action": "CreatedIncident",
+              "runId": "mixed-orders:cam:order:0002"
+            }
+          ],
+          "diagnostics": []
+        },
+        "diagnostics": [],
+        "partition": "serial",
+        "normalized": {
+          "line": 3,
+          "profileId": "cam",
+          "raw": "Unable to send order OrderID=x",
+          "message": "Unable to send order OrderID=x",
+          "eventAt": "2026-09-24T21:25:41.0824186+00:00",
+          "processedAt": "2026-09-24T21:25:41.0824186+00:00",
+          "timestampQuality": "ProcessingTimeFallback",
+          "fields": {},
+          "identifier": "x"
+        }
+      },
+      {
+        "id": "9275b3f6-2f9c-42d3-8fd3-0d285a2b274f",
+        "fingerprint": "496B2001C3C57B16060C865D4AC374D79D0B048D605089A8ECA5057D52824CC9",
+        "command": {
+          "id": "9275b3f6-2f9c-42d3-8fd3-0d285a2b274f",
+          "sequence": 4,
+          "kind": "Evidence",
+          "processedAt": "2026-09-24T21:25:41.0824186+00:00",
+          "effectiveAt": "0001-01-01T00:00:00+00:00",
+          "raw": "Finding order OrderID=x",
+          "evidenceKey": "{\u0022schema\u0022:1,\u0022source\u0022:\u0022fixture-file\u0022,\u0022generation\u0022:\u0022719972c1-8d6e-416a-9184-f5806eaeac16\u0022,\u0022offset\u0022:75}",
+          "sampleDate": null,
+          "frontier": null,
+          "incidentId": "",
+          "expectedRevision": 0,
+          "targetStatus": "Active",
+          "actor": "",
+          "reason": "",
+          "profile": null,
+          "source": "",
+          "readSuccess": false
+        },
+        "profileVersion": 1,
+        "disposition": "Applied",
+        "interpretation": {
+          "matches": [
+            {
+              "ruleKey": "order-begin",
+              "role": "OrderBegin",
+              "target": "Order",
+              "priority": 0,
+              "classification": null,
+              "alternatives": [
+                0
+              ],
+              "selection": "Matched"
+            }
+          ],
+          "actions": [
+            "OrderStarted:mixed-orders:cam:order:0005"
+          ],
+          "problemDecisions": [],
+          "diagnostics": []
+        },
+        "diagnostics": [],
+        "partition": "serial",
+        "normalized": {
+          "line": 4,
+          "profileId": "cam",
+          "raw": "Finding order OrderID=x",
+          "message": "Finding order OrderID=x",
+          "eventAt": "2026-09-24T21:25:41.0824186+00:00",
+          "processedAt": "2026-09-24T21:25:41.0824186+00:00",
+          "timestampQuality": "ProcessingTimeFallback",
+          "fields": {},
+          "identifier": "x"
+        }
+      },
+      {
+        "id": "b82b6a88-4e2f-447c-acbf-dcb8214c46fa",
+        "fingerprint": "B27D8DDA050E9EA5F8501588CAE13BD038162809B33D3C6C222F6E1C31C04CC3",
+        "command": {
+          "id": "b82b6a88-4e2f-447c-acbf-dcb8214c46fa",
+          "sequence": 5,
+          "kind": "Evidence",
+          "processedAt": "2026-09-24T21:25:41.0824186+00:00",
+          "effectiveAt": "0001-01-01T00:00:00+00:00",
+          "raw": "Order sent OrderID=x",
+          "evidenceKey": "{\u0022schema\u0022:1,\u0022source\u0022:\u0022fixture-file\u0022,\u0022generation\u0022:\u0022719972c1-8d6e-416a-9184-f5806eaeac16\u0022,\u0022offset\u0022:99}",
+          "sampleDate": null,
+          "frontier": null,
+          "incidentId": "",
+          "expectedRevision": 0,
+          "targetStatus": "Active",
+          "actor": "",
+          "reason": "",
+          "profile": null,
+          "source": "",
+          "readSuccess": false
+        },
+        "profileVersion": 1,
+        "disposition": "Applied",
+        "interpretation": {
+          "matches": [
+            {
+              "ruleKey": "order-success",
+              "role": "OrderSuccess",
+              "target": "Order",
+              "priority": 0,
+              "classification": null,
+              "alternatives": [
+                0
+              ],
+              "selection": "Matched"
+            }
+          ],
+          "actions": [
+            "OrderFinalized:mixed-orders:cam:order:0005:Success"
+          ],
+          "problemDecisions": [
+            {
+              "line": 5,
+              "incidentKey": "problem:v1:[\u0022policy-8bbb4740677f4a0faacd2da4147fede0\u0022,\u0022app-cam\u0022,\u0022cam\u0022,\u0022Order\u0022,\u0022default\u0022,\u0022cam-order-v1\u0022,\u0022x\u0022,\u0022order-outcome\u0022]",
+              "incidentId": "mixed-orders:cam:incident:0003",
+              "action": "ResolvedBySuccessfulRun",
+              "runId": "mixed-orders:cam:order:0005"
+            }
+          ],
+          "diagnostics": []
+        },
+        "diagnostics": [],
+        "partition": "serial",
+        "normalized": {
+          "line": 5,
+          "profileId": "cam",
+          "raw": "Order sent OrderID=x",
+          "message": "Order sent OrderID=x",
+          "eventAt": "2026-09-24T21:25:41.0824186+00:00",
+          "processedAt": "2026-09-24T21:25:41.0824186+00:00",
+          "timestampQuality": "ProcessingTimeFallback",
+          "fields": {},
+          "identifier": "x"
+        }
+      }
+    ],
+    "observations": [],
+    "blockedPartitions": []
+  }
+}

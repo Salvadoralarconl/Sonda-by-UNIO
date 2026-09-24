@@ -1,0 +1,2 @@
+const { chromium } = require('../../../src/Sonda.Web/node_modules/playwright');
+(async()=>{const browser=await chromium.launch({channel:'chrome',headless:true});const page=await browser.newPage({viewport:{width:1120,height:460},deviceScaleFactor:1});await page.goto('file:///C:/SaProductions/Sonda/artifacts/phase6/font-review/comparison.html');await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:'artifacts/phase6/font-review/comparison.png',fullPage:true});await browser.close();})();

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="df275534-8685-4112-9a10-91590a2ccc80" name="sapro@ASUSPROART 2026-09-24 10:51:57" runUser="ASUSPROART\sapro" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-24T10:51:57.6253028-04:00" queuing="2026-09-24T10:51:57.6253037-04:00" start="2026-09-24T10:51:45.8800506-04:00" finish="2026-09-24T10:52:11.2974351-04:00" />
+  <TestSettings name="default" id="799bb6e3-3e2a-4995-a9d9-d74c02ebb6ca">
+    <Deployment runDeploymentRoot="sapro_ASUSPROART_2026-09-24_10_51_57" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="f6da4a05-e076-4fe1-aed9-0a8955bf7008" testId="f1534880-ac65-ccc6-8c55-22f4c8e4eabb" testName="Sonda.Api.Tests.QueryTests.Late_processing_uses_processing_day_for_volume_and_event_day_for_health" computerName="ASUSPROART" duration="00:00:00.7129461" startTime="2026-09-24T10:52:06.1767165-04:00" endTime="2026-09-24T10:52:06.8904548-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f6da4a05-e076-4fe1-aed9-0a8955bf7008" />
+    <UnitTestResult executionId="b7823c63-ea4c-458e-a942-9adafcee4007" testId="256e51dc-3e0e-4a5a-6548-7651e4c18480" testName="Sonda.Api.Tests.QueryTests.Dashboard_matches_accepted_mixed_order_fixture" computerName="ASUSPROART" duration="00:00:00.6820604" startTime="2026-09-24T10:52:05.4937668-04:00" endTime="2026-09-24T10:52:06.1763408-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7823c63-ea4c-458e-a942-9adafcee4007" />
+    <UnitTestResult executionId="b1325842-b3a8-4cd8-92b2-56bd12d36a86" testId="b4238c05-da30-87db-7f57-25888484f6eb" testName="Sonda.Api.Tests.QueryTests.Ignore_evidence_remains_searchable_and_invalid_windows_and_tampered_cursors_fail" computerName="ASUSPROART" duration="00:00:00.2936474" startTime="2026-09-24T10:52:05.1996082-04:00" endTime="2026-09-24T10:52:05.4934069-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b1325842-b3a8-4cd8-92b2-56bd12d36a86" />
+    <UnitTestResult executionId="80a8b88b-1567-40e5-bbc6-2728d231eac9" testId="35f535f6-877b-9c1b-0069-1a96a17f7b9f" testName="Sonda.Api.Tests.WorkflowTests.Crash_retry_uses_durable_intent_pending_and_receipt_without_duplicate_history(boundary: &quot;pending-before-interpretation&quot;)" computerName="ASUSPROART" duration="00:00:01.0793466" startTime="2026-09-24T10:51:57.5907614-04:00" endTime="2026-09-24T10:51:58.6334280-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="80a8b88b-1567-40e5-bbc6-2728d231eac9" />
+    <UnitTestResult executionId="9bf68558-f524-4dc8-a360-b899cb1324cb" testId="0f8c2b0b-9883-1c79-9ffd-75d8bdcc3aad" testName="Sonda.Api.Tests.WorkflowTests.Standalone_owner_fence_and_wrong_host_cannot_be_bypassed_by_workflow" computerName="ASUSPROART" duration="00:00:00.9275896" startTime="2026-09-24T10:52:01.8451280-04:00" endTime="2026-09-24T10:52:02.7740918-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9bf68558-f524-4dc8-a360-b899cb1324cb" />
+    <UnitTestResult executionId="fb907286-f7b4-440e-b9d6-9cfd4a0fa3c9" testId="b971f0e7-b588-1c82-5cc4-ba1ef9b4280b" testName="Sonda.Api.Tests.ProfileAcceptanceTests.Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles" computerName="ASUSPROART" duration="00:00:03.2247884" startTime="2026-09-24T10:52:07.5735502-04:00" endTime="2026-09-24T10:52:10.8173728-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb907286-f7b4-440e-b9d6-9cfd4a0fa3c9">
+      <Output>
+        <ErrorInfo>
+          <Message>System.Text.Json.JsonException : Explicit null is not supported in sample input at $.profiles[0].policy.readFreshness; omit optional properties instead.</Message>
+          <StackTrace>   at Sonda.Application.Simulation.SimulationJson.RejectNull(JsonElement element, String path) in C:\SaProductions\Sonda\src\Sonda.Application\Simulation\SimulationJson.cs:line 40&#xD;
+   at Sonda.Application.Simulation.SimulationJson.RejectNull(JsonElement element, String path) in C:\SaProductions\Sonda\src\Sonda.Application\Simulation\SimulationJson.cs:line 42&#xD;
+   at Sonda.Application.Simulation.SimulationJson.RejectNull(JsonElement element, String path) in C:\SaProductions\Sonda\src\Sonda.Application\Simulation\SimulationJson.cs:line 42&#xD;
+   at Sonda.Application.Simulation.SimulationJson.RejectNull(JsonElement element, String path) in C:\SaProductions\Sonda\src\Sonda.Application\Simulation\SimulationJson.cs:line 46&#xD;
+   at Sonda.Application.Simulation.SimulationJson.RejectNull(JsonElement element, String path) in C:\SaProductions\Sonda\src\Sonda.Application\Simulation\SimulationJson.cs:line 42&#xD;
+   at Sonda.Application.Simulation.SimulationJson.Deserialize[T](String json) in C:\SaProductions\Sonda\src\Sonda.Application\Simulation\SimulationJson.cs:line 31&#xD;
+   at Sonda.Api.Tests.ProfileAcceptanceTests.Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles() in C:\SaProductions\Sonda\tests\Sonda.Api.Tests\ProfileAcceptanceTests.cs:line 43&#xD;
+   at Sonda.Api.Tests.ProfileAcceptanceTests.Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles() in C:\SaProductions\Sonda\tests\Sonda.Api.Tests\ProfileAcceptanceTests.cs:line 50&#xD;
+   at Sonda.Api.Tests.ProfileAcceptanceTests.Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles() in C:\SaProductions\Sonda\tests\Sonda.Api.Tests\ProfileAcceptanceTests.cs:line 61&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1ffc770d-732e-4a46-bac4-e35ddf110357" testId="b9d81f0b-75da-4d60-55ed-bf6ef2e2c01b" testName="Sonda.Api.Tests.WorkflowTests.Crash_retry_uses_durable_intent_pending_and_receipt_without_duplicate_history(boundary: &quot;after-core-commit&quot;)" computerName="ASUSPROART" duration="00:00:01.0267289" startTime="2026-09-24T10:51:58.6359492-04:00" endTime="2026-09-24T10:51:59.6608249-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1ffc770d-732e-4a46-bac4-e35ddf110357" />
+    <UnitTestResult executionId="b23baebc-1336-4184-b6a6-fc3cd1eaf468" testId="0bbd066b-f1be-d444-797d-66751abd0b13" testName="Sonda.Api.Tests.WorkflowTests.Crash_retry_uses_durable_intent_pending_and_receipt_without_duplicate_history(boundary: &quot;before-reservation&quot;)" computerName="ASUSPROART" duration="00:00:05.5359600" startTime="2026-09-24T10:51:52.0489765-04:00" endTime="2026-09-24T10:51:57.5487464-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b23baebc-1336-4184-b6a6-fc3cd1eaf468" />
+    <UnitTestResult executionId="64af9e56-9566-4f80-b85a-e5f2295d9f4f" testId="4da316a4-8869-a025-cf51-951e807fa46d" testName="Sonda.Api.Tests.WorkflowTests.Source_commit_ack_loss_replays_once_and_conflicting_revision_rolls_back" computerName="ASUSPROART" duration="00:00:01.0114456" startTime="2026-09-24T10:51:59.6644156-04:00" endTime="2026-09-24T10:52:00.6760096-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="64af9e56-9566-4f80-b85a-e5f2295d9f4f" />
+    <UnitTestResult executionId="4dfb5bfb-446c-4522-85e2-8e8c807d0e03" testId="ab5fd4da-3362-7a7d-cefb-0db266a9c896" testName="Sonda.Api.Tests.QueryTests.Unregistered_simulator_data_does_not_appear_in_dashboard_or_search" computerName="ASUSPROART" duration="00:00:00.9161031" startTime="2026-09-24T10:52:02.7783110-04:00" endTime="2026-09-24T10:52:03.6952740-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4dfb5bfb-446c-4522-85e2-8e8c807d0e03" />
+    <UnitTestResult executionId="6ad3b684-cb7d-4733-a7af-1fb6fa57d855" testId="62a81a8d-e8a3-0558-616e-24421d61d037" testName="Sonda.Api.Tests.QueryTests.Foreign_session_cannot_be_used_to_investigate_runs" computerName="ASUSPROART" duration="00:00:00.6390756" startTime="2026-09-24T10:52:03.6962337-04:00" endTime="2026-09-24T10:52:04.3350540-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6ad3b684-cb7d-4733-a7af-1fb6fa57d855" />
+    <UnitTestResult executionId="67ad9022-c96f-43ce-984b-f6ea703f4650" testId="c10ad77b-45f0-c049-72f8-937744933d15" testName="Sonda.Api.Tests.WorkflowTests.Concurrent_workflow_commands_do_not_bypass_expected_revision" computerName="ASUSPROART" duration="00:00:01.1674260" startTime="2026-09-24T10:52:00.6765975-04:00" endTime="2026-09-24T10:52:01.8444414-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67ad9022-c96f-43ce-984b-f6ea703f4650" />
+    <UnitTestResult executionId="bea7c93f-6ca5-4ea1-ac97-82b427c9da43" testId="8d6e010b-f31c-fe5c-21d1-8ccb15a53355" testName="Sonda.Api.Tests.QueryTests.Search_pages_once_per_evidence_and_rejects_filter_or_team_cursor_reuse" computerName="ASUSPROART" duration="00:00:00.8630118" startTime="2026-09-24T10:52:04.3354065-04:00" endTime="2026-09-24T10:52:05.1990914-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bea7c93f-6ca5-4ea1-ac97-82b427c9da43" />
+    <UnitTestResult executionId="c11eadb3-f1cb-4a8a-9917-c93c19cde9b2" testId="67b47436-a588-4e13-15e2-f0082f72bcfd" testName="Sonda.Api.Tests.QueryTests.Search_literal_text_identifier_result_and_incident_filters_use_persisted_links" computerName="ASUSPROART" duration="00:00:00.6817628" startTime="2026-09-24T10:52:06.8908975-04:00" endTime="2026-09-24T10:52:07.5730238-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c11eadb3-f1cb-4a8a-9917-c93c19cde9b2" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Sonda.Api.Tests.WorkflowTests.Concurrent_workflow_commands_do_not_bypass_expected_revision" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="c10ad77b-45f0-c049-72f8-937744933d15">
+      <Execution id="67ad9022-c96f-43ce-984b-f6ea703f4650" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.WorkflowTests" name="Concurrent_workflow_commands_do_not_bypass_expected_revision" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.QueryTests.Search_pages_once_per_evidence_and_rejects_filter_or_team_cursor_reuse" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="8d6e010b-f31c-fe5c-21d1-8ccb15a53355">
+      <Execution id="bea7c93f-6ca5-4ea1-ac97-82b427c9da43" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.QueryTests" name="Search_pages_once_per_evidence_and_rejects_filter_or_team_cursor_reuse" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.WorkflowTests.Crash_retry_uses_durable_intent_pending_and_receipt_without_duplicate_history(boundary: &quot;after-core-commit&quot;)" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="b9d81f0b-75da-4d60-55ed-bf6ef2e2c01b">
+      <Execution id="1ffc770d-732e-4a46-bac4-e35ddf110357" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.WorkflowTests" name="Crash_retry_uses_durable_intent_pending_and_receipt_without_duplicate_history" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.QueryTests.Dashboard_matches_accepted_mixed_order_fixture" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="256e51dc-3e0e-4a5a-6548-7651e4c18480">
+      <Execution id="b7823c63-ea4c-458e-a942-9adafcee4007" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.QueryTests" name="Dashboard_matches_accepted_mixed_order_fixture" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.WorkflowTests.Standalone_owner_fence_and_wrong_host_cannot_be_bypassed_by_workflow" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="0f8c2b0b-9883-1c79-9ffd-75d8bdcc3aad">
+      <Execution id="9bf68558-f524-4dc8-a360-b899cb1324cb" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.WorkflowTests" name="Standalone_owner_fence_and_wrong_host_cannot_be_bypassed_by_workflow" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.ProfileAcceptanceTests.Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="b971f0e7-b588-1c82-5cc4-ba1ef9b4280b">
+      <Execution id="fb907286-f7b4-440e-b9d6-9cfd4a0fa3c9" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.ProfileAcceptanceTests" name="Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.WorkflowTests.Source_commit_ack_loss_replays_once_and_conflicting_revision_rolls_back" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="4da316a4-8869-a025-cf51-951e807fa46d">
+      <Execution id="64af9e56-9566-4f80-b85a-e5f2295d9f4f" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.WorkflowTests" name="Source_commit_ack_loss_replays_once_and_conflicting_revision_rolls_back" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.WorkflowTests.Crash_retry_uses_durable_intent_pending_and_receipt_without_duplicate_history(boundary: &quot;before-reservation&quot;)" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="0bbd066b-f1be-d444-797d-66751abd0b13">
+      <Execution id="b23baebc-1336-4184-b6a6-fc3cd1eaf468" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.WorkflowTests" name="Crash_retry_uses_durable_intent_pending_and_receipt_without_duplicate_history" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.WorkflowTests.Crash_retry_uses_durable_intent_pending_and_receipt_without_duplicate_history(boundary: &quot;pending-before-interpretation&quot;)" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="35f535f6-877b-9c1b-0069-1a96a17f7b9f">
+      <Execution id="80a8b88b-1567-40e5-bbc6-2728d231eac9" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.WorkflowTests" name="Crash_retry_uses_durable_intent_pending_and_receipt_without_duplicate_history" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.QueryTests.Search_literal_text_identifier_result_and_incident_filters_use_persisted_links" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="67b47436-a588-4e13-15e2-f0082f72bcfd">
+      <Execution id="c11eadb3-f1cb-4a8a-9917-c93c19cde9b2" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.QueryTests" name="Search_literal_text_identifier_result_and_incident_filters_use_persisted_links" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.QueryTests.Late_processing_uses_processing_day_for_volume_and_event_day_for_health" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="f1534880-ac65-ccc6-8c55-22f4c8e4eabb">
+      <Execution id="f6da4a05-e076-4fe1-aed9-0a8955bf7008" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.QueryTests" name="Late_processing_uses_processing_day_for_volume_and_event_day_for_health" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.QueryTests.Unregistered_simulator_data_does_not_appear_in_dashboard_or_search" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="ab5fd4da-3362-7a7d-cefb-0db266a9c896">
+      <Execution id="4dfb5bfb-446c-4522-85e2-8e8c807d0e03" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.QueryTests" name="Unregistered_simulator_data_does_not_appear_in_dashboard_or_search" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.QueryTests.Foreign_session_cannot_be_used_to_investigate_runs" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="62a81a8d-e8a3-0558-616e-24421d61d037">
+      <Execution id="6ad3b684-cb7d-4733-a7af-1fb6fa57d855" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.QueryTests" name="Foreign_session_cannot_be_used_to_investigate_runs" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.QueryTests.Ignore_evidence_remains_searchable_and_invalid_windows_and_tampered_cursors_fail" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="b4238c05-da30-87db-7f57-25888484f6eb">
+      <Execution id="b1325842-b3a8-4cd8-92b2-56bd12d36a86" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.QueryTests" name="Ignore_evidence_remains_searchable_and_invalid_windows_and_tampered_cursors_fail" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="f1534880-ac65-ccc6-8c55-22f4c8e4eabb" executionId="f6da4a05-e076-4fe1-aed9-0a8955bf7008" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="256e51dc-3e0e-4a5a-6548-7651e4c18480" executionId="b7823c63-ea4c-458e-a942-9adafcee4007" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4238c05-da30-87db-7f57-25888484f6eb" executionId="b1325842-b3a8-4cd8-92b2-56bd12d36a86" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="35f535f6-877b-9c1b-0069-1a96a17f7b9f" executionId="80a8b88b-1567-40e5-bbc6-2728d231eac9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f8c2b0b-9883-1c79-9ffd-75d8bdcc3aad" executionId="9bf68558-f524-4dc8-a360-b899cb1324cb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b971f0e7-b588-1c82-5cc4-ba1ef9b4280b" executionId="fb907286-f7b4-440e-b9d6-9cfd4a0fa3c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b9d81f0b-75da-4d60-55ed-bf6ef2e2c01b" executionId="1ffc770d-732e-4a46-bac4-e35ddf110357" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0bbd066b-f1be-d444-797d-66751abd0b13" executionId="b23baebc-1336-4184-b6a6-fc3cd1eaf468" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4da316a4-8869-a025-cf51-951e807fa46d" executionId="64af9e56-9566-4f80-b85a-e5f2295d9f4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ab5fd4da-3362-7a7d-cefb-0db266a9c896" executionId="4dfb5bfb-446c-4522-85e2-8e8c807d0e03" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="62a81a8d-e8a3-0558-616e-24421d61d037" executionId="6ad3b684-cb7d-4733-a7af-1fb6fa57d855" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c10ad77b-45f0-c049-72f8-937744933d15" executionId="67ad9022-c96f-43ce-984b-f6ea703f4650" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8d6e010b-f31c-fe5c-21d1-8ccb15a53355" executionId="bea7c93f-6ca5-4ea1-ac97-82b427c9da43" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="67b47436-a588-4e13-15e2-f0082f72bcfd" executionId="c11eadb3-f1cb-4a8a-9917-c93c19cde9b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="14" executed="14" passed="13" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.1+bf6400fd51 (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.24]   Discovering: Sonda.Api.Tests&#xD;
+[xUnit.net 00:00:00.34]   Discovered:  Sonda.Api.Tests&#xD;
+[xUnit.net 00:00:00.39]   Starting:    Sonda.Api.Tests&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\SaProductions\Sonda\src\Sonda.Server&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:23.92]       System.Text.Json.JsonException : Explicit null is not supported in sample input at $.profiles[0].policy.readFreshness; omit optional properties instead.&#xD;
+[xUnit.net 00:00:23.93]       Stack Trace:&#xD;
+[xUnit.net 00:00:23.93]         C:\SaProductions\Sonda\src\Sonda.Application\Simulation\SimulationJson.cs(40,0): at Sonda.Application.Simulation.SimulationJson.RejectNull(JsonElement element, String path)&#xD;
+[xUnit.net 00:00:23.93]         C:\SaProductions\Sonda\src\Sonda.Application\Simulation\SimulationJson.cs(42,0): at Sonda.Application.Simulation.SimulationJson.RejectNull(JsonElement element, String path)&#xD;
+[xUnit.net 00:00:23.93]         C:\SaProductions\Sonda\src\Sonda.Application\Simulation\SimulationJson.cs(42,0): at Sonda.Application.Simulation.SimulationJson.RejectNull(JsonElement element, String path)&#xD;
+[xUnit.net 00:00:23.93]         C:\SaProductions\Sonda\src\Sonda.Application\Simulation\SimulationJson.cs(46,0): at Sonda.Application.Simulation.SimulationJson.RejectNull(JsonElement element, String path)&#xD;
+[xUnit.net 00:00:23.93]         C:\SaProductions\Sonda\src\Sonda.Application\Simulation\SimulationJson.cs(42,0): at Sonda.Application.Simulation.SimulationJson.RejectNull(JsonElement element, String path)&#xD;
+[xUnit.net 00:00:23.93]         C:\SaProductions\Sonda\src\Sonda.Application\Simulation\SimulationJson.cs(31,0): at Sonda.Application.Simulation.SimulationJson.Deserialize[T](String json)&#xD;
+[xUnit.net 00:00:23.93]         C:\SaProductions\Sonda\tests\Sonda.Api.Tests\ProfileAcceptanceTests.cs(43,0): at Sonda.Api.Tests.ProfileAcceptanceTests.Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles()&#xD;
+[xUnit.net 00:00:23.93]         C:\SaProductions\Sonda\tests\Sonda.Api.Tests\ProfileAcceptanceTests.cs(50,0): at Sonda.Api.Tests.ProfileAcceptanceTests.Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles()&#xD;
+[xUnit.net 00:00:23.93]         C:\SaProductions\Sonda\tests\Sonda.Api.Tests\ProfileAcceptanceTests.cs(61,0): at Sonda.Api.Tests.ProfileAcceptanceTests.Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles()&#xD;
+[xUnit.net 00:00:23.93]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:24.27]   Finished:    Sonda.Api.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="ASUSPROART" outcome="Error" timestamp="2026-09-24T10:52:10.8222426-04:00">
+        <Text>[xUnit.net 00:00:23.92]     Sonda.Api.Tests.ProfileAcceptanceTests.Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

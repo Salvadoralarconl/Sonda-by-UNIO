@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../Sonda.Application/Sonda.Application.csproj" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.4"><PrivateAssets>all</PrivateAssets></PackageReference>
+    <EmbeddedResource Include="Persistence/Migrations/001_initial.sql" />
+    <EmbeddedResource Include="Persistence/Migrations/002_policy_constraints.sql" />
+    <EmbeddedResource Include="Persistence/Migrations/003_acquisition_constraints.sql" />
+  </ItemGroup>
+</Project>

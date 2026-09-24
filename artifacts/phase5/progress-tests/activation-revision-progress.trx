@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="68a83156-d391-43f7-a1e2-9bc5863f2167" name="sapro@ASUSPROART 2026-09-24 10:59:28" runUser="ASUSPROART\sapro" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-24T10:59:28.1260374-04:00" queuing="2026-09-24T10:59:28.1260381-04:00" start="2026-09-24T10:59:15.2735048-04:00" finish="2026-09-24T10:59:28.1408311-04:00" />
+  <TestSettings name="default" id="aa5b2b2f-5e5a-4389-8831-254dd9e28cb8">
+    <Deployment runDeploymentRoot="sapro_ASUSPROART_2026-09-24_10_59_28" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="8873cfee-cd80-4e03-ad57-520f90af5371" testId="c9410c4c-fabe-ea17-84ab-7e2d7da1e2a0" testName="Sonda.Api.Tests.WorkflowTests.Activation_recovers_reserved_file_input_and_pins_open_cycle_to_old_version" computerName="ASUSPROART" duration="00:00:06.2319829" startTime="2026-09-24T10:59:21.4372382-04:00" endTime="2026-09-24T10:59:27.6381571-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8873cfee-cd80-4e03-ad57-520f90af5371" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Sonda.Api.Tests.WorkflowTests.Activation_recovers_reserved_file_input_and_pins_open_cycle_to_old_version" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="c9410c4c-fabe-ea17-84ab-7e2d7da1e2a0">
+      <Execution id="8873cfee-cd80-4e03-ad57-520f90af5371" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.WorkflowTests" name="Activation_recovers_reserved_file_input_and_pins_open_cycle_to_old_version" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="c9410c4c-fabe-ea17-84ab-7e2d7da1e2a0" executionId="8873cfee-cd80-4e03-ad57-520f90af5371" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.1+bf6400fd51 (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.42]   Discovering: Sonda.Api.Tests&#xD;
+[xUnit.net 00:00:00.51]   Discovered:  Sonda.Api.Tests&#xD;
+[xUnit.net 00:00:00.55]   Starting:    Sonda.Api.Tests&#xD;
+[xUnit.net 00:00:11.75]   Finished:    Sonda.Api.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

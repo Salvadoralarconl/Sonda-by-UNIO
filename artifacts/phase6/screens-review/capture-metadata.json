@@ -1,0 +1,54 @@
+{
+  "reviewStatus": "UNREVIEWED — NOT A FROZEN BASELINE",
+  "viewport": {
+    "width": 1366,
+    "height": 736
+  },
+  "source": "deterministic API presentation fixtures; real integration evidence is separate",
+  "serverInstant": "2026-09-24T14:00:00Z",
+  "measurements": [
+    {
+      "page": "home",
+      "workspace": {
+        "x": 73.59375,
+        "y": 10.9375,
+        "width": 910.40625,
+        "height": 712.71875
+      },
+      "rightPanel": {
+        "x": 995,
+        "y": 10.9375,
+        "width": 357,
+        "height": 712.71875
+      },
+      "font": "Inter, sans-serif"
+    },
+    {
+      "page": "monitoring",
+      "workspace": {
+        "x": 73.59375,
+        "y": 10.9375,
+        "width": 1280.609375,
+        "height": 712.71875
+      },
+      "rightPanel": null,
+      "font": "Inter, sans-serif"
+    },
+    {
+      "page": "search",
+      "workspace": {
+        "x": 73.59375,
+        "y": 10.9375,
+        "width": 910.40625,
+        "height": 712.71875
+      },
+      "rightPanel": {
+        "x": 995,
+        "y": 10.9375,
+        "width": 357,
+        "height": 712.71875
+      },
+      "font": "Inter, sans-serif"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "consoleStartStopRestart": true,
+  "leaseReleased": true,
+  "epochs": 2,
+  "checkpoint": 42,
+  "manifestValidationReads": 0,
+  "installedService": "Environmental blocker: non-elevated session; not tested",
+  "first": "info: Microsoft.Hosting.Lifetime[0]\r\n      Application started. Press Ctrl\u002BC to shut down.\r\ninfo: Microsoft.Hosting.Lifetime[0]\r\n      Hosting environment: Production\r\ninfo: Microsoft.Hosting.Lifetime[0]\r\n      Content root path: C:\\SaProductions\\Sonda\\tests\\Sonda.Persistence.Tests\\bin\\Release\\net10.0\r\ninfo: AcquisitionWorker[0]\r\n      Source file state Following: records 1, bytes 20, backlog 0\r\ninfo: AcquisitionWorker[0]\r\n      Deadline evaluation for cam: CompletenessUnproven\r\ninfo: Microsoft.Hosting.Lifetime[0]\r\n      Application is shutting down...\r\n",
+  "second": "info: Microsoft.Hosting.Lifetime[0]\r\n      Application started. Press Ctrl\u002BC to shut down.\r\ninfo: Microsoft.Hosting.Lifetime[0]\r\n      Hosting environment: Production\r\ninfo: Microsoft.Hosting.Lifetime[0]\r\n      Content root path: C:\\SaProductions\\Sonda\\tests\\Sonda.Persistence.Tests\\bin\\Release\\net10.0\r\ninfo: AcquisitionWorker[0]\r\n      Source file state Following: records 1, bytes 22, backlog 0\r\ninfo: AcquisitionWorker[0]\r\n      Deadline evaluation for cam: CompletenessUnproven\r\ninfo: Microsoft.Hosting.Lifetime[0]\r\n      Application is shutting down...\r\n"
+}

@@ -1,0 +1,28 @@
+  Sonda.Domain -> C:\SaProductions\Sonda\src\Sonda.Domain\bin\Release\net10.0\Sonda.Domain.dll
+  Sonda.Application -> C:\SaProductions\Sonda\src\Sonda.Application\bin\Release\net10.0\Sonda.Application.dll
+  Sonda.Infrastructure -> C:\SaProductions\Sonda\src\Sonda.Infrastructure\bin\Release\net10.0\Sonda.Infrastructure.dll
+  Sonda.Phase3.Tests -> C:\SaProductions\Sonda\tests\Sonda.Phase3.Tests\bin\Release\net10.0\Sonda.Phase3.Tests.dll
+  Sonda.Phase1.Tests -> C:\SaProductions\Sonda\tests\Sonda.Phase1.Tests\bin\Release\net10.0\Sonda.Phase1.Tests.dll
+Test run for C:\SaProductions\Sonda\tests\Sonda.Phase3.Tests\bin\Release\net10.0\Sonda.Phase3.Tests.dll (.NETCoreApp,Version=v10.0)
+Test run for C:\SaProductions\Sonda\tests\Sonda.Phase1.Tests\bin\Release\net10.0\Sonda.Phase1.Tests.dll (.NETCoreApp,Version=v10.0)
+  Sonda.Acquisition.Tests -> C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll
+Test run for C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+A total of 1 test files matched the specified pattern.
+  Sonda.PersistenceHarness -> C:\SaProductions\Sonda\tools\Sonda.PersistenceHarness\bin\Release\net10.0\Sonda.PersistenceHarness.dll
+A total of 1 test files matched the specified pattern.
+  Sonda.Persistence.Tests -> C:\SaProductions\Sonda\tests\Sonda.Persistence.Tests\bin\Release\net10.0\Sonda.Persistence.Tests.dll
+Test run for C:\SaProductions\Sonda\tests\Sonda.Persistence.Tests\bin\Release\net10.0\Sonda.Persistence.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: C:\SaProductions\Sonda\artifacts\phase5\legacy-tests\sapro_ASUSPROART_2026-09-24_09_18_56_net10.0.trx
+
+Passed!  - Failed:     0, Passed:    42, Skipped:     0, Total:    42, Duration: 581 ms - Sonda.Phase1.Tests.dll (net10.0)
+Results File: C:\SaProductions\Sonda\artifacts\phase5\legacy-tests\sapro_ASUSPROART_2026-09-24_09_18_57_net10.0.trx
+
+Passed!  - Failed:     0, Passed:    11, Skipped:     0, Total:    11, Duration: 245 ms - Sonda.Acquisition.Tests.dll (net10.0)
+Results File: C:\SaProductions\Sonda\artifacts\phase5\legacy-tests\sapro_ASUSPROART_2026-09-24_09_18_56_net10.0[1].trx
+
+Passed!  - Failed:     0, Passed:    76, Skipped:     0, Total:    76, Duration: 1 s - Sonda.Phase3.Tests.dll (net10.0)
+Results File: C:\SaProductions\Sonda\artifacts\phase5\legacy-tests\sapro_ASUSPROART_2026-09-24_09_19_05_net10.0.trx
+
+Passed!  - Failed:     0, Passed:   180, Skipped:     0, Total:   180, Duration: 2 m 6 s - Sonda.Persistence.Tests.dll (net10.0)

@@ -1,0 +1,299 @@
+{
+  "profile": {
+    "policy": {
+      "revision": 2,
+      "undefinedApplicationSeverity": "Error",
+      "cycleMode": "Serial",
+      "unexpectedBegin": "RejectAmbiguousBegin",
+      "deadlineClock": "Processing",
+      "orderFallbackEnabled": false,
+      "correlationExpression": "",
+      "correlationCapture": "cycle",
+      "correlationEpoch": "",
+      "routingContract": "routing-v1",
+      "recoveryCompatibility": "recovery-v1",
+      "applicationWideRules": [],
+      "lateObservationRules": [],
+      "readFreshness": "00:02:00",
+      "runCadence": null
+    },
+    "teamId": "phase3-fixtures",
+    "applicationId": "application",
+    "id": "profile",
+    "version": 1,
+    "name": "Synthetic revision-2",
+    "streamKey": "default",
+    "completionMode": "TerminalMarker",
+    "parsing": {
+      "entryPattern": "",
+      "timestampFormat": "",
+      "timestampHasDate": true,
+      "timestampHasOffset": false,
+      "sourceTimeZoneId": "UTC"
+    },
+    "identifier": {
+      "kind": "KeyValue",
+      "name": "Transaction ID",
+      "namespace": "order",
+      "expression": "OrderID",
+      "captureName": "id",
+      "caseSensitive": false
+    },
+    "cycleFailureSeverity": "Error",
+    "orderFailureSeverity": "Warning",
+    "undefinedOrderSeverity": "Warning",
+    "cycleTiming": {
+      "expectedDuration": null,
+      "gracePeriod": null,
+      "fallbackTimeout": null,
+      "requested": false
+    },
+    "orderTiming": {
+      "expectedDuration": null,
+      "gracePeriod": null,
+      "fallbackTimeout": null,
+      "requested": false
+    },
+    "rules": [
+      {
+        "key": "b",
+        "role": "CycleBegin",
+        "target": "Application",
+        "enabled": true,
+        "priority": 0,
+        "classification": null,
+        "conditionKey": "",
+        "recovery": "ManualOnly",
+        "alternatives": [
+          {
+            "kind": "Contains",
+            "expression": "APP BEGIN",
+            "caseSensitive": false
+          }
+        ]
+      },
+      {
+        "key": "s",
+        "role": "CycleSuccess",
+        "target": "Application",
+        "enabled": true,
+        "priority": 0,
+        "classification": null,
+        "conditionKey": "",
+        "recovery": "ManualOnly",
+        "alternatives": [
+          {
+            "kind": "Contains",
+            "expression": "APP SUCCESS",
+            "caseSensitive": false
+          }
+        ]
+      },
+      {
+        "key": "f",
+        "role": "CycleFailure",
+        "target": "Application",
+        "enabled": true,
+        "priority": 0,
+        "classification": null,
+        "conditionKey": "",
+        "recovery": "ManualOnly",
+        "alternatives": [
+          {
+            "kind": "Contains",
+            "expression": "APP FAILURE",
+            "caseSensitive": false
+          }
+        ]
+      },
+      {
+        "key": "e",
+        "role": "CycleEnd",
+        "target": "Application",
+        "enabled": true,
+        "priority": 0,
+        "classification": null,
+        "conditionKey": "",
+        "recovery": "ManualOnly",
+        "alternatives": [
+          {
+            "kind": "Contains",
+            "expression": "APP END",
+            "caseSensitive": false
+          }
+        ]
+      },
+      {
+        "key": "ob",
+        "role": "OrderBegin",
+        "target": "Order",
+        "enabled": true,
+        "priority": 0,
+        "classification": null,
+        "conditionKey": "",
+        "recovery": "ManualOnly",
+        "alternatives": [
+          {
+            "kind": "Contains",
+            "expression": "ORDER BEGIN",
+            "caseSensitive": false
+          }
+        ]
+      },
+      {
+        "key": "os",
+        "role": "OrderSuccess",
+        "target": "Order",
+        "enabled": true,
+        "priority": 0,
+        "classification": null,
+        "conditionKey": "",
+        "recovery": "ManualOnly",
+        "alternatives": [
+          {
+            "kind": "Contains",
+            "expression": "ORDER SUCCESS",
+            "caseSensitive": false
+          }
+        ]
+      },
+      {
+        "key": "of",
+        "role": "OrderFailure",
+        "target": "Order",
+        "enabled": true,
+        "priority": 0,
+        "classification": null,
+        "conditionKey": "",
+        "recovery": "ManualOnly",
+        "alternatives": [
+          {
+            "kind": "Contains",
+            "expression": "ORDER FAILURE",
+            "caseSensitive": false
+          }
+        ]
+      },
+      {
+        "key": "diagnostic",
+        "role": "Detection",
+        "target": "Application",
+        "enabled": true,
+        "priority": 10,
+        "classification": "Error",
+        "conditionKey": "diagnostic",
+        "recovery": "NextSuccessfulRun",
+        "alternatives": [
+          {
+            "kind": "Contains",
+            "expression": "DIAGNOSTIC",
+            "caseSensitive": false
+          }
+        ]
+      }
+    ]
+  },
+  "seed": "later-clean-recovery",
+  "serverTimeZoneId": "America/New_York",
+  "asOf": "2026-09-23T16:00:00+00:00",
+  "commands": [
+    {
+      "id": "842d5fe8-6486-e7fb-7994-9055877d24bb",
+      "sequence": 1,
+      "kind": "Evidence",
+      "processedAt": "2026-09-23T14:00:01+00:00",
+      "effectiveAt": "0001-01-01T00:00:00+00:00",
+      "raw": "APP BEGIN",
+      "evidenceKey": "fixture:1",
+      "sampleDate": null,
+      "frontier": null,
+      "incidentId": "",
+      "expectedRevision": 0,
+      "targetStatus": "Active",
+      "actor": "",
+      "reason": "",
+      "profile": null,
+      "source": "",
+      "readSuccess": false
+    },
+    {
+      "id": "37c8890a-5454-b057-8d73-8f5a56ea5430",
+      "sequence": 2,
+      "kind": "Evidence",
+      "processedAt": "2026-09-23T14:00:02+00:00",
+      "effectiveAt": "0001-01-01T00:00:00+00:00",
+      "raw": "DIAGNOSTIC",
+      "evidenceKey": "fixture:2",
+      "sampleDate": null,
+      "frontier": null,
+      "incidentId": "",
+      "expectedRevision": 0,
+      "targetStatus": "Active",
+      "actor": "",
+      "reason": "",
+      "profile": null,
+      "source": "",
+      "readSuccess": false
+    },
+    {
+      "id": "7f082424-d338-a1cf-c3d1-8afd1fdf56d1",
+      "sequence": 3,
+      "kind": "Evidence",
+      "processedAt": "2026-09-23T14:00:03+00:00",
+      "effectiveAt": "0001-01-01T00:00:00+00:00",
+      "raw": "APP SUCCESS",
+      "evidenceKey": "fixture:3",
+      "sampleDate": null,
+      "frontier": null,
+      "incidentId": "",
+      "expectedRevision": 0,
+      "targetStatus": "Active",
+      "actor": "",
+      "reason": "",
+      "profile": null,
+      "source": "",
+      "readSuccess": false
+    },
+    {
+      "id": "c98d8e1b-040f-324b-1a72-ab89af25e6e2",
+      "sequence": 4,
+      "kind": "Evidence",
+      "processedAt": "2026-09-23T14:00:04+00:00",
+      "effectiveAt": "0001-01-01T00:00:00+00:00",
+      "raw": "APP BEGIN",
+      "evidenceKey": "fixture:4",
+      "sampleDate": null,
+      "frontier": null,
+      "incidentId": "",
+      "expectedRevision": 0,
+      "targetStatus": "Active",
+      "actor": "",
+      "reason": "",
+      "profile": null,
+      "source": "",
+      "readSuccess": false
+    },
+    {
+      "id": "e2257b10-b10b-61f4-e0bf-60b65777e01f",
+      "sequence": 5,
+      "kind": "Evidence",
+      "processedAt": "2026-09-23T14:00:05+00:00",
+      "effectiveAt": "0001-01-01T00:00:00+00:00",
+      "raw": "APP SUCCESS",
+      "evidenceKey": "fixture:5",
+      "sampleDate": null,
+      "frontier": null,
+      "incidentId": "",
+      "expectedRevision": 0,
+      "targetStatus": "Active",
+      "actor": "",
+      "reason": "",
+      "profile": null,
+      "source": "",
+      "readSuccess": false
+    }
+  ],
+  "requiredSources": [
+    "required"
+  ]
+}

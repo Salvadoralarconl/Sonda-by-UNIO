@@ -1,0 +1,35 @@
+{
+  "fixture": "open-out-of-order",
+  "isolatedTeam": "matrix-3cc07e54992b464d937cb031867be131",
+  "tracesEqual": true,
+  "restartedAfterEveryCommand": true,
+  "replayUnchanged": true,
+  "expectedMetrics": {
+    "successfulEvaluatedRuns": 0,
+    "totalEvaluatedRuns": 0,
+    "systemHealthPercentage": null,
+    "completedOrderRunsProcessedToday": 0,
+    "fiveDayHistory": [
+      {
+        "date": "2026-09-19",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-20",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-21",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-22",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-23",
+        "completedOrderRunsProcessedCount": 0
+      }
+    ]
+  }
+}

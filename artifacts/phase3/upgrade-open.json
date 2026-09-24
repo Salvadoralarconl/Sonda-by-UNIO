@@ -1,0 +1,10 @@
+{
+  "initialMigration": "20260924023552_DurablePersistence",
+  "additiveMigration": "20260924032911_InterpretationPolicies",
+  "legacyTablesCompared": 32,
+  "allLegacyRowsUnchanged": true,
+  "reapplyNoOp": true,
+  "replayUnchanged": true,
+  "continuationEqual": true,
+  "snapshotHash": "16DB4CDAA1DE94AD681C2597FADF2E0A9DA57F1EE6430954B92A9729ABA31D0A"
+}

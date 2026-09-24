@@ -1,0 +1,23 @@
+{
+  "fence": {
+    "scope": {
+      "teamId": "policy-d3d6027052a64e94bb966a4cd24567cb",
+      "sessionId": "d91af0c1-cbdb-45fa-a7a3-fadf895ba540",
+      "applicationId": "app-cam"
+    },
+    "instanceId": "c1a2a9bc-dbe7-40c4-80d0-27615eb3ce8d",
+    "epoch": 1
+  },
+  "generation": "4b1db44c-cd44-410b-a213-6cc2aa8c5bb2",
+  "record": {
+    "start": 99,
+    "end": 120,
+    "bytes": "T3JkZXIgc2VudCBPcmRlcklEPXgK",
+    "text": "Order sent OrderID=x",
+    "terminator": "LF",
+    "bomBytes": 0,
+    "hash": "3D5C093E0BA1F6DD4407B5C05E83E68AC0256D1A68BA39AD42EA587445F0632A"
+  },
+  "processedAt": "2026-09-24T21:25:41.8611215+00:00",
+  "byteFile": "C:\\SaProductions\\Sonda\\artifacts\\phase4\\crash-after-reservation-synthetic.log"
+}

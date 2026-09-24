@@ -1,0 +1,1285 @@
+SONDA should know almost nothing about a log format by default. The user configures the parameters that teach SONDA where the logs are, how an application run starts/ends, how transactions are identified, what success/failure looks like, and which messages matter.
+
+Below is the detailed specification I would give Desktop.
+
+SONDA User-Configured Parameters
+
+Every monitored application in SONDA has its own Profile.
+
+A Profile is the complete set of instructions SONDA uses to interpret that application's logs.
+
+For example, CAM, UNITELLER, DIGICEL, and TERRAPAY would each have separate profiles because their logs may use completely different formats.
+
+A Profile should contain these major configuration areas:
+
+Area	Purpose
+General	Identifies the monitored application/profile
+File Locations	Tells SONDA where logs are stored
+Log Parsing	Tells SONDA how to understand individual log lines
+Application Run Cycle	Defines one execution of the application
+Order/Transaction Grouping	Defines how multiple lines become one transaction
+Identifier Extraction	Defines how SONDA finds transaction IDs
+Order Result Detection	Defines Success, Failure, and Undefined
+Detection Filters	Defines Error, Warning, and Ignore patterns
+Matching Options	Controls how patterns are evaluated
+Health Behavior	Defines how results affect current health
+Resolution Behavior	Defines how subsequent success resolves incidents
+1. General Profile Parameters
+
+The first section identifies what SONDA is monitoring.
+
+Profile Name
+
+Example:
+
+CAM
+
+This is the human-readable name of the monitored application.
+
+It appears throughout SONDA in places such as:
+
+Logs Monitored
+
+Error Logs
+
+Incident details
+
+Search results
+
+Historical reports
+
+Internally, SONDA should also assign the profile a permanent database ID.
+
+The display name can change without breaking historical relationships.
+
+Description
+
+Optional text describing what the application does.
+
+Example:
+
+Processes CAM money transfer orders.
+
+This does not affect detection logic.
+
+It exists to help administrators understand the purpose of the profile.
+
+Profile Enabled
+
+Boolean:
+
+Enabled / Disabled
+
+When Enabled, SONDA actively monitors the configured log sources.
+
+When Disabled, SONDA stops ingesting new logs for the profile without deleting existing data.
+
+Historical:
+
+Application Runs
+
+Order Runs
+
+Incidents
+
+Metrics
+
+should remain available.
+
+2. File Location Parameters
+
+This tells SONDA where the application's logs exist.
+
+Example:
+
+C:\Girosol\CAM\Logs\
+
+or:
+
+\\SERVER01\CAM\logs\
+
+or eventually:
+
+/var/log/cam/
+
+SONDA should support multiple locations per profile.
+
+Each location should be stored as its own Log Source.
+
+File Path
+
+The path to the directory or log file.
+
+Example:
+
+C:\Apps\CAM\logs\
+
+This tells SONDA where to monitor.
+
+File Name / File Pattern
+
+The user may point SONDA toward:
+
+a specific file
+
+or
+
+a set of files.
+
+Examples:
+
+cam.log
+
+*.log
+
+CAM_*.txt
+
+This allows applications that generate new daily files to continue being monitored.
+
+For example:
+
+CAM_2026-09-23.log
+
+CAM_2026-09-24.log
+
+could both match:
+
+CAM_*.log
+
+Include Subdirectories
+
+Optional:
+
+Yes / No
+
+If enabled, SONDA also monitors matching files inside folders underneath the configured path.
+
+Log Source Enabled
+
+Each File Location should independently support:
+
+Enabled / Disabled
+
+This lets the administrator temporarily stop monitoring one source without disabling the entire application profile.
+
+3. Log Parsing Parameters
+
+Before SONDA can detect Runs or Orders, it needs to understand the structure of each log entry.
+
+A real log might look like:
+
+2026-09-23 10:31:54 INFO Finding order OrderID=93822
+
+SONDA should be able to extract useful pieces such as:
+
+Timestamp
+
+Message
+
+Level
+
+Transaction ID
+
+Other metadata
+
+The exact format may vary by application.
+
+Timestamp Format
+
+The user tells SONDA how timestamps appear.
+
+Example:
+
+YYYY-MM-DD HH:mm:ss
+
+This allows SONDA to convert:
+
+2026-09-23 10:31:54
+
+into an actual timestamp.
+
+This timestamp is then used for:
+
+chronological ordering
+
+incident creation time
+
+run duration
+
+order duration
+
+history
+
+daily metrics
+
+Logs Today calculations.
+
+Message Extraction
+
+The user may define where the actual message begins.
+
+For example:
+
+Raw:
+
+2026-09-23 10:31:54 INFO Finding order OrderID=93822
+
+Parsed:
+
+Timestamp:
+2026-09-23 10:31:54
+
+Level:
+INFO
+
+Message:
+Finding order OrderID=93822
+
+SONDA should perform detection primarily against the parsed message while preserving the complete raw log entry.
+
+4. Pattern Configuration
+
+Most SONDA detection rules rely on Patterns.
+
+A Pattern tells SONDA:
+
+"If a log entry matches this condition, treat it as meaning something."
+
+Patterns should support several matching methods.
+
+Contains
+
+Example:
+
+Finding order
+
+This matches:
+
+Finding order 93822
+
+Finding order from database
+
+and any other log containing that phrase.
+
+This should probably be the easiest/default option for normal users.
+
+Exact Match
+
+Example:
+
+Application completed successfully
+
+Only matches when the configured portion equals that value.
+
+Useful when the log format is very predictable.
+
+Regular Expression
+
+Advanced mode.
+
+Example:
+
+OrderID=(\d+)
+
+Regex allows SONDA to extract or recognize values from more complicated logs.
+
+Normal users should not need regex for every configuration.
+
+5. Multiple Pattern Alternatives
+
+SONDA must allow more than one Pattern for the same logical event.
+
+For example, CAM might have several messages that all mean an Application Run started.
+
+The user could configure:
+
+Application Start:
+
+CAM process started
+
+OR
+
+Starting CAM service
+
+OR
+
+Beginning payer processing
+
+All three mean:
+
+A new Application Run Cycle has begun.
+
+Internally these should be stored as separate Pattern records connected to the same Rule.
+
+This matters because different versions of an application might produce slightly different logs.
+
+6. Application Run Cycle Parameters
+
+An Application Run Cycle represents one complete execution of the monitored application.
+
+This is one of SONDA's most important concepts.
+
+The user teaches SONDA how to recognize these cycles.
+
+Application Run Begin
+
+The user enters one or more patterns indicating that a new run has started.
+
+Example:
+
+CAM process started
+
+When SONDA detects this:
+
+SONDA creates a new Application Run Cycle.
+
+Conceptually:
+
+ApplicationRun #1408
+
+Status initially:
+
+Running
+
+Start time:
+
+timestamp from the matching log.
+
+All subsequent relevant logs can now be associated with this Application Run until the cycle completes.
+
+7. Application Run Success
+
+One or more patterns representing successful completion.
+
+Example:
+
+CAM process completed successfully
+
+When this appears during an active Application Run:
+
+SONDA closes that Application Run.
+
+Detection Result becomes:
+
+Success
+
+End timestamp is recorded.
+
+Duration can be calculated.
+
+The successful cycle contributes positively toward System Health.
+
+It may also automatically resolve a previous application-level error from the previous failed cycle.
+
+8. Application Run Failure
+
+Patterns representing application-level failure.
+
+Example:
+
+CAM process terminated
+
+or:
+
+Unable to connect to database
+
+if that condition is configured as an application-level failure.
+
+When matched during an Application Run:
+
+Detection Result becomes:
+
+Failure
+
+SONDA generates or updates an incident.
+
+Typical Severity:
+
+Error
+
+Typical Incident Status:
+
+Active
+
+Application current state becomes:
+
+Error
+
+The failed Application Run counts as unsuccessful in today's System Health calculation.
+
+9. Optional Application Run End
+
+Some applications may have an explicit end message independent of success or failure.
+
+For example:
+
+CAM execution finished
+
+SONDA could use:
+
+Run Begin
+
+Run End
+
+and then examine messages within the run to determine whether it succeeded or failed.
+
+This should therefore be supported separately from Success/Failure where necessary.
+
+For simpler logs, the Success or Failure event itself can also act as the Run End.
+
+10. Order / Transaction Grouping
+
+Within one Application Run, multiple business transactions may occur.
+
+SONDA calls each reconstructed transaction an:
+
+Order Run
+
+An Order Run consists of all related log entries belonging to the same business operation.
+
+Example:
+
+Finding order OrderID=93822
+
+Getting customer information OrderID=93822
+
+Connecting to payer OrderID=93822
+
+Sending transaction OrderID=93822
+
+Order sent OrderID=93822
+
+Instead of showing these as five unrelated logs, SONDA groups them into:
+
+Order Run #93822
+
+11. Order Identifier Parameter
+
+The user must configure how SONDA identifies transactions.
+
+This is one of the most important configuration parameters.
+
+The identifier could be:
+
+Order ID
+
+Transaction ID
+
+Reference Number
+
+Payment ID
+
+Request ID
+
+Confirmation Number
+
+or something else.
+
+SONDA should not hardcode a field named OrderID.
+
+12. Identifier Name
+
+Human-readable name.
+
+Example:
+
+Order ID
+
+or:
+
+Transaction Number
+
+This is used in the UI.
+
+13. Identifier Extraction Pattern
+
+The user teaches SONDA how to extract the identifier.
+
+Example log:
+
+Finding order OrderID=93822
+
+A configured regex might be:
+
+OrderID=(\d+)
+
+SONDA extracts:
+
+93822
+
+That becomes the grouping key.
+
+Another application might use:
+
+Transaction: ABC992823
+
+so its extraction rule might be completely different.
+
+14. Identifier Scope
+
+SONDA should not automatically assume identifiers are globally unique forever.
+
+Initially the safe relationship is:
+
+Profile + Identifier + Application Run
+
+Example:
+
+CAM
+
+Order:
+93822
+
+Application Run:
+#1408
+
+Together they uniquely identify that particular Order Run occurrence.
+
+SONDA can then examine later Application Runs to determine whether another appearance of 93822 represents a retry.
+
+Eventually identifier scope could become configurable:
+
+Per Application
+
+Per Day
+
+Per Payer
+
+Globally Unique
+
+Custom scope
+
+But until actual GiroSol logs confirm the behavior, SONDA should not assume global uniqueness.
+
+15. Order Run Begin
+
+The user defines one or more patterns indicating that an Order Run has started.
+
+Example:
+
+Finding order
+
+When SONDA detects:
+
+Finding order OrderID=93822
+
+it:
+
+extracts 93822
+
+creates an Order Run
+
+associates it with the current Application Run
+
+stores the matching log as the first Order Run entry.
+
+16. Order Run Success
+
+The user defines patterns representing successful transaction completion.
+
+Example:
+
+Order sent
+
+When SONDA sees:
+
+Order sent OrderID=93822
+
+SONDA:
+
+extracts 93822
+
+finds the open Order Run for 93822
+
+associates the log
+
+sets:
+
+Detection Result:
+Success
+
+records completion timestamp
+
+calculates duration
+
+closes the Order Run.
+
+The Order Run contributes positively to System Health.
+
+17. Order Run Failure
+
+The user defines patterns representing failed transaction completion.
+
+Example:
+
+Unable to send order
+
+When SONDA sees:
+
+Unable to send order OrderID=93822
+
+SONDA:
+
+finds the associated Order Run
+
+sets:
+
+Detection Result:
+Failure
+
+closes the Order Run
+
+creates an Incident if appropriate.
+
+Typically:
+
+Severity:
+Warning
+
+Status:
+Active
+
+because one transaction failed but the application itself may still be functioning.
+
+18. Undefined Order Runs
+
+The user does not manually configure "Undefined" as a log pattern.
+
+Undefined is inferred by SONDA.
+
+Suppose an Application Run contains:
+
+Finding order OrderID=93822
+
+Connecting to payer OrderID=93822
+
+Preparing request OrderID=93822
+
+but SONDA reaches the end of the Application Run without seeing either:
+
+Order Success
+
+or
+
+Order Failure.
+
+SONDA determines:
+
+Detection Result:
+Undefined
+
+That means:
+
+SONDA knows the transaction started, but cannot determine how it ended.
+
+An Incident is created.
+
+Its Incident Status begins:
+
+Active
+
+Its Severity should follow the configured detection/health behavior.
+
+This distinction is important:
+
+Undefined = Detection Result.
+
+It is NOT:
+
+Incident Status.
+
+19. Error / Warning / Ignore Filters
+
+Each Profile contains user-configured detection filters.
+
+These teach SONDA what specific messages mean.
+
+Each rule contains:
+
+Pattern
+
+Match Type
+
+Classification
+
+Optional description.
+
+Example:
+
+Pattern:
+
+Database connection failed
+
+Classification:
+
+Error
+
+Another:
+
+Pattern:
+
+Unable to send order
+
+Classification:
+
+Warning
+
+Another:
+
+Pattern:
+
+Retrying request
+
+Classification:
+
+Ignore
+
+20. Error Classification
+
+If a Pattern is classified as:
+
+Error
+
+SONDA considers the condition serious.
+
+Normally it means:
+
+application-level malfunction
+
+critical dependency failure
+
+system operation unable to continue
+
+or another condition requiring immediate attention.
+
+An Error can:
+
+create an Incident
+
+set Application Health to Error
+
+count as unsuccessful for System Health when connected to an evaluated run
+
+appear in Error Logs.
+
+21. Warning Classification
+
+A Warning means:
+
+something went wrong,
+
+but the application may still be running.
+
+Example:
+
+one transaction failed.
+
+It can:
+
+create an Incident
+
+set Application Health to Warning
+
+count negatively toward health when attached to a failed Order Run
+
+appear in Error Logs.
+
+22. Ignore Classification
+
+Ignore means SONDA recognizes the message intentionally but should not treat it as a problem.
+
+Example:
+
+Retry attempt 1
+
+might be normal application behavior.
+
+A user could classify it:
+
+Ignore
+
+This prevents unnecessary incidents.
+
+Ignored conditions should not reduce System Health.
+
+They can still optionally remain searchable in the raw logs.
+
+23. Pattern Priority
+
+SONDA should account for cases where multiple rules match the same log entry.
+
+For example:
+
+A generic rule might match:
+
+connection failed
+
+while a more specific rule matches:
+
+optional service connection failed
+
+and classifies it as Ignore.
+
+The architecture should support deterministic priority.
+
+A useful eventual configuration parameter is:
+
+Priority
+
+Higher-priority rules evaluate before lower-priority ones.
+
+The UI does not necessarily need to expose this immediately, but the data model should allow it.
+
+24. Case Sensitivity
+
+Pattern configuration should support:
+
+Case Sensitive: Yes / No
+
+Default should probably be:
+
+No
+
+For example:
+
+ORDER SENT
+
+and:
+
+Order Sent
+
+could therefore be treated the same unless the user specifically requires exact casing.
+
+25. Application Health Behavior
+
+The user does not manually set the dashboard dot every time.
+
+SONDA derives current health from active conditions.
+
+The states are:
+
+Stable
+
+Warning
+
+Error.
+
+If the application has no unresolved problem:
+
+Stable
+
+If at least one relevant active Warning exists but no Error exists:
+
+Warning
+
+If at least one application-level Error exists:
+
+Error
+
+Severity precedence therefore becomes:
+
+Error > Warning > Stable
+
+Once the problem resolves, current application state should be recalculated based on remaining active incidents.
+
+26. Automatic Application Error Resolution
+
+The user-configured Application Run rules allow SONDA to understand recovery.
+
+Example:
+
+Cycle #50:
+
+Run Begin detected.
+
+Failure detected.
+
+Incident:
+
+Error / Active.
+
+Cycle #51:
+
+Run Begin detected.
+
+Success detected.
+
+SONDA knows the application has successfully completed another cycle.
+
+The previous application-level Error becomes:
+
+Resolved
+
+SONDA records:
+
+Resolution Type:
+Automatic
+
+Resolution reason:
+
+Subsequent Application Run completed successfully.
+
+The old incident remains in history.
+
+27. Automatic Order Retry Resolution
+
+The configured Identifier makes transaction recovery possible.
+
+Example:
+
+Cycle #50:
+
+Order ID:
+93822
+
+Result:
+Failure
+
+Incident:
+Warning / Active
+
+Cycle #51:
+
+Order ID:
+93822
+
+Result:
+Success
+
+SONDA recognizes the same configured identifier appearing again in a later cycle for the same Profile.
+
+SONDA links the new successful Order Run to the unresolved previous failure.
+
+The Incident becomes:
+
+Resolved
+
+Resolution Type:
+
+Automatic
+
+The original failed Order Run remains available historically.
+
+The successful retry is also preserved.
+
+The Incident can reference both.
+
+28. Manual Incident Status
+
+This is operational input rather than Profile configuration.
+
+Users may manually change:
+
+Active
+
+to:
+
+Investigating
+
+or:
+
+Resolved.
+
+The available Incident Status values remain exactly:
+
+Active
+
+Investigating
+
+Resolved.
+
+A manual change should never change the underlying Detection Result.
+
+For example:
+
+Order Result:
+Failure
+
+Incident Status:
+Resolved
+
+is perfectly valid.
+
+It means:
+
+The transaction failed historically, but the resulting incident has been dealt with.
+
+29. Why These Fields Must Stay Separate
+
+Consider:
+
+Order 93822
+
+Result:
+
+Failure
+
+Severity:
+
+Warning
+
+Status:
+
+Investigating
+
+These answer three different questions.
+
+Detection Result
+
+What happened?
+
+Failure
+
+Severity
+
+How important is it?
+
+Warning
+
+Incident Status
+
+What are we doing about it?
+
+Investigating
+
+Never combine those into one field.
+
+30. System Health Usage
+
+The Profile configuration indirectly determines System Health because it tells SONDA which Runs succeeded or failed.
+
+SONDA calculates System Health for the current day.
+
+Conceptually:
+
+successful evaluated runs / total evaluated runs × 100
+
+Evaluated runs include:
+
+Application Run Cycles
+
+and:
+
+Order Runs.
+
+Successful:
+
+Application Run = Success
+
+Order Run = Success.
+
+Unsuccessful:
+
+Application Run = Failure
+
+Order Run = Failure
+
+Order Run = Undefined.
+
+Warnings and Errors have the same negative weight for this particular metric.
+
+Ignore patterns do not negatively affect health.
+
+31. Logs Today Usage
+
+The Profile also determines what SONDA considers a logical processed record.
+
+Logs Today should not simply count physical lines.
+
+If one transaction contains:
+
+14 raw log lines
+
+SONDA may interpret those 14 lines as:
+
+1 Order Run.
+
+The dashboard metric should count grouped/logical activity rather than simply showing enormous raw line counts.
+
+The exact categories included can eventually be refined, but Order Runs are the main intended metric.
+
+32. Full Example
+
+Imagine the user creates this Profile:
+
+Profile:
+
+CAM
+
+File Location:
+
+C:\CAM\Logs\
+
+Application Start:
+
+Starting CAM process
+
+Application Success:
+
+CAM process completed
+
+Application Failure:
+
+CAM process aborted
+
+Order Identifier:
+
+OrderID=(\d+)
+
+Order Start:
+
+Finding order
+
+Order Success:
+
+Order sent
+
+Order Failure:
+
+Unable to send order
+
+Warning Pattern:
+
+Unable to send order
+
+Error Pattern:
+
+Database unavailable
+
+Ignore Pattern:
+
+Retrying request
+
+Now SONDA receives:
+
+10:00:00 Starting CAM process
+
+SONDA creates:
+
+Application Run #100
+
+State:
+Running.
+
+Then:
+
+10:00:01 Finding order OrderID=93822
+
+SONDA extracts:
+
+93822
+
+and creates:
+
+Order Run #93822
+
+associated with:
+
+Application Run #100.
+
+Then:
+
+10:00:03 Connecting to payer OrderID=93822
+
+SONDA attaches this log to the same Order Run.
+
+Then:
+
+10:00:04 Unable to send order OrderID=93822
+
+SONDA recognizes:
+
+Order Failure Pattern.
+
+Order Run becomes:
+
+Result:
+Failure
+
+Severity:
+Warning
+
+Incident:
+Active.
+
+Then:
+
+10:00:08 CAM process completed
+
+Application Run #100 becomes:
+
+Result:
+Success.
+
+The Application itself worked, but Order #93822 failed.
+
+Therefore current CAM state becomes:
+
+Warning
+
+rather than Error.
+
+Then the next cycle begins.
+
+10:05:00 Starting CAM process
+
+New:
+
+Application Run #101.
+
+Then:
+
+10:05:01 Finding order OrderID=93822
+
+SONDA creates a new Order Run occurrence.
+
+It does NOT overwrite the old one.
+
+Then:
+
+10:05:03 Order sent OrderID=93822
+
+New Order Run:
+
+Result:
+Success.
+
+SONDA sees that:
+
+CAM + 93822
+
+previously had an unresolved failure.
+
+It links the retry.
+
+The original Incident becomes:
+
+Resolved.
+
+Then:
+
+10:05:07 CAM process completed
+
+Application Run #101:
+
+Success.
+
+Assuming no other active Warning/Error exists:
+
+CAM current health becomes:
+
+Stable.
+
+The Configuration Philosophy
+
+The best way to explain this to Desktop is:
+
+A SONDA Profile is not just a list of settings. It is a user-created parser and interpretation model for one application's logs.
+
+The user tells SONDA where the logs exist, how their structure works, what marks the beginning and ending of an application execution, how transactions are identified, how transaction logs are grouped, what indicates success or failure, and which messages represent Errors, Warnings, or conditions to Ignore.
+
+SONDA takes those parameters and converts otherwise unstructured log text into structured domain objects:
+
+Raw Log Entries → Application Run Cycles → Order Runs → Detection Results → Incidents → Application Health → Dashboard Metrics.
+
+None of the actual GiroSol-specific phrases should be hardcoded into SONDA. They belong inside configurable Profiles.

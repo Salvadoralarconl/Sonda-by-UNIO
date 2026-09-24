@@ -1,0 +1,219 @@
+[
+  {
+    "path": "src/Sonda.Infrastructure/Persistence/Migrations\\SondaDbContextModelSnapshot.cs",
+    "baselineHash": "6337E788902AFC1966DDBDB7C7B1AA71509D017CE296BFAC96D9D4C32B344E3F",
+    "currentHash": "B25EE87EE0D01FFEF39F195C8E2494FD7E4B4FB0308F3215C54F64DCCD60B4EE",
+    "classification": "Approved additive schema snapshot",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "src/Sonda.Infrastructure/Persistence/Migrations\\20260924032911_InterpretationPolicies.Designer.cs",
+    "baselineHash": "375C343306D4D5482BF90566F706A044F51BA7EBF1DB29E71896E81B5E056ADB",
+    "currentHash": "375C343306D4D5482BF90566F706A044F51BA7EBF1DB29E71896E81B5E056ADB",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "src/Sonda.Infrastructure/Persistence/Migrations\\20260924032911_InterpretationPolicies.cs",
+    "baselineHash": "A0F025E0BC52823A37C992BA0A671892D40A1B01BD88582F3687D11B0CD7B749",
+    "currentHash": "A0F025E0BC52823A37C992BA0A671892D40A1B01BD88582F3687D11B0CD7B749",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "src/Sonda.Infrastructure/Persistence/Migrations\\20260924023552_DurablePersistence.Designer.cs",
+    "baselineHash": "6C411DB5FD2A39FECE9B87BBE3BE2F3AA57C77E34190677D77D0F633EF6CB768",
+    "currentHash": "6C411DB5FD2A39FECE9B87BBE3BE2F3AA57C77E34190677D77D0F633EF6CB768",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "src/Sonda.Infrastructure/Persistence/Migrations\\20260924023552_DurablePersistence.cs",
+    "baselineHash": "796A0CB3BFAF358D81836F3506BE0513B6546A229504141963A93D486224EAAF",
+    "currentHash": "796A0CB3BFAF358D81836F3506BE0513B6546A229504141963A93D486224EAAF",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "src/Sonda.Infrastructure/Persistence/Migrations\\002_policy_constraints.sql",
+    "baselineHash": "F168959C09BA60AE7EA4DB7097C6982C507DD746E5E012C9FA2AAF71356FD12F",
+    "currentHash": "F168959C09BA60AE7EA4DB7097C6982C507DD746E5E012C9FA2AAF71356FD12F",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "src/Sonda.Infrastructure/Persistence/Migrations\\001_initial.sql",
+    "baselineHash": "108B9D0E7A0AA81F8C99586FD2796BFEBB333DF0FCAA513DCD1F1A3536A33E99",
+    "currentHash": "108B9D0E7A0AA81F8C99586FD2796BFEBB333DF0FCAA513DCD1F1A3536A33E99",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Phase3.Tests\\AcceptanceMatrixTests.cs",
+    "baselineHash": "D5E5A6E036917470E2B6A799F63266D45D340C50C27178F257A8495A88CB6EFA",
+    "currentHash": "D5E5A6E036917470E2B6A799F63266D45D340C50C27178F257A8495A88CB6EFA",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Phase3.Tests\\PolicyTests.cs",
+    "baselineHash": "84CE4BC0FE9E9F8527EE9A06F7F83B45067AAD8146EB6D5334A1A796677D6ED8",
+    "currentHash": "84CE4BC0FE9E9F8527EE9A06F7F83B45067AAD8146EB6D5334A1A796677D6ED8",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Phase3.Tests\\PolicyFixtureCatalog.cs",
+    "baselineHash": "DB85CCAD6E3564FF92C52F100A9F817E1734F0B0BAB848A765815827823818FF",
+    "currentHash": "DB85CCAD6E3564FF92C52F100A9F817E1734F0B0BAB848A765815827823818FF",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\RestoreTests.cs",
+    "baselineHash": "7E64F7ED7B2F7E712DBAC10D3A3AD936AE6F87CF56D66D3275FA20178F1F50F5",
+    "currentHash": "7E64F7ED7B2F7E712DBAC10D3A3AD936AE6F87CF56D66D3275FA20178F1F50F5",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\ReconstructionTests.cs",
+    "baselineHash": "AD6CA41CBD4FA604C8D92B02EF7755041064E30458ED6C450AD56FCE47934C0D",
+    "currentHash": "AD6CA41CBD4FA604C8D92B02EF7755041064E30458ED6C450AD56FCE47934C0D",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\PostgresFixture.cs",
+    "baselineHash": "EAFE631A29D6AE92156C748274B21CA0DBBE26EA4C87E559FA7A2A120C40223D",
+    "currentHash": "EAFE631A29D6AE92156C748274B21CA0DBBE26EA4C87E559FA7A2A120C40223D",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\Phase3UpgradeTests.cs",
+    "baselineHash": "AE19FC81C677B9FA18019953B8D6DA15701C6ADC953B8C700DD000299640A717",
+    "currentHash": "EF52B5AFE2D9C5387658F2C729B5DEB1E70326316797E687C799391EDD4A2598",
+    "classification": "Historical v1-to-v2 setup explicitly targets migration 002; assertions unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\Phase3RestoreTests.cs",
+    "baselineHash": "24FD44A96715B8A88DE27CA350E1292612D9AD9EB7E0F2D1C10E02C712C8F6E0",
+    "currentHash": "24FD44A96715B8A88DE27CA350E1292612D9AD9EB7E0F2D1C10E02C712C8F6E0",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\Phase3RaceTests.cs",
+    "baselineHash": "1ADA44260A962907F6E661C663F27AD363A750BBB66DBC876D2E17E3F0044948",
+    "currentHash": "1ADA44260A962907F6E661C663F27AD363A750BBB66DBC876D2E17E3F0044948",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\Phase3PolicyTests.cs",
+    "baselineHash": "86284E830449F3B3F748D709A5C579C2450F454597BE2F61A2B5E2D904B83D5C",
+    "currentHash": "86284E830449F3B3F748D709A5C579C2450F454597BE2F61A2B5E2D904B83D5C",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\Phase3MatrixTests.cs",
+    "baselineHash": "72953EDF2B650027855B6E1A94133DF4A70722967FCAA94B6DB83DB7E477B4DE",
+    "currentHash": "72953EDF2B650027855B6E1A94133DF4A70722967FCAA94B6DB83DB7E477B4DE",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\Phase3CrashTests.cs",
+    "baselineHash": "D821696971DC19087C9D29BDE38A4201D088C7CF06A8A1ED128A63A835815FBF",
+    "currentHash": "D821696971DC19087C9D29BDE38A4201D088C7CF06A8A1ED128A63A835815FBF",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\Phase3BoundaryTests.cs",
+    "baselineHash": "2C0024C50AD371B53A6C4AC1FC17CD7234967EA7FACB63EFE679E0DBA3B52EAD",
+    "currentHash": "2C0024C50AD371B53A6C4AC1FC17CD7234967EA7FACB63EFE679E0DBA3B52EAD",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\PersistenceTests.cs",
+    "baselineHash": "BF9BAD6B7C44CF4632E7417268BF48C252A64D1F1389A7345D433B1F01DCCA8A",
+    "currentHash": "BF9BAD6B7C44CF4632E7417268BF48C252A64D1F1389A7345D433B1F01DCCA8A",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\InvariantTests.cs",
+    "baselineHash": "AD0BA77DEF6086D9CCDE3B700C9128056CFC54A161AB41DF846BB9EB897CC8A7",
+    "currentHash": "AD0BA77DEF6086D9CCDE3B700C9128056CFC54A161AB41DF846BB9EB897CC8A7",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\CrashAndMigrationTests.cs",
+    "baselineHash": "2F82086C49ECBB6A66D6007494BC231B22022CEBC4FAA7D81B58B5BC9F109CCA",
+    "currentHash": "606EDDE8D0176BDC87CF69A6232D98FEB186A5AD3A4C2E66DD077B0E1A625EFD",
+    "classification": "Approved exact three-migration chain",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Persistence.Tests\\ConcurrencyTests.cs",
+    "baselineHash": "1EF02D9CDBA3D47915DEFEF5D76C6069599B9C931F7F330F05DDA429636838FF",
+    "currentHash": "1EF02D9CDBA3D47915DEFEF5D76C6069599B9C931F7F330F05DDA429636838FF",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Phase3.Tests\\EdgePolicyTests.cs",
+    "baselineHash": "7246F5FD8B6D8274B884A99B9849BFC01C4C9E46CBFC9FB9F29430B2B352FF81",
+    "currentHash": "7246F5FD8B6D8274B884A99B9849BFC01C4C9E46CBFC9FB9F29430B2B352FF81",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Phase3.Tests\\CommandTests.cs",
+    "baselineHash": "7441BDCFF483D90CC2086443142AFBB34970D64220D715851C714A608810D735",
+    "currentHash": "7441BDCFF483D90CC2086443142AFBB34970D64220D715851C714A608810D735",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Phase1.Tests\\TestSamples.cs",
+    "baselineHash": "8700B38ABA508F641EFCBEAE317441C14506E9373347F5517D860D46B2B1D043",
+    "currentHash": "8700B38ABA508F641EFCBEAE317441C14506E9373347F5517D860D46B2B1D043",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Phase1.Tests\\PriorityAndValidationTests.cs",
+    "baselineHash": "C5F2FFB26CAA63A0E76A61D780DF80639D4DE35B63E56E46A59BABB2DE03D778",
+    "currentHash": "C5F2FFB26CAA63A0E76A61D780DF80639D4DE35B63E56E46A59BABB2DE03D778",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Phase1.Tests\\ParsingMetricsAndReportTests.cs",
+    "baselineHash": "5ACC4717295A8B7B588CC8CC4BC1EBD0D89A11BC04EBDAE8B53379C379DFE0AE",
+    "currentHash": "5ACC4717295A8B7B588CC8CC4BC1EBD0D89A11BC04EBDAE8B53379C379DFE0AE",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Phase1.Tests\\BoundarySafetyTests.cs",
+    "baselineHash": "6A24DA057CC49F0E658F810583E7E6EF8054F11C0908E8E9D86E3A8FFF195875",
+    "currentHash": "6A24DA057CC49F0E658F810583E7E6EF8054F11C0908E8E9D86E3A8FFF195875",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  },
+  {
+    "path": "tests\\Sonda.Phase1.Tests\\EngineAcceptanceTests.cs",
+    "baselineHash": "E6BA6F2FA4AE2D5F832EC06EF621A1730409392B505860190C6B9A4A9184A6A6",
+    "currentHash": "E6BA6F2FA4AE2D5F832EC06EF621A1730409392B505860190C6B9A4A9184A6A6",
+    "classification": "Unchanged",
+    "onlyDocumentedEditVerified": true
+  }
+]

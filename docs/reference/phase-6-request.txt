@@ -1,0 +1,232 @@
+Phase 5 is approved.
+The shared backend, authentication/authorization, Admin provisioning, Dashboard/Search APIs, Profile lifecycle endpoints, Incident workflow, monitoring diagnostics, crash/retry behavior, access migrations, and 382 passing tests are accepted.
+Preserve all 382 tests as regression gates.
+Preserve all existing Domain/Application, persistence, acquisition, account, API, and security behavior.
+The five Phase 4 environmental gates remain pending and must continue to be reported separately. Phase 6 does not authorize claiming those capabilities passed.
+Do not begin Phase 6 implementation yet.
+Prepare a bounded Phase 6 proposal for the actual SONDA web frontend.
+The frontend must use:
+@Canva → Sonda Home Page Design
+as the primary approved visual source of truth.
+Page 1 = Home
+ Page 2 = Search
+Do not redesign those pages.
+The existing SONDA backend/API is the behavioral source of truth.
+The Canva design controls how SONDA looks.
+ The Phase 1–5 implementation controls how SONDA behaves.
+Build the React/TypeScript frontend that consumes the existing /api/v1 backend.
+Phase 6 should include:
+1. Application shell 
+   -  left navigation rail 
+   -  main workspace 
+   -  right-side monitoring panel where defined by Canva 
+   -  approved spacing, proportions, typography, cards and visual hierarchy 
+2. Home Page 
+Reproduce the approved Canva Home Page as closely as practical.
+Connect real API data for:
+-  System Health 
+-  Logs Today 
+-  five-day activity chart 
+-  Active Incidents 
+-  Error Logs / recent Incidents 
+-  Logs Monitored / application state 
+-  business health 
+-  availability 
+Do not invent new Home metrics.
+3. Search Page 
+Reproduce the approved Canva Search design.
+Search must use the existing evidence-based Search API and preserve the backend semantics:
+-  each evidence row appears once 
+-  raw evidence is not an Incident 
+-  Order Run is not a raw line 
+-  Application Run, Order Run, Incident and Evidence stay distinct 
+Support the API's existing filters where appropriate:
+-  Application/Profile 
+-  time basis 
+-  time range 
+-  message text 
+-  identifier 
+-  result 
+-  classification 
+-  Incident status 
+Use bounded pagination/keyset cursors. Do not attempt client-side full-history loading.
+4. Incident investigation 
+Add UI for:
+-  Incident detail 
+-  severity 
+-  workflow status 
+-  Problem Identity 
+-  Occurrences 
+-  Recoveries 
+-  status history 
+-  linked evidence 
+-  linked Order/Application Runs 
+Manual workflow actions must use the existing backend's allowedActions, expected revisions and CSRF/idempotent command behavior.
+Do not hardcode workflow transitions in the frontend.
+5. Application/Run investigation 
+UI for:
+-  monitored applications 
+-  Application Runs 
+-  Order Runs 
+-  parent/child relationships 
+-  results 
+-  attempts 
+-  identifiers 
+-  timestamps 
+-  Profile Version 
+Keep this visually calm and consistent with the approved SONDA style.
+6. Configuration 
+Build an Admin-only Configuration workflow for:
+-  Create Application 
+-  Create Profile 
+-  Add/configure Log Source 
+-  edit Profile Draft 
+-  parsing settings 
+-  identifier extraction 
+-  Application Run Cycle rules 
+-  Order grouping rules 
+-  Error/Warning/Ignore filters 
+-  timing policies 
+-  advanced revision-2 policy options where appropriate 
+-  validate 
+-  simulate 
+-  inspect simulation result 
+-  publish 
+-  activate 
+This must be a visual configuration experience, not a raw JSON editor for normal use.
+Advanced regex fields are acceptable where the engine requires them.
+Do not expose arbitrary server filesystem browsing.
+7. Profile simulation UI 
+The simulation workflow is first-class.
+Admin should be able to:
+-  paste/upload bounded sample logs 
+-  run simulation 
+-  inspect detected Application Runs 
+-  inspect Order Runs 
+-  see Success / Failure / Undefined 
+-  see rule matches/suppression 
+-  see Errors / Warnings / Ignore 
+-  inspect Problem Identity 
+-  inspect generated Incidents 
+-  inspect metrics 
+-  see validation warnings/errors 
+Publication must visibly depend on a valid current simulation/report where required by the backend.
+8. Accounts 
+Add frontend screens for:
+-  login 
+-  logout 
+-  password change 
+-  invitation redemption 
+-  Admin member management 
+-  enable/disable member 
+-  Admin/Member role 
+-  invitation/reset grant workflows 
+Preserve the existing security model:
+-  cookie auth 
+-  CSRF 
+-  no browser localStorage bearer token 
+-  no client-side trust of role/team 
+9. Monitoring diagnostics 
+Add read-only diagnostics UI.
+Members see safe high-level monitoring state.
+Admins may see the detailed fields already authorized by the API.
+Do not add:
+-  checkpoint editing 
+-  force read 
+-  gap clearing 
+-  source repair 
+-  arbitrary file access 
+10. Loading / empty / error states 
+Design explicit states for:
+-  loading 
+-  no data 
+-  unobserved 
+-  stale 
+-  disconnected 
+-  unsupported capability 
+-  authorization failure 
+-  conflict / stale revision 
+-  API temporarily unavailable 
+Do not display stale/unavailable data as green simply because the last business state was Stable.
+11. Responsive behavior 
+SONDA remains desktop-first.
+Preserve the desktop Canva proportions first.
+Add reasonable smaller-screen behavior without redesigning the desktop experience.
+12. Accessibility 
+Include:
+-  keyboard navigation 
+-  visible focus states 
+-  semantic tables/forms 
+-  accessible labels 
+-  status information not conveyed only through color 
+-  usable contrast 
+13. Frontend architecture 
+Propose:
+-  React folder structure 
+-  routing 
+-  API client 
+-  session/auth state 
+-  query/cache strategy 
+-  form strategy 
+-  component hierarchy 
+-  design tokens derived from Canva 
+-  error handling 
+-  frontend testing approach 
+Prefer a simple architecture over unnecessary frontend frameworks.
+14. API contract discipline 
+Use the existing OpenAPI/backend behavior.
+Do not duplicate backend business rules client-side.
+The frontend may format and present data, but must not independently calculate authoritative:
+-  System Health 
+-  Logs Today 
+-  Incident resolution 
+-  Application current health 
+-  workflow eligibility 
+-  Profile publication eligibility 
+15. Frontend acceptance testing 
+Propose tests for:
+-  Home matches Dashboard API semantics 
+-  Search never duplicates evidence rows 
+-  Search pagination/filter changes 
+-  Incident status conflict/retry UX 
+-  Admin vs Member visibility 
+-  Profile creation flow 
+-  simulation → publish → activate flow 
+-  stale simulation cannot publish changed draft 
+-  source path validation errors 
+-  session expiration/logout 
+-  CSRF handling 
+-  backend unavailable state 
+-  availability versus business health display 
+-  Canva visual regression 
+16. Visual regression 
+Use the Canva Home and Search pages as baseline references.
+Establish screenshot/visual comparison tests for the approved desktop viewport.
+Do not attempt to improve or modernize the design without asking me first.
+17. Explicit exclusions 
+Phase 6 must not add:
+-  remote collectors 
+-  notification system 
+-  AI features 
+-  billing 
+-  SaaS organization registration 
+-  Elasticsearch 
+-  Redis 
+-  message brokers 
+-  deployment 
+-  real GiroSol access 
+18. Proposal deliverables 
+Before implementation, give me:
+-  frontend page map 
+-  navigation structure 
+-  component architecture 
+-  design-token plan from Canva 
+-  API-to-screen mapping 
+-  Configuration workflow 
+-  simulation workflow 
+-  account-management workflow 
+-  error/loading state strategy 
+-  frontend test plan 
+-  visual regression strategy 
+-  Phase 6 completion criteria 
+Stop after presenting the Phase 6 proposal for approval. Do not implement Phase 6 yet.

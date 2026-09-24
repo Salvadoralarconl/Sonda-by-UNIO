@@ -1,0 +1,85 @@
+  Sonda.Domain -> C:\SaProductions\Sonda\src\Sonda.Domain\bin\Release\net10.0\Sonda.Domain.dll
+  Sonda.Application -> C:\SaProductions\Sonda\src\Sonda.Application\bin\Release\net10.0\Sonda.Application.dll
+  Sonda.Api.Contracts -> C:\SaProductions\Sonda\src\Sonda.Api.Contracts\bin\Release\net10.0\Sonda.Api.Contracts.dll
+  Sonda.Phase1.Tests -> C:\SaProductions\Sonda\tests\Sonda.Phase1.Tests\bin\Release\net10.0\Sonda.Phase1.Tests.dll
+  Sonda.Phase3.Tests -> C:\SaProductions\Sonda\tests\Sonda.Phase3.Tests\bin\Release\net10.0\Sonda.Phase3.Tests.dll
+Test run for C:\SaProductions\Sonda\tests\Sonda.Phase1.Tests\bin\Release\net10.0\Sonda.Phase1.Tests.dll (.NETCoreApp,Version=v10.0)
+Test run for C:\SaProductions\Sonda\tests\Sonda.Phase3.Tests\bin\Release\net10.0\Sonda.Phase3.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+A total of 1 test files matched the specified pattern.
+  Sonda.Infrastructure -> C:\SaProductions\Sonda\src\Sonda.Infrastructure\bin\Release\net10.0\Sonda.Infrastructure.dll
+  Sonda.Acquisition.Tests -> C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll
+Test run for C:\SaProductions\Sonda\tests\Sonda.Acquisition.Tests\bin\Release\net10.0\Sonda.Acquisition.Tests.dll (.NETCoreApp,Version=v10.0)
+  Sonda.PersistenceHarness -> C:\SaProductions\Sonda\tools\Sonda.PersistenceHarness\bin\Release\net10.0\Sonda.PersistenceHarness.dll
+  Sonda.Access -> C:\SaProductions\Sonda\src\Sonda.Access\bin\Release\net10.0\Sonda.Access.dll
+A total of 1 test files matched the specified pattern.
+  Sonda.Access.Tests -> C:\SaProductions\Sonda\tests\Sonda.Access.Tests\bin\Release\net10.0\Sonda.Access.Tests.dll
+Test run for C:\SaProductions\Sonda\tests\Sonda.Access.Tests\bin\Release\net10.0\Sonda.Access.Tests.dll (.NETCoreApp,Version=v10.0)
+Results File: C:\SaProductions\Sonda\artifacts\phase5\final-tests\sapro_ASUSPROART_2026-09-24_11_03_50_net10.0.trx
+
+Passed!  - Failed:     0, Passed:    42, Skipped:     0, Total:    42, Duration: 1 s - Sonda.Phase1.Tests.dll (net10.0)
+  Sonda.Persistence.Tests -> C:\SaProductions\Sonda\tests\Sonda.Persistence.Tests\bin\Release\net10.0\Sonda.Persistence.Tests.dll
+Test run for C:\SaProductions\Sonda\tests\Sonda.Persistence.Tests\bin\Release\net10.0\Sonda.Persistence.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: C:\SaProductions\Sonda\artifacts\phase5\final-tests\sapro_ASUSPROART_2026-09-24_11_03_50_net10.0[1].trx
+
+Passed!  - Failed:     0, Passed:    76, Skipped:     0, Total:    76, Duration: 1 s - Sonda.Phase3.Tests.dll (net10.0)
+A total of 1 test files matched the specified pattern.
+  Sonda.Server -> C:\SaProductions\Sonda\src\Sonda.Server\bin\Release\net10.0\Sonda.Server.dll
+Results File: C:\SaProductions\Sonda\artifacts\phase5\final-tests\sapro_ASUSPROART_2026-09-24_11_03_52_net10.0.trx
+
+Passed!  - Failed:     0, Passed:    11, Skipped:     0, Total:    11, Duration: 509 ms - Sonda.Acquisition.Tests.dll (net10.0)
+  Sonda.Simulator -> C:\SaProductions\Sonda\tools\Sonda.Simulator\bin\Release\net10.0\Sonda.Simulator.dll
+  Sonda.Api.Tests -> C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Release\net10.0\Sonda.Api.Tests.dll
+Test run for C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Release\net10.0\Sonda.Api.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: C:\SaProductions\Sonda\artifacts\phase5\final-tests\sapro_ASUSPROART_2026-09-24_11_03_54_net10.0.trx
+
+Passed!  - Failed:     0, Passed:    28, Skipped:     0, Total:    28, Duration: 25 s - Sonda.Access.Tests.dll (net10.0)
+[xUnit.net 00:00:40.39]     Sonda.Api.Tests.QueryTests.Dashboard_snapshot_does_not_mix_new_commits_into_old_counts [FAIL]
+  Failed Sonda.Api.Tests.QueryTests.Dashboard_snapshot_does_not_mix_new_commits_into_old_counts [811 ms]
+  Error Message:
+   System.InvalidOperationException : An exception has been raised that is likely due to a transient failure.
+---- Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.
+-------- Npgsql.PostgresException : 40001: lost ingestion fence
+  Stack Trace:
+     at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Sonda.Infrastructure.Persistence.PostgresProcessingStore.ProcessInTransactionAsync(SondaDbContext db, ProcessingRequest r, CancellationToken ct) in C:\SaProductions\Sonda\src\Sonda.Infrastructure\Persistence\PostgresProcessingStore.cs:line 71
+   at Sonda.Infrastructure.Persistence.PostgresProcessingStore.ProcessAsync(ProcessingRequest r, CancellationToken cancellationToken) in C:\SaProductions\Sonda\src\Sonda.Infrastructure\Persistence\PostgresProcessingStore.cs:line 25
+   at Sonda.Infrastructure.Persistence.PostgresProcessingStore.ProcessAsync(ProcessingRequest r, CancellationToken cancellationToken) in C:\SaProductions\Sonda\src\Sonda.Infrastructure\Persistence\PostgresProcessingStore.cs:line 28
+   at Sonda.Infrastructure.Persistence.PostgresProcessingStore.ProcessAsync(ProcessingRequest r, CancellationToken cancellationToken) in C:\SaProductions\Sonda\src\Sonda.Infrastructure\Persistence\PostgresProcessingStore.cs:line 28
+   at Sonda.Api.Tests.QueryTests.<>c__DisplayClass15_0.<<Dashboard_snapshot_does_not_mix_new_commits_into_old_counts>b__0>d.MoveNext() in C:\SaProductions\Sonda\tests\Sonda.Api.Tests\QueryTests.cs:line 174
+--- End of stack trace from previous location ---
+   at Sonda.Server.Queries.DashboardQueries.ReadAsync(Actor actor, CancellationToken ct) in C:\SaProductions\Sonda\src\Sonda.Server\Queries\DashboardQueries.cs:line 25
+   at Sonda.Server.Queries.DashboardQueries.ReadAsync(Actor actor, CancellationToken ct) in C:\SaProductions\Sonda\src\Sonda.Server\Queries\DashboardQueries.cs:line 79
+   at Sonda.Server.Queries.DashboardQueries.ReadAsync(Actor actor, CancellationToken ct) in C:\SaProductions\Sonda\src\Sonda.Server\Queries\DashboardQueries.cs:line 79
+   at Sonda.Api.Tests.QueryTests.Dashboard_snapshot_does_not_mix_new_commits_into_old_counts() in C:\SaProductions\Sonda\tests\Sonda.Api.Tests\QueryTests.cs:line 177
+--- End of stack trace from previous location ---
+----- Inner Stack Trace -----
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+----- Inner Stack Trace -----
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+Results File: C:\SaProductions\Sonda\artifacts\phase5\final-tests\sapro_ASUSPROART_2026-09-24_11_04_09_net10.0.trx
+
+Failed!  - Failed:     1, Passed:    42, Skipped:     0, Total:    43, Duration: 1 m 15 s - Sonda.Api.Tests.dll (net10.0)
+Results File: C:\SaProductions\Sonda\artifacts\phase5\final-tests\sapro_ASUSPROART_2026-09-24_11_04_04_net10.0.trx
+
+Passed!  - Failed:     0, Passed:   180, Skipped:     0, Total:   180, Duration: 2 m 34 s - Sonda.Persistence.Tests.dll (net10.0)

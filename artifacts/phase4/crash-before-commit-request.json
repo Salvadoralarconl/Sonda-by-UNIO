@@ -1,0 +1,23 @@
+{
+  "fence": {
+    "scope": {
+      "teamId": "policy-f8f42d22a6974805b772d284e8b5c909",
+      "sessionId": "a9322be4-fb21-4284-b411-34ed267302c6",
+      "applicationId": "app-cam"
+    },
+    "instanceId": "8a545421-417c-46e6-a1c4-da646b0d3b30",
+    "epoch": 1
+  },
+  "generation": "6acefafa-b229-4cb3-82bd-9290c97e4c61",
+  "record": {
+    "start": 99,
+    "end": 120,
+    "bytes": "T3JkZXIgc2VudCBPcmRlcklEPXgK",
+    "text": "Order sent OrderID=x",
+    "terminator": "LF",
+    "bomBytes": 0,
+    "hash": "3D5C093E0BA1F6DD4407B5C05E83E68AC0256D1A68BA39AD42EA587445F0632A"
+  },
+  "processedAt": "2026-09-24T21:25:45.5317073+00:00",
+  "byteFile": "C:\\SaProductions\\Sonda\\artifacts\\phase4\\crash-before-commit-synthetic.log"
+}

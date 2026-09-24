@@ -1,0 +1,3 @@
+Verification server: portable PostgreSQL 18 development cluster at .tools/pgdata, loopback port 55432.
+Final tests completed and disposed their test databases.
+The development server was stopped after verification. No production service was installed.

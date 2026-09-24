@@ -1,0 +1,21 @@
+{
+  "status": "Awaiting review; no frozen visual baseline",
+  "overlay": "50% browser-rendered implementation over unchanged reference at 1366x736",
+  "pages": [
+    {
+      "page": "Home",
+      "referenceSha256": "0d5fc99359f0af26e5492866487f20f0809c1dda5ad888fd1c2dbb60cf01c784",
+      "implementationSha256": "f2d7261bffb09469a689a773df5721efd412afcadbc637f11ac14d45df4b71c3"
+    },
+    {
+      "page": "Monitoring",
+      "referenceSha256": "1dcb367256ead5aa6629a71b61a6de5c0cac77b1e0b93cf4a46df9869ef70fc4",
+      "implementationSha256": "f04496d8ca99dee26d3e0a23d49f55f9af9a6eff34d8d87b24cf1b81bff4f905"
+    },
+    {
+      "page": "Search",
+      "referenceSha256": "680c67c3cb11d1e54842131822a3e9775f6ee86fa36bcddaeb5eebb71c5ceb95",
+      "implementationSha256": "9bb0f48fcc56c124cef12de00e17b5c4ec1b4135330254d2a58530fadf38ee82"
+    }
+  ]
+}

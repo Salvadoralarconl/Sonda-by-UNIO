@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="5ed29faa-0df4-43e3-b51a-2716e05521c4" name="sapro@ASUSPROART 2026-09-24 10:55:51" runUser="ASUSPROART\sapro" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-24T10:55:51.3787016-04:00" queuing="2026-09-24T10:55:51.3787024-04:00" start="2026-09-24T10:55:40.4095731-04:00" finish="2026-09-24T10:55:56.0303361-04:00" />
+  <TestSettings name="default" id="4ba88382-7303-457a-bf60-7a8bf2e746fa">
+    <Deployment runDeploymentRoot="sapro_ASUSPROART_2026-09-24_10_55_51" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="2b5dcc79-65ee-4fa2-b145-1d3172cfdbfa" testId="b971f0e7-b588-1c82-5cc4-ba1ef9b4280b" testName="Sonda.Api.Tests.ProfileAcceptanceTests.Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles" computerName="ASUSPROART" duration="00:00:03.4883510" startTime="2026-09-24T10:55:52.0887438-04:00" endTime="2026-09-24T10:55:55.5760946-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2b5dcc79-65ee-4fa2-b145-1d3172cfdbfa" />
+    <UnitTestResult executionId="7ff3f60c-e30d-4e17-8121-c361709b0e9e" testId="c9410c4c-fabe-ea17-84ab-7e2d7da1e2a0" testName="Sonda.Api.Tests.WorkflowTests.Activation_recovers_reserved_file_input_and_pins_open_cycle_to_old_version" computerName="ASUSPROART" duration="00:00:04.8321865" startTime="2026-09-24T10:55:46.4864382-04:00" endTime="2026-09-24T10:55:51.3134344-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7ff3f60c-e30d-4e17-8121-c361709b0e9e">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: Exception type was not an exact match&#xD;
+Expected: typeof(System.IO.IOException)&#xD;
+Actual:   typeof(Sonda.Application.Persistence.PersistenceConflict)&#xD;
+---- Sonda.Application.Persistence.PersistenceConflict : Source is disabled, blocked or has an unresolved gap.</Message>
+          <StackTrace>   at Sonda.Api.Tests.WorkflowTests.Activation_recovers_reserved_file_input_and_pins_open_cycle_to_old_version() in C:\SaProductions\Sonda\tests\Sonda.Api.Tests\WorkflowTests.cs:line 139&#xD;
+--- End of stack trace from previous location ---&#xD;
+----- Inner Stack Trace -----&#xD;
+   at Sonda.Infrastructure.Persistence.PostgresIngestionStore.CommitAsync(OwnerFence fence, Guid generation, PhysicalRecord record, DateTimeOffset processedAt, CancellationToken ct) in C:\SaProductions\Sonda\src\Sonda.Infrastructure\Persistence\PostgresIngestionStore.cs:line 113&#xD;
+   at Sonda.Infrastructure.Persistence.PostgresIngestionStore.CommitAsync(OwnerFence fence, Guid generation, PhysicalRecord record, DateTimeOffset processedAt, CancellationToken ct) in C:\SaProductions\Sonda\src\Sonda.Infrastructure\Persistence\PostgresIngestionStore.cs:line 133&#xD;
+   at Sonda.Infrastructure.Persistence.PostgresIngestionStore.CommitAsync(OwnerFence fence, Guid generation, PhysicalRecord record, DateTimeOffset processedAt, CancellationToken ct) in C:\SaProductions\Sonda\src\Sonda.Infrastructure\Persistence\PostgresIngestionStore.cs:line 133</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4cf0d14c-79c2-41cc-8fa9-95bfd29a3d64" testId="390fda46-d70a-d635-1c18-1e781a080472" testName="Sonda.Api.Tests.QueryTests.Search_actual_parameterized_plan_is_captured_and_blocked_query_times_out" computerName="ASUSPROART" duration="00:00:00.7607887" startTime="2026-09-24T10:55:51.3553656-04:00" endTime="2026-09-24T10:55:52.0843586-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4cf0d14c-79c2-41cc-8fa9-95bfd29a3d64">
+      <Output>
+        <ErrorInfo>
+          <Message>System.FormatException : One of the identified items was in an invalid format.</Message>
+          <StackTrace>   at System.Text.Json.ThrowHelper.ThrowFormatException()&#xD;
+   at System.Text.Json.JsonElement.GetInt32()&#xD;
+   at Sonda.Api.Tests.QueryTests.Search_actual_parameterized_plan_is_captured_and_blocked_query_times_out() in C:\SaProductions\Sonda\tests\Sonda.Api.Tests\QueryTests.cs:line 133&#xD;
+   at Sonda.Api.Tests.QueryTests.Search_actual_parameterized_plan_is_captured_and_blocked_query_times_out() in C:\SaProductions\Sonda\tests\Sonda.Api.Tests\QueryTests.cs:line 137&#xD;
+   at Sonda.Api.Tests.QueryTests.Search_actual_parameterized_plan_is_captured_and_blocked_query_times_out() in C:\SaProductions\Sonda\tests\Sonda.Api.Tests\QueryTests.cs:line 137&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Sonda.Api.Tests.WorkflowTests.Activation_recovers_reserved_file_input_and_pins_open_cycle_to_old_version" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="c9410c4c-fabe-ea17-84ab-7e2d7da1e2a0">
+      <Execution id="7ff3f60c-e30d-4e17-8121-c361709b0e9e" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.WorkflowTests" name="Activation_recovers_reserved_file_input_and_pins_open_cycle_to_old_version" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.ProfileAcceptanceTests.Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="b971f0e7-b588-1c82-5cc4-ba1ef9b4280b">
+      <Execution id="2b5dcc79-65ee-4fa2-b145-1d3172cfdbfa" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.ProfileAcceptanceTests" name="Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles" />
+    </UnitTest>
+    <UnitTest name="Sonda.Api.Tests.QueryTests.Search_actual_parameterized_plan_is_captured_and_blocked_query_times_out" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\debug\net10.0\sonda.api.tests.dll" id="390fda46-d70a-d635-1c18-1e781a080472">
+      <Execution id="4cf0d14c-79c2-41cc-8fa9-95bfd29a3d64" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Debug\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.QueryTests" name="Search_actual_parameterized_plan_is_captured_and_blocked_query_times_out" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="b971f0e7-b588-1c82-5cc4-ba1ef9b4280b" executionId="2b5dcc79-65ee-4fa2-b145-1d3172cfdbfa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c9410c4c-fabe-ea17-84ab-7e2d7da1e2a0" executionId="7ff3f60c-e30d-4e17-8121-c361709b0e9e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="390fda46-d70a-d635-1c18-1e781a080472" executionId="4cf0d14c-79c2-41cc-8fa9-95bfd29a3d64" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" passed="1" failed="2" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.1+bf6400fd51 (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.20]   Discovering: Sonda.Api.Tests&#xD;
+[xUnit.net 00:00:00.27]   Discovered:  Sonda.Api.Tests&#xD;
+[xUnit.net 00:00:00.32]   Starting:    Sonda.Api.Tests&#xD;
+[xUnit.net 00:00:09.94]       Assert.Throws() Failure: Exception type was not an exact match&#xD;
+[xUnit.net 00:00:09.94]       Expected: typeof(System.IO.IOException)&#xD;
+[xUnit.net 00:00:09.94]       Actual:   typeof(Sonda.Application.Persistence.PersistenceConflict)&#xD;
+[xUnit.net 00:00:09.94]       ---- Sonda.Application.Persistence.PersistenceConflict : Source is disabled, blocked or has an unresolved gap.&#xD;
+[xUnit.net 00:00:09.94]       Stack Trace:&#xD;
+[xUnit.net 00:00:09.94]         C:\SaProductions\Sonda\tests\Sonda.Api.Tests\WorkflowTests.cs(139,0): at Sonda.Api.Tests.WorkflowTests.Activation_recovers_reserved_file_input_and_pins_open_cycle_to_old_version()&#xD;
+[xUnit.net 00:00:09.94]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:09.94]         ----- Inner Stack Trace -----&#xD;
+[xUnit.net 00:00:09.94]         C:\SaProductions\Sonda\src\Sonda.Infrastructure\Persistence\PostgresIngestionStore.cs(113,0): at Sonda.Infrastructure.Persistence.PostgresIngestionStore.CommitAsync(OwnerFence fence, Guid generation, PhysicalRecord record, DateTimeOffset processedAt, CancellationToken ct)&#xD;
+[xUnit.net 00:00:09.94]         C:\SaProductions\Sonda\src\Sonda.Infrastructure\Persistence\PostgresIngestionStore.cs(133,0): at Sonda.Infrastructure.Persistence.PostgresIngestionStore.CommitAsync(OwnerFence fence, Guid generation, PhysicalRecord record, DateTimeOffset processedAt, CancellationToken ct)&#xD;
+[xUnit.net 00:00:09.94]         C:\SaProductions\Sonda\src\Sonda.Infrastructure\Persistence\PostgresIngestionStore.cs(133,0): at Sonda.Infrastructure.Persistence.PostgresIngestionStore.CommitAsync(OwnerFence fence, Guid generation, PhysicalRecord record, DateTimeOffset processedAt, CancellationToken ct)&#xD;
+[xUnit.net 00:00:10.70]       System.FormatException : One of the identified items was in an invalid format.&#xD;
+[xUnit.net 00:00:10.70]       Stack Trace:&#xD;
+[xUnit.net 00:00:10.71]            at System.Text.Json.ThrowHelper.ThrowFormatException()&#xD;
+[xUnit.net 00:00:10.71]            at System.Text.Json.JsonElement.GetInt32()&#xD;
+[xUnit.net 00:00:10.71]         C:\SaProductions\Sonda\tests\Sonda.Api.Tests\QueryTests.cs(133,0): at Sonda.Api.Tests.QueryTests.Search_actual_parameterized_plan_is_captured_and_blocked_query_times_out()&#xD;
+[xUnit.net 00:00:10.71]         C:\SaProductions\Sonda\tests\Sonda.Api.Tests\QueryTests.cs(137,0): at Sonda.Api.Tests.QueryTests.Search_actual_parameterized_plan_is_captured_and_blocked_query_times_out()&#xD;
+[xUnit.net 00:00:10.71]         C:\SaProductions\Sonda\tests\Sonda.Api.Tests\QueryTests.cs(137,0): at Sonda.Api.Tests.QueryTests.Search_actual_parameterized_plan_is_captured_and_blocked_query_times_out()&#xD;
+[xUnit.net 00:00:10.71]         --- End of stack trace from previous location ---&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\SaProductions\Sonda\src\Sonda.Server&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:14.53]   Finished:    Sonda.Api.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="ASUSPROART" outcome="Error" timestamp="2026-09-24T10:55:51.3202997-04:00">
+        <Text>[xUnit.net 00:00:09.94]     Sonda.Api.Tests.WorkflowTests.Activation_recovers_reserved_file_input_and_pins_open_cycle_to_old_version [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="ASUSPROART" outcome="Error" timestamp="2026-09-24T10:55:52.0868191-04:00">
+        <Text>[xUnit.net 00:00:10.70]     Sonda.Api.Tests.QueryTests.Search_actual_parameterized_plan_is_captured_and_blocked_query_times_out [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

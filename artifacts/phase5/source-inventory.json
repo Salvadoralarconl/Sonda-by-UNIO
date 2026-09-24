@@ -1,0 +1,206 @@
+[
+  {
+    "path": "Sonda.sln",
+    "sha256": "DD83B715530B244A018CEA1617A0DC67B30D27DDED02E0CA45F14CF96F5C6798"
+  },
+  {
+    "path": "src/Sonda.Access/AccessContracts.cs",
+    "sha256": "094818B9912C1BD326131330D615B14CB13B61E13FC32FE3D19E772A00AE6CB3"
+  },
+  {
+    "path": "src/Sonda.Access/AccessDbContext.cs",
+    "sha256": "E1EA22F8E34EF3A4751B12DA1CDB6A0CCB3AB78A571F461DF4FB92A53652D6F1"
+  },
+  {
+    "path": "src/Sonda.Access/AccountService.cs",
+    "sha256": "F290E0A45471B6BA2FBF7D0EDA6572813DA515E8D02FB9355F3A4C44D937746A"
+  },
+  {
+    "path": "src/Sonda.Access/InitialActivationStore.cs",
+    "sha256": "4B62E3461BA4772DD684313F201CB7D3E2CA02D1D634160E115AFD37851AB946"
+  },
+  {
+    "path": "src/Sonda.Access/Migrations/20260924130738_AccessFoundation.cs",
+    "sha256": "41D9DAA0841B427BCB06641D8EBFBEA878D1A3A2537B2EAFC8839E0EB036E077"
+  },
+  {
+    "path": "src/Sonda.Access/Migrations/20260924130738_AccessFoundation.Designer.cs",
+    "sha256": "64C0FC5CB86EF9941A1771CDB868C2721C20EEDF29390BD8A0C17A11CA0A7B40"
+  },
+  {
+    "path": "src/Sonda.Access/Migrations/20260924141909_AccessSecurityConstraints.cs",
+    "sha256": "65DAE04E146906EF5E953D89D73D642797C4A74387D8C4F545FA3EF2F07F9145"
+  },
+  {
+    "path": "src/Sonda.Access/Migrations/20260924141909_AccessSecurityConstraints.Designer.cs",
+    "sha256": "28DBB85E27FF75C1ADABFF5A77E9FD17B99782BCCA123F9DF9B0EEE5364EAF17"
+  },
+  {
+    "path": "src/Sonda.Access/Migrations/AccessDbContextModelSnapshot.cs",
+    "sha256": "F350ADCFFED249BAD840D28D840E9AE172A2626DE118C9E5D25DE794D23BA403"
+  },
+  {
+    "path": "src/Sonda.Access/MonitoringPathPolicy.cs",
+    "sha256": "3ACBEBFA604707AC7388271E76C35559CEA4A0B216068ECFBF82865F0318D57C"
+  },
+  {
+    "path": "src/Sonda.Access/OperationLedger.cs",
+    "sha256": "5D1DCE5D28DCBA2D1F570B6B5E7E77C50E53F736CB8D76D329B99ECB020AB4F5"
+  },
+  {
+    "path": "src/Sonda.Access/packages.lock.json",
+    "sha256": "1E647551EA33BB24E9413A50E1BF66577A5CFDA81B06435AE8A1B38C7336064F"
+  },
+  {
+    "path": "src/Sonda.Access/ProvisioningStore.cs",
+    "sha256": "B148F4AD26A5BD822C873D19BBA0086DD024A53A22CB7EE810EACF262258C262"
+  },
+  {
+    "path": "src/Sonda.Access/Sonda.Access.csproj",
+    "sha256": "2AF60E9A5DCC4649400218C702C14F7A7DF7FBBC65567709AF8977011B64BAA5"
+  },
+  {
+    "path": "src/Sonda.Api.Contracts/packages.lock.json",
+    "sha256": "A4364D81A6DE2707D66FBCED18FBBC926C882AB96E1D1AEBBB17E871285B9D75"
+  },
+  {
+    "path": "src/Sonda.Api.Contracts/Queries.cs",
+    "sha256": "CD77BCD46B62BD6E3BD1494ADF89DDDFB45ADA8AFABE267397AC21B0742069FE"
+  },
+  {
+    "path": "src/Sonda.Api.Contracts/Sonda.Api.Contracts.csproj",
+    "sha256": "8D654C44B7BEBB6B31A9F2F606927F45B5072193ADC4EEF8CCE3F3CF3B278DF3"
+  },
+  {
+    "path": "src/Sonda.Infrastructure/Persistence/PostgresIngestionStore.ApiConfiguration.cs",
+    "sha256": "B93E3F9E4BEB9EEE6DB60B5BACB54B92D599A0C9E444C74725A7AA7D5AB0A13E"
+  },
+  {
+    "path": "src/Sonda.Server/Hosting/ApplicationAdmission.cs",
+    "sha256": "A3A0AC52DC77D2EBF26C35735C636449D955C41E11D3274DD301495693F2C19D"
+  },
+  {
+    "path": "src/Sonda.Server/Hosting/OperationReconciler.cs",
+    "sha256": "B51B86A828F0144B94A4C27E33D1AA1CF02A112312DC05A7FA76D7243854908F"
+  },
+  {
+    "path": "src/Sonda.Server/Hosting/RequestContract.cs",
+    "sha256": "C0330DC3523AA135C743F15BC30135B482491DB45C43FCB1D5B27CE9B7385495"
+  },
+  {
+    "path": "src/Sonda.Server/Hosting/SourceService.cs",
+    "sha256": "C2285B0271276D12FBD0AE4000E75BAC83F3DD30634761B2612667B40CAD04A7"
+  },
+  {
+    "path": "src/Sonda.Server/Hosting/WorkflowService.cs",
+    "sha256": "F019BC48589FD3282895F2FBB88CEF2EBD41C6E43AF62313E8D8FBE162D2C128"
+  },
+  {
+    "path": "src/Sonda.Server/packages.lock.json",
+    "sha256": "79C528EA78A39771382493CDCBC63A0985B0E86517A8A373A7199EF7A7074FA3"
+  },
+  {
+    "path": "src/Sonda.Server/Profiles/ProfileService.cs",
+    "sha256": "652CE6BD9E19FF1B07281C79822BCEA08AE9AA6490B40C86B9C2C6FE7847474B"
+  },
+  {
+    "path": "src/Sonda.Server/Profiles/SimulationProcess.cs",
+    "sha256": "269991C50EC3C5E1E88BFC0A58076B1085C4EEF6C4819151BD2E7FA72FFBA88F"
+  },
+  {
+    "path": "src/Sonda.Server/Program.cs",
+    "sha256": "10A5B0EF79EA8B96B67525A17C7C3ACDAFB47D389F815644776AACB3E7164A49"
+  },
+  {
+    "path": "src/Sonda.Server/Queries/CursorCodec.cs",
+    "sha256": "94200404DFC5BFBE25228CFC035AD31540D7EB79CD6970D5951389902DC605ED"
+  },
+  {
+    "path": "src/Sonda.Server/Queries/DashboardQueries.cs",
+    "sha256": "183571D6A171D37E9030E0931B17695830F10A22145254DC3B2ACF710C5D8E7A"
+  },
+  {
+    "path": "src/Sonda.Server/Queries/DetailQueries.cs",
+    "sha256": "11D20E57FD65F407B411B2E6A82188202BE31F8F304F063F2374B4515AF272A0"
+  },
+  {
+    "path": "src/Sonda.Server/Queries/InvestigationQueries.cs",
+    "sha256": "9D4D2F13A7061ED559F7C7DF97157DAA90C426FF5EFB3686E710F1B692C08A22"
+  },
+  {
+    "path": "src/Sonda.Server/Queries/SearchQueries.cs",
+    "sha256": "4689E254FDB372ECD28C8E5F8DC8AA1C77D89F16963C6D6107E80A37BF46B8B9"
+  },
+  {
+    "path": "src/Sonda.Server/Sonda.Server.csproj",
+    "sha256": "2BCE796B42154C29A862F5B7263E082BE97E5CEC844A66846A4FF5B8F35BD23B"
+  },
+  {
+    "path": "tests/Sonda.Access.Tests/AccessDatabase.cs",
+    "sha256": "0088DBAD9E899431B35E13C689E22AF66A799561115CC301BFBDB6A26363EAC9"
+  },
+  {
+    "path": "tests/Sonda.Access.Tests/MonitoringPathTests.cs",
+    "sha256": "4C2D0F4793FC3C18CADBBCDD3A26816EB76D3A9252DCA357A011FA869DA11097"
+  },
+  {
+    "path": "tests/Sonda.Access.Tests/packages.lock.json",
+    "sha256": "D6A84C66DAB418CF85923C7A23E19123E0F0B44299EE4FF4C7EF53B53F5059EB"
+  },
+  {
+    "path": "tests/Sonda.Access.Tests/ProvisioningTests.cs",
+    "sha256": "170A2022E416586D55983821E3C286D3072093E1CE4572802A1CA3E6C52496FF"
+  },
+  {
+    "path": "tests/Sonda.Access.Tests/RuntimeRoleTests.cs",
+    "sha256": "1CCED3601829D2DF68A5E0733C5ACA311D8AEE8AB4EE230E18A999E895C96749"
+  },
+  {
+    "path": "tests/Sonda.Access.Tests/Sonda.Access.Tests.csproj",
+    "sha256": "2A36530A04BAA17B33A6C49A839BF9FACAFCA4F3801E98254F8B6A0D99EF0012"
+  },
+  {
+    "path": "tests/Sonda.Access.Tests/UpgradeTests.cs",
+    "sha256": "B34385DFE504C18C517B3C384D12211DAA3CD5DD9875110D75506E3489179FE8"
+  },
+  {
+    "path": "tests/Sonda.Api.Tests/AccountTests.cs",
+    "sha256": "C5CBDE993C821AB23FCE6DAEFC49B76E02E30086936DA37F61BE4DC60F2C9F97"
+  },
+  {
+    "path": "tests/Sonda.Api.Tests/HostedMonitoringTests.cs",
+    "sha256": "CD05A8D04E97BC779F320D0064064C422CDD114565DDA93D570FACC2F148A521"
+  },
+  {
+    "path": "tests/Sonda.Api.Tests/HttpsTests.cs",
+    "sha256": "99EE36B12A571A2CFF98F91348DEA0549E2A1F6B01B84EED194F5782F0FB7DAE"
+  },
+  {
+    "path": "tests/Sonda.Api.Tests/packages.lock.json",
+    "sha256": "92883EA4EF1242A7372D4D347733AE4173F1988444951E512FB9D9CDC3019E7A"
+  },
+  {
+    "path": "tests/Sonda.Api.Tests/ProfileAcceptanceTests.cs",
+    "sha256": "1A9DC6561E98A0B3D86CA1CD80695FF6D95005D303E289871E012A32338297F5"
+  },
+  {
+    "path": "tests/Sonda.Api.Tests/QueryTests.cs",
+    "sha256": "D7187DF32BF9727E204CE94CCA741FD67711B9971482408CFCDB8E1ACE0087CD"
+  },
+  {
+    "path": "tests/Sonda.Api.Tests/SecurityTests.cs",
+    "sha256": "788D5E706EEED2A617862B93ABB64876FF6A0C622682EDAAE58ED785DEA3FB65"
+  },
+  {
+    "path": "tests/Sonda.Api.Tests/Sonda.Api.Tests.csproj",
+    "sha256": "529DD76604994FBDEEBFD0D226DA4B3EF23F34AE00C1A3B29DFD870F71AC19BF"
+  },
+  {
+    "path": "tests/Sonda.Api.Tests/WorkflowTests.cs",
+    "sha256": "C7E9E98923EFA1C6837DFC507EC850E61F3EE46FF137771D3AC2BD22C9D29CC5"
+  },
+  {
+    "path": "tools/Verify-Phase5Evidence.ps1",
+    "sha256": "919333541EFCCAD0F4AB7C40AD1B314B5FE8A7A1EC16ECE1A6810ADF59CECAEE"
+  }
+]

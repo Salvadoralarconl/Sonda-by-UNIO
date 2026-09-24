@@ -1,0 +1,42 @@
+{
+  "Tracking": "on",
+  "Runs": [
+    {
+      "File": "verified_net10.0_20260924001656.trx",
+      "Total": 42,
+      "Passed": 42,
+      "Failed": 0,
+      "NotExecuted": 0
+    },
+    {
+      "File": "verified_net10.0_20260924001657.trx",
+      "Total": 76,
+      "Passed": 76,
+      "Failed": 0,
+      "NotExecuted": 0
+    },
+    {
+      "File": "verified_net10.0_20260924001807.trx",
+      "Total": 119,
+      "Passed": 119,
+      "Failed": 0,
+      "NotExecuted": 0
+    }
+  ],
+  "Total": 237.0,
+  "LegacyTestCases": 81,
+  "LegacyMissingOrFailing": [],
+  "AllLegacyPassing": true,
+  "ExactMigrationChain": [
+    "20260924023552_DurablePersistence",
+    "20260924032911_InterpretationPolicies"
+  ],
+  "TrackingOff": {
+    "File": "verified-off_net10.0_20260924002019.trx",
+    "Total": 119,
+    "Passed": 119,
+    "Failed": 0,
+    "NotExecuted": 0
+  },
+  "LocalDatabaseStopped": true
+}

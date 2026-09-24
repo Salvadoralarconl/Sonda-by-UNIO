@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../Sonda.Domain/Sonda.Domain.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,215 @@
+{
+  "seed": "mixed-orders",
+  "serverTimeZoneId": "America/New_York",
+  "asOf": "2026-09-23T16:00:00+00:00",
+  "sampleDate": "2026-09-23",
+  "profiles": [
+    {
+      "teamId": "test-4d52d606fc854c7593f86ed6ffc1313b",
+      "applicationId": "app-cam",
+      "id": "cam",
+      "version": 1,
+      "name": "CAM synthetic sample",
+      "streamKey": "default",
+      "completionMode": "TerminalMarker",
+      "parsing": {
+        "entryPattern": "^(?\u003Ctimestamp\u003E\\d{2}:\\d{2}:\\d{2}) (?\u003Cmessage\u003E.*)$",
+        "timestampFormat": "HH:mm:ss",
+        "timestampHasDate": false,
+        "timestampHasOffset": false,
+        "sourceTimeZoneId": "America/New_York"
+      },
+      "identifier": {
+        "kind": "KeyValue",
+        "name": "Order ID",
+        "namespace": "cam-order-v1",
+        "expression": "OrderID",
+        "captureName": "id",
+        "caseSensitive": false
+      },
+      "cycleFailureSeverity": "Error",
+      "orderFailureSeverity": "Warning",
+      "undefinedOrderSeverity": "Warning",
+      "cycleTiming": {
+        "expectedDuration": null,
+        "gracePeriod": null,
+        "fallbackTimeout": null,
+        "requested": false
+      },
+      "orderTiming": {
+        "expectedDuration": null,
+        "gracePeriod": null,
+        "fallbackTimeout": null,
+        "requested": false
+      },
+      "rules": [
+        {
+          "key": "cycle-begin",
+          "role": "CycleBegin",
+          "target": "Application",
+          "enabled": true,
+          "priority": 0,
+          "classification": null,
+          "conditionKey": "",
+          "recovery": "ManualOnly",
+          "alternatives": [
+            {
+              "kind": "Exact",
+              "expression": "CAM process started",
+              "caseSensitive": false
+            }
+          ]
+        },
+        {
+          "key": "cycle-success",
+          "role": "CycleSuccess",
+          "target": "Application",
+          "enabled": true,
+          "priority": 0,
+          "classification": null,
+          "conditionKey": "",
+          "recovery": "ManualOnly",
+          "alternatives": [
+            {
+              "kind": "Exact",
+              "expression": "CAM process completed",
+              "caseSensitive": false
+            }
+          ]
+        },
+        {
+          "key": "cycle-failure",
+          "role": "CycleFailure",
+          "target": "Application",
+          "enabled": true,
+          "priority": 0,
+          "classification": null,
+          "conditionKey": "",
+          "recovery": "ManualOnly",
+          "alternatives": [
+            {
+              "kind": "Exact",
+              "expression": "CAM process failed",
+              "caseSensitive": false
+            }
+          ]
+        },
+        {
+          "key": "order-begin",
+          "role": "OrderBegin",
+          "target": "Order",
+          "enabled": true,
+          "priority": 0,
+          "classification": null,
+          "conditionKey": "",
+          "recovery": "ManualOnly",
+          "alternatives": [
+            {
+              "kind": "Contains",
+              "expression": "Finding order",
+              "caseSensitive": false
+            }
+          ]
+        },
+        {
+          "key": "order-success",
+          "role": "OrderSuccess",
+          "target": "Order",
+          "enabled": true,
+          "priority": 0,
+          "classification": null,
+          "conditionKey": "",
+          "recovery": "ManualOnly",
+          "alternatives": [
+            {
+              "kind": "Contains",
+              "expression": "Order sent",
+              "caseSensitive": false
+            }
+          ]
+        },
+        {
+          "key": "order-failure",
+          "role": "OrderFailure",
+          "target": "Order",
+          "enabled": true,
+          "priority": 0,
+          "classification": null,
+          "conditionKey": "",
+          "recovery": "ManualOnly",
+          "alternatives": [
+            {
+              "kind": "Contains",
+              "expression": "Unable to send order",
+              "caseSensitive": false
+            }
+          ]
+        },
+        {
+          "key": "order-warning",
+          "role": "Detection",
+          "target": "Order",
+          "enabled": true,
+          "priority": 10,
+          "classification": "Warning",
+          "conditionKey": "order-outcome",
+          "recovery": "NextSuccessfulRun",
+          "alternatives": [
+            {
+              "kind": "Contains",
+              "expression": "Unable to send order",
+              "caseSensitive": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "profileId": "cam",
+      "raw": "10:00:00 CAM process started",
+      "processedAt": "2026-09-23T14:00:00+00:00"
+    },
+    {
+      "profileId": "cam",
+      "raw": "10:00:01 Finding order OrderID=001",
+      "processedAt": "2026-09-23T14:00:01+00:00"
+    },
+    {
+      "profileId": "cam",
+      "raw": "10:00:02 Finding order OrderID=002",
+      "processedAt": "2026-09-23T14:00:02+00:00"
+    },
+    {
+      "profileId": "cam",
+      "raw": "10:00:03 Connecting to payer OrderID=001",
+      "processedAt": "2026-09-23T14:00:03+00:00"
+    },
+    {
+      "profileId": "cam",
+      "raw": "10:00:04 Order sent OrderID=001",
+      "processedAt": "2026-09-23T14:00:04+00:00"
+    },
+    {
+      "profileId": "cam",
+      "raw": "10:00:05 Unable to send order OrderID=002",
+      "processedAt": "2026-09-23T14:00:05+00:00"
+    },
+    {
+      "profileId": "cam",
+      "raw": "10:00:06 Finding order OrderID=003",
+      "processedAt": "2026-09-23T14:00:06+00:00"
+    },
+    {
+      "profileId": "cam",
+      "raw": "10:00:07 Order sent OrderID=003",
+      "processedAt": "2026-09-23T14:00:07+00:00"
+    },
+    {
+      "profileId": "cam",
+      "raw": "10:00:08 CAM process completed",
+      "processedAt": "2026-09-23T14:00:08+00:00"
+    }
+  ]
+}

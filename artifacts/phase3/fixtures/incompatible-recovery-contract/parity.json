@@ -1,0 +1,35 @@
+{
+  "fixture": "incompatible-recovery-contract",
+  "isolatedTeam": "matrix-bbbb8257ecbc4397bf950d9a515c63b0",
+  "tracesEqual": true,
+  "restartedAfterEveryCommand": true,
+  "replayUnchanged": true,
+  "expectedMetrics": {
+    "successfulEvaluatedRuns": 0,
+    "totalEvaluatedRuns": 1,
+    "systemHealthPercentage": 0,
+    "completedOrderRunsProcessedToday": 0,
+    "fiveDayHistory": [
+      {
+        "date": "2026-09-19",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-20",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-21",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-22",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-23",
+        "completedOrderRunsProcessedCount": 0
+      }
+    ]
+  }
+}

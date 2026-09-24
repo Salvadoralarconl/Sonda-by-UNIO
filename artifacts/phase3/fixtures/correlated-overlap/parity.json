@@ -1,0 +1,35 @@
+{
+  "fixture": "correlated-overlap",
+  "isolatedTeam": "matrix-74d435c4f52e4be7926acaac4f7bc697",
+  "tracesEqual": true,
+  "restartedAfterEveryCommand": true,
+  "replayUnchanged": true,
+  "expectedMetrics": {
+    "successfulEvaluatedRuns": 3,
+    "totalEvaluatedRuns": 4,
+    "systemHealthPercentage": 75,
+    "completedOrderRunsProcessedToday": 2,
+    "fiveDayHistory": [
+      {
+        "date": "2026-09-19",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-20",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-21",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-22",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-23",
+        "completedOrderRunsProcessedCount": 2
+      }
+    ]
+  }
+}

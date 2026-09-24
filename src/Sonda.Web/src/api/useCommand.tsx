@@ -1,0 +1,10 @@
+import { useState } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
+import { api, ApiError, command, submit, type PendingCommand } from './client';
+import { identity, useSession } from '../session';
+export function useCommand() {
+ const session=useSession(),cache=useQueryClient();const [pending,setPending]=useState<PendingCommand<object>|null>(null),[busy,setBusy]=useState(false),[message,setMessage]=useState(''),[result,setResult]=useState<unknown>(null);
+ async function send(intent:PendingCommand<object>) {setPending(intent);setBusy(true);setMessage('Submitting…');try{const data=await submit<unknown>(intent);setResult(data);setPending(null);setMessage('Completed.');await cache.invalidateQueries({predicate:q=>q.queryKey[0]===identity(session)});return data;}catch(e){if(e instanceof ApiError&&e.status<500){setPending(null);setMessage(e.status===409?'The record changed. Refresh and review before submitting again.':e.code);}else setMessage('Outcome unknown. Check operation status or retry the same request.');return undefined;}finally{setBusy(false);}}
+ async function check(){if(!pending)return;setBusy(true);try{const r=await api<{state:string;result:unknown}>(`/operations/${pending.operationId}`);setMessage(`Operation ${r.state}.`);if(['Committed','Rejected'].includes(r.state)){setResult(r.result);setPending(null);await cache.invalidateQueries({predicate:q=>q.queryKey[0]===identity(session)});}}catch(e){setMessage(e instanceof ApiError&&e.status===404?'Receipt not found. Retry the same request.':'Unable to check yet.');}finally{setBusy(false);}}
+ return {busy,pending,message,result,run:(path:string,body:object,method='POST')=>pending?Promise.resolve(undefined):send(command(path,body,method)),controls:<div aria-live="polite"><p>{message}</p>{pending&&<><p>Operation {pending.operationId}</p><button disabled={busy} onClick={()=>void check()}>Check operation</button><button disabled={busy} onClick={()=>void send(pending)}>Retry same request</button></>}</div>};
+}

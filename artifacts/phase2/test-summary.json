@@ -1,0 +1,23 @@
+[
+  {
+    "suite": "phase1",
+    "total": 42,
+    "passed": 42,
+    "failed": 0,
+    "notExecuted": 0
+  },
+  {
+    "suite": "postgres-on",
+    "total": 39,
+    "passed": 39,
+    "failed": 0,
+    "notExecuted": 0
+  },
+  {
+    "suite": "postgres-off",
+    "total": 39,
+    "passed": 39,
+    "failed": 0,
+    "notExecuted": 0
+  }
+]

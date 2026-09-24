@@ -1,0 +1,9 @@
+{
+  "kind": "AdvanceTime",
+  "childExit": 73,
+  "committedReceiptFound": true,
+  "retryStateUnchanged": true,
+  "runs": 1,
+  "incidents": 1,
+  "receipts": 2
+}

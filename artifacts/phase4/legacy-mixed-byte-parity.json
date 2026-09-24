@@ -1,0 +1,212 @@
+{
+  "source": {
+    "profileId": "cam",
+    "sourceKey": "file",
+    "revision": 1,
+    "root": "C:\\Users\\sapro\\AppData\\Local\\Temp\\sonda-synthetic-049e8673e9ad434cbd67588ddfe882ad",
+    "include": [
+      "*.log"
+    ],
+    "exclude": [],
+    "recursive": false,
+    "enabled": true,
+    "required": true,
+    "encoding": "Utf8",
+    "rotation": "Rename",
+    "completeness": "None",
+    "producerContract": "",
+    "producerManifestPath": "",
+    "rotationContract": "",
+    "rotationManifestPath": "",
+    "fileOrderExpression": "",
+    "sampleDate": "2026-09-23",
+    "readBytes": 65536,
+    "visitBytes": 1048576,
+    "visitRecords": 256,
+    "maximumRecordBytes": 1048576,
+    "maximumFiles": 1024,
+    "pollInterval": "00:00:01"
+  },
+  "metrics": {
+    "successfulEvaluatedRuns": 3,
+    "totalEvaluatedRuns": 4,
+    "systemHealthPercentage": 75,
+    "completedOrderRunsProcessedToday": 3,
+    "fiveDayHistory": [
+      {
+        "date": "2026-09-19",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-20",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-21",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-22",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-23",
+        "completedOrderRunsProcessedCount": 3
+      }
+    ]
+  },
+  "state": {
+    "interpreter": {
+      "format": 1,
+      "profileId": "cam",
+      "cycleSequence": 1,
+      "runs": [
+        {
+          "id": "mixed-orders:cam:cycle:0001",
+          "profileId": "cam",
+          "scope": "Application",
+          "cycleSequence": 1,
+          "applicationRunId": null,
+          "identifier": null,
+          "attemptNumber": 1,
+          "startedEventAt": "2026-09-23T14:00:00+00:00",
+          "lifecycle": "Finalized",
+          "result": "Success",
+          "completedEventAt": "2026-09-23T14:00:08+00:00",
+          "completedProcessedAt": "2026-09-23T14:00:08+00:00",
+          "terminalReason": "ConfiguredCycleCompletion",
+          "evidenceLines": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "diagnosticProblemKeys": [],
+          "observedSuccess": true,
+          "observedFailure": false
+        },
+        {
+          "id": "mixed-orders:cam:order:0002",
+          "profileId": "cam",
+          "scope": "Order",
+          "cycleSequence": 1,
+          "applicationRunId": "mixed-orders:cam:cycle:0001",
+          "identifier": "001",
+          "attemptNumber": 1,
+          "startedEventAt": "2026-09-23T14:00:01+00:00",
+          "lifecycle": "Finalized",
+          "result": "Success",
+          "completedEventAt": "2026-09-23T14:00:04+00:00",
+          "completedProcessedAt": "2026-09-23T14:00:04+00:00",
+          "terminalReason": "ConfiguredOrderOutcome",
+          "evidenceLines": [
+            2,
+            4,
+            5
+          ],
+          "diagnosticProblemKeys": [],
+          "observedSuccess": false,
+          "observedFailure": false
+        },
+        {
+          "id": "mixed-orders:cam:order:0003",
+          "profileId": "cam",
+          "scope": "Order",
+          "cycleSequence": 1,
+          "applicationRunId": "mixed-orders:cam:cycle:0001",
+          "identifier": "002",
+          "attemptNumber": 1,
+          "startedEventAt": "2026-09-23T14:00:02+00:00",
+          "lifecycle": "Finalized",
+          "result": "Failure",
+          "completedEventAt": "2026-09-23T14:00:05+00:00",
+          "completedProcessedAt": "2026-09-23T14:00:05+00:00",
+          "terminalReason": "ConfiguredOrderOutcome",
+          "evidenceLines": [
+            3,
+            6
+          ],
+          "diagnosticProblemKeys": [],
+          "observedSuccess": false,
+          "observedFailure": false
+        },
+        {
+          "id": "mixed-orders:cam:order:0006",
+          "profileId": "cam",
+          "scope": "Order",
+          "cycleSequence": 1,
+          "applicationRunId": "mixed-orders:cam:cycle:0001",
+          "identifier": "003",
+          "attemptNumber": 1,
+          "startedEventAt": "2026-09-23T14:00:06+00:00",
+          "lifecycle": "Finalized",
+          "result": "Success",
+          "completedEventAt": "2026-09-23T14:00:07+00:00",
+          "completedProcessedAt": "2026-09-23T14:00:07+00:00",
+          "terminalReason": "ConfiguredOrderOutcome",
+          "evidenceLines": [
+            7,
+            8
+          ],
+          "diagnosticProblemKeys": [],
+          "observedSuccess": false,
+          "observedFailure": false
+        }
+      ],
+      "incidents": [
+        {
+          "id": "mixed-orders:cam:incident:0004",
+          "problem": {
+            "teamId": "test-507757e289c94de7bf2e91c6cdf94d43",
+            "applicationId": "app-cam",
+            "profileId": "cam",
+            "scope": "Order",
+            "streamKey": "default",
+            "identifierNamespace": "cam-order-v1",
+            "identifier": "002",
+            "conditionKey": "order-outcome",
+            "incidentKey": "problem:v1:[\u0022test-507757e289c94de7bf2e91c6cdf94d43\u0022,\u0022app-cam\u0022,\u0022cam\u0022,\u0022Order\u0022,\u0022default\u0022,\u0022cam-order-v1\u0022,\u0022002\u0022,\u0022order-outcome\u0022]"
+          },
+          "recoveryPolicy": "NextSuccessfulRun",
+          "severity": "Warning",
+          "status": "Active",
+          "occurrences": [
+            {
+              "id": "mixed-orders:cam:occurrence:0005",
+              "runId": "mixed-orders:cam:order:0003",
+              "applicationRunId": "mixed-orders:cam:cycle:0001",
+              "cycleSequence": 1,
+              "result": "Failure",
+              "severity": "Warning",
+              "detectedAt": "2026-09-23T14:00:05+00:00",
+              "evidenceLines": [
+                3,
+                6
+              ]
+            }
+          ],
+          "recoveries": [],
+          "history": [
+            {
+              "from": null,
+              "to": "Active",
+              "at": "2026-09-23T14:00:05+00:00",
+              "reason": "First occurrence"
+            }
+          ]
+        }
+      ]
+    },
+    "idCounter": 6,
+    "blocked": false
+  },
+  "exactRuns": true,
+  "exactMetrics": true,
+  "splitWrites": true,
+  "explicitSampleDate": "2026-09-23"
+}

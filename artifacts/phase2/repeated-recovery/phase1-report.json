@@ -1,0 +1,822 @@
+{
+  "provenance": {
+    "reportSchemaVersion": "1",
+    "engineVersion": "phase1.1",
+    "profileHash": "8268D4081DCB11567FCBD93877E2CB82970F4C9A8A39A6C988CFCC9D86079866",
+    "sampleHash": "3C2153E8DC4C4BC816F95FAAB14BE869D0ABB046DFE2609D1D3C673B96AA730F",
+    "requestHash": "3F1716D769E1BAE468BC195CD07098FC6AB695833BC2AE240893FD115399CBF9",
+    "seed": "repeated-recovery",
+    "serverTimeZoneId": "America/New_York",
+    "asOf": "2026-09-23T16:00:00+00:00"
+  },
+  "complete": true,
+  "diagnostics": [],
+  "entries": [
+    {
+      "line": 1,
+      "profileId": "cam",
+      "raw": "CAM process started",
+      "parsed": {
+        "line": 1,
+        "profileId": "cam",
+        "raw": "CAM process started",
+        "message": "CAM process started",
+        "eventAt": "2026-09-23T14:00:00+00:00",
+        "processedAt": "2026-09-23T14:00:00+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "cycle-begin",
+          "role": "CycleBegin",
+          "target": "Application",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        }
+      ],
+      "actions": [
+        "CycleStarted:repeated-recovery:cam:cycle:0001"
+      ],
+      "problemDecisions": [],
+      "diagnostics": []
+    },
+    {
+      "line": 2,
+      "profileId": "cam",
+      "raw": "Finding order OrderID=93822",
+      "parsed": {
+        "line": 2,
+        "profileId": "cam",
+        "raw": "Finding order OrderID=93822",
+        "message": "Finding order OrderID=93822",
+        "eventAt": "2026-09-23T14:00:01+00:00",
+        "processedAt": "2026-09-23T14:00:01+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": "93822"
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "order-begin",
+          "role": "OrderBegin",
+          "target": "Order",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        }
+      ],
+      "actions": [
+        "OrderStarted:repeated-recovery:cam:order:0002"
+      ],
+      "problemDecisions": [],
+      "diagnostics": []
+    },
+    {
+      "line": 3,
+      "profileId": "cam",
+      "raw": "Unable to send order OrderID=93822",
+      "parsed": {
+        "line": 3,
+        "profileId": "cam",
+        "raw": "Unable to send order OrderID=93822",
+        "message": "Unable to send order OrderID=93822",
+        "eventAt": "2026-09-23T14:00:02+00:00",
+        "processedAt": "2026-09-23T14:00:02+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": "93822"
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "order-failure",
+          "role": "OrderFailure",
+          "target": "Order",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        },
+        {
+          "ruleKey": "order-warning",
+          "role": "Detection",
+          "target": "Order",
+          "priority": 10,
+          "classification": "Warning",
+          "alternatives": [
+            0
+          ],
+          "selection": "Winner"
+        }
+      ],
+      "actions": [
+        "OrderFinalized:repeated-recovery:cam:order:0002:Failure"
+      ],
+      "problemDecisions": [
+        {
+          "line": 3,
+          "incidentKey": "problem:v1:[\u0022test-d4aeb579d15b4f86a869706cb6c4eae9\u0022,\u0022app-cam\u0022,\u0022cam\u0022,\u0022Order\u0022,\u0022default\u0022,\u0022cam-order-v1\u0022,\u002293822\u0022,\u0022order-outcome\u0022]",
+          "incidentId": "repeated-recovery:cam:incident:0003",
+          "action": "CreatedIncident",
+          "runId": "repeated-recovery:cam:order:0002"
+        }
+      ],
+      "diagnostics": []
+    },
+    {
+      "line": 4,
+      "profileId": "cam",
+      "raw": "CAM process completed",
+      "parsed": {
+        "line": 4,
+        "profileId": "cam",
+        "raw": "CAM process completed",
+        "message": "CAM process completed",
+        "eventAt": "2026-09-23T14:00:03+00:00",
+        "processedAt": "2026-09-23T14:00:03+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "cycle-success",
+          "role": "CycleSuccess",
+          "target": "Application",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        }
+      ],
+      "actions": [
+        "CycleFinalized:repeated-recovery:cam:cycle:0001:Success"
+      ],
+      "problemDecisions": [],
+      "diagnostics": []
+    },
+    {
+      "line": 5,
+      "profileId": "cam",
+      "raw": "CAM process started",
+      "parsed": {
+        "line": 5,
+        "profileId": "cam",
+        "raw": "CAM process started",
+        "message": "CAM process started",
+        "eventAt": "2026-09-23T14:00:04+00:00",
+        "processedAt": "2026-09-23T14:00:04+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "cycle-begin",
+          "role": "CycleBegin",
+          "target": "Application",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        }
+      ],
+      "actions": [
+        "CycleStarted:repeated-recovery:cam:cycle:0005"
+      ],
+      "problemDecisions": [],
+      "diagnostics": []
+    },
+    {
+      "line": 6,
+      "profileId": "cam",
+      "raw": "Finding order OrderID=93822",
+      "parsed": {
+        "line": 6,
+        "profileId": "cam",
+        "raw": "Finding order OrderID=93822",
+        "message": "Finding order OrderID=93822",
+        "eventAt": "2026-09-23T14:00:05+00:00",
+        "processedAt": "2026-09-23T14:00:05+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": "93822"
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "order-begin",
+          "role": "OrderBegin",
+          "target": "Order",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        }
+      ],
+      "actions": [
+        "OrderStarted:repeated-recovery:cam:order:0006"
+      ],
+      "problemDecisions": [],
+      "diagnostics": []
+    },
+    {
+      "line": 7,
+      "profileId": "cam",
+      "raw": "Unable to send order OrderID=93822",
+      "parsed": {
+        "line": 7,
+        "profileId": "cam",
+        "raw": "Unable to send order OrderID=93822",
+        "message": "Unable to send order OrderID=93822",
+        "eventAt": "2026-09-23T14:00:06+00:00",
+        "processedAt": "2026-09-23T14:00:06+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": "93822"
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "order-failure",
+          "role": "OrderFailure",
+          "target": "Order",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        },
+        {
+          "ruleKey": "order-warning",
+          "role": "Detection",
+          "target": "Order",
+          "priority": 10,
+          "classification": "Warning",
+          "alternatives": [
+            0
+          ],
+          "selection": "Winner"
+        }
+      ],
+      "actions": [
+        "OrderFinalized:repeated-recovery:cam:order:0006:Failure"
+      ],
+      "problemDecisions": [
+        {
+          "line": 7,
+          "incidentKey": "problem:v1:[\u0022test-d4aeb579d15b4f86a869706cb6c4eae9\u0022,\u0022app-cam\u0022,\u0022cam\u0022,\u0022Order\u0022,\u0022default\u0022,\u0022cam-order-v1\u0022,\u002293822\u0022,\u0022order-outcome\u0022]",
+          "incidentId": "repeated-recovery:cam:incident:0003",
+          "action": "AppendedOccurrence",
+          "runId": "repeated-recovery:cam:order:0006"
+        }
+      ],
+      "diagnostics": []
+    },
+    {
+      "line": 8,
+      "profileId": "cam",
+      "raw": "CAM process completed",
+      "parsed": {
+        "line": 8,
+        "profileId": "cam",
+        "raw": "CAM process completed",
+        "message": "CAM process completed",
+        "eventAt": "2026-09-23T14:00:07+00:00",
+        "processedAt": "2026-09-23T14:00:07+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "cycle-success",
+          "role": "CycleSuccess",
+          "target": "Application",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        }
+      ],
+      "actions": [
+        "CycleFinalized:repeated-recovery:cam:cycle:0005:Success"
+      ],
+      "problemDecisions": [],
+      "diagnostics": []
+    },
+    {
+      "line": 9,
+      "profileId": "cam",
+      "raw": "CAM process started",
+      "parsed": {
+        "line": 9,
+        "profileId": "cam",
+        "raw": "CAM process started",
+        "message": "CAM process started",
+        "eventAt": "2026-09-23T14:00:08+00:00",
+        "processedAt": "2026-09-23T14:00:08+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "cycle-begin",
+          "role": "CycleBegin",
+          "target": "Application",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        }
+      ],
+      "actions": [
+        "CycleStarted:repeated-recovery:cam:cycle:0008"
+      ],
+      "problemDecisions": [],
+      "diagnostics": []
+    },
+    {
+      "line": 10,
+      "profileId": "cam",
+      "raw": "Finding order OrderID=93822",
+      "parsed": {
+        "line": 10,
+        "profileId": "cam",
+        "raw": "Finding order OrderID=93822",
+        "message": "Finding order OrderID=93822",
+        "eventAt": "2026-09-23T14:00:09+00:00",
+        "processedAt": "2026-09-23T14:00:09+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": "93822"
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "order-begin",
+          "role": "OrderBegin",
+          "target": "Order",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        }
+      ],
+      "actions": [
+        "OrderStarted:repeated-recovery:cam:order:0009"
+      ],
+      "problemDecisions": [],
+      "diagnostics": []
+    },
+    {
+      "line": 11,
+      "profileId": "cam",
+      "raw": "Order sent OrderID=93822",
+      "parsed": {
+        "line": 11,
+        "profileId": "cam",
+        "raw": "Order sent OrderID=93822",
+        "message": "Order sent OrderID=93822",
+        "eventAt": "2026-09-23T14:00:10+00:00",
+        "processedAt": "2026-09-23T14:00:10+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": "93822"
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "order-success",
+          "role": "OrderSuccess",
+          "target": "Order",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        }
+      ],
+      "actions": [
+        "OrderFinalized:repeated-recovery:cam:order:0009:Success"
+      ],
+      "problemDecisions": [
+        {
+          "line": 11,
+          "incidentKey": "problem:v1:[\u0022test-d4aeb579d15b4f86a869706cb6c4eae9\u0022,\u0022app-cam\u0022,\u0022cam\u0022,\u0022Order\u0022,\u0022default\u0022,\u0022cam-order-v1\u0022,\u002293822\u0022,\u0022order-outcome\u0022]",
+          "incidentId": "repeated-recovery:cam:incident:0003",
+          "action": "ResolvedBySuccessfulRun",
+          "runId": "repeated-recovery:cam:order:0009"
+        }
+      ],
+      "diagnostics": []
+    },
+    {
+      "line": 12,
+      "profileId": "cam",
+      "raw": "CAM process completed",
+      "parsed": {
+        "line": 12,
+        "profileId": "cam",
+        "raw": "CAM process completed",
+        "message": "CAM process completed",
+        "eventAt": "2026-09-23T14:00:11+00:00",
+        "processedAt": "2026-09-23T14:00:11+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      },
+      "disposition": "Applied",
+      "matches": [
+        {
+          "ruleKey": "cycle-success",
+          "role": "CycleSuccess",
+          "target": "Application",
+          "priority": 0,
+          "classification": null,
+          "alternatives": [
+            0
+          ],
+          "selection": "Matched"
+        }
+      ],
+      "actions": [
+        "CycleFinalized:repeated-recovery:cam:cycle:0008:Success"
+      ],
+      "problemDecisions": [],
+      "diagnostics": []
+    }
+  ],
+  "applicationRuns": [
+    {
+      "id": "repeated-recovery:cam:cycle:0001",
+      "profileId": "cam",
+      "scope": "Application",
+      "cycleSequence": 1,
+      "applicationRunId": null,
+      "identifier": null,
+      "attemptNumber": 1,
+      "startedEventAt": "2026-09-23T14:00:00+00:00",
+      "lifecycle": "Finalized",
+      "result": "Success",
+      "completedEventAt": "2026-09-23T14:00:03+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:03+00:00",
+      "terminalReason": "ConfiguredCycleCompletion",
+      "evidenceLines": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "diagnosticProblemKeys": [],
+      "observedSuccess": true,
+      "observedFailure": false
+    },
+    {
+      "id": "repeated-recovery:cam:cycle:0005",
+      "profileId": "cam",
+      "scope": "Application",
+      "cycleSequence": 2,
+      "applicationRunId": null,
+      "identifier": null,
+      "attemptNumber": 1,
+      "startedEventAt": "2026-09-23T14:00:04+00:00",
+      "lifecycle": "Finalized",
+      "result": "Success",
+      "completedEventAt": "2026-09-23T14:00:07+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:07+00:00",
+      "terminalReason": "ConfiguredCycleCompletion",
+      "evidenceLines": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "diagnosticProblemKeys": [],
+      "observedSuccess": true,
+      "observedFailure": false
+    },
+    {
+      "id": "repeated-recovery:cam:cycle:0008",
+      "profileId": "cam",
+      "scope": "Application",
+      "cycleSequence": 3,
+      "applicationRunId": null,
+      "identifier": null,
+      "attemptNumber": 1,
+      "startedEventAt": "2026-09-23T14:00:08+00:00",
+      "lifecycle": "Finalized",
+      "result": "Success",
+      "completedEventAt": "2026-09-23T14:00:11+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:11+00:00",
+      "terminalReason": "ConfiguredCycleCompletion",
+      "evidenceLines": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "diagnosticProblemKeys": [],
+      "observedSuccess": true,
+      "observedFailure": false
+    }
+  ],
+  "orderRuns": [
+    {
+      "id": "repeated-recovery:cam:order:0002",
+      "profileId": "cam",
+      "scope": "Order",
+      "cycleSequence": 1,
+      "applicationRunId": "repeated-recovery:cam:cycle:0001",
+      "identifier": "93822",
+      "attemptNumber": 1,
+      "startedEventAt": "2026-09-23T14:00:01+00:00",
+      "lifecycle": "Finalized",
+      "result": "Failure",
+      "completedEventAt": "2026-09-23T14:00:02+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:02+00:00",
+      "terminalReason": "ConfiguredOrderOutcome",
+      "evidenceLines": [
+        2,
+        3
+      ],
+      "diagnosticProblemKeys": [],
+      "observedSuccess": false,
+      "observedFailure": false
+    },
+    {
+      "id": "repeated-recovery:cam:order:0006",
+      "profileId": "cam",
+      "scope": "Order",
+      "cycleSequence": 2,
+      "applicationRunId": "repeated-recovery:cam:cycle:0005",
+      "identifier": "93822",
+      "attemptNumber": 1,
+      "startedEventAt": "2026-09-23T14:00:05+00:00",
+      "lifecycle": "Finalized",
+      "result": "Failure",
+      "completedEventAt": "2026-09-23T14:00:06+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:06+00:00",
+      "terminalReason": "ConfiguredOrderOutcome",
+      "evidenceLines": [
+        6,
+        7
+      ],
+      "diagnosticProblemKeys": [],
+      "observedSuccess": false,
+      "observedFailure": false
+    },
+    {
+      "id": "repeated-recovery:cam:order:0009",
+      "profileId": "cam",
+      "scope": "Order",
+      "cycleSequence": 3,
+      "applicationRunId": "repeated-recovery:cam:cycle:0008",
+      "identifier": "93822",
+      "attemptNumber": 1,
+      "startedEventAt": "2026-09-23T14:00:09+00:00",
+      "lifecycle": "Finalized",
+      "result": "Success",
+      "completedEventAt": "2026-09-23T14:00:10+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:10+00:00",
+      "terminalReason": "ConfiguredOrderOutcome",
+      "evidenceLines": [
+        10,
+        11
+      ],
+      "diagnosticProblemKeys": [],
+      "observedSuccess": false,
+      "observedFailure": false
+    }
+  ],
+  "incidents": [
+    {
+      "id": "repeated-recovery:cam:incident:0003",
+      "problem": {
+        "teamId": "test-d4aeb579d15b4f86a869706cb6c4eae9",
+        "applicationId": "app-cam",
+        "profileId": "cam",
+        "scope": "Order",
+        "streamKey": "default",
+        "identifierNamespace": "cam-order-v1",
+        "identifier": "93822",
+        "conditionKey": "order-outcome",
+        "incidentKey": "problem:v1:[\u0022test-d4aeb579d15b4f86a869706cb6c4eae9\u0022,\u0022app-cam\u0022,\u0022cam\u0022,\u0022Order\u0022,\u0022default\u0022,\u0022cam-order-v1\u0022,\u002293822\u0022,\u0022order-outcome\u0022]"
+      },
+      "incidentKey": "problem:v1:[\u0022test-d4aeb579d15b4f86a869706cb6c4eae9\u0022,\u0022app-cam\u0022,\u0022cam\u0022,\u0022Order\u0022,\u0022default\u0022,\u0022cam-order-v1\u0022,\u002293822\u0022,\u0022order-outcome\u0022]",
+      "recoveryPolicy": "NextSuccessfulRun",
+      "severity": "Warning",
+      "status": "Resolved",
+      "occurrences": [
+        {
+          "id": "repeated-recovery:cam:occurrence:0004",
+          "runId": "repeated-recovery:cam:order:0002",
+          "applicationRunId": "repeated-recovery:cam:cycle:0001",
+          "cycleSequence": 1,
+          "result": "Failure",
+          "severity": "Warning",
+          "detectedAt": "2026-09-23T14:00:02+00:00",
+          "evidenceLines": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "repeated-recovery:cam:occurrence:0007",
+          "runId": "repeated-recovery:cam:order:0006",
+          "applicationRunId": "repeated-recovery:cam:cycle:0005",
+          "cycleSequence": 2,
+          "result": "Failure",
+          "severity": "Warning",
+          "detectedAt": "2026-09-23T14:00:06+00:00",
+          "evidenceLines": [
+            6,
+            7
+          ]
+        }
+      ],
+      "recoveryEvents": [
+        {
+          "runId": "repeated-recovery:cam:order:0009",
+          "applicationRunId": "repeated-recovery:cam:cycle:0008",
+          "cycleSequence": 3,
+          "recoveredAt": "2026-09-23T14:00:10+00:00",
+          "method": "Automatic",
+          "evidenceLines": [
+            10,
+            11
+          ]
+        }
+      ],
+      "history": [
+        {
+          "from": null,
+          "to": "Active",
+          "at": "2026-09-23T14:00:02+00:00",
+          "reason": "First occurrence"
+        },
+        {
+          "from": "Active",
+          "to": "Resolved",
+          "at": "2026-09-23T14:00:10+00:00",
+          "reason": "Later configured successful run"
+        }
+      ]
+    }
+  ],
+  "currentStates": [
+    {
+      "profileId": "cam",
+      "lastKnownBusinessHealth": "Stable",
+      "interpretationComplete": true
+    }
+  ],
+  "metricFacts": [
+    {
+      "runId": "repeated-recovery:cam:cycle:0001",
+      "scope": "Application",
+      "result": "Success",
+      "completedEventAt": "2026-09-23T14:00:03+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:03+00:00"
+    },
+    {
+      "runId": "repeated-recovery:cam:order:0002",
+      "scope": "Order",
+      "result": "Failure",
+      "completedEventAt": "2026-09-23T14:00:02+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:02+00:00"
+    },
+    {
+      "runId": "repeated-recovery:cam:cycle:0005",
+      "scope": "Application",
+      "result": "Success",
+      "completedEventAt": "2026-09-23T14:00:07+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:07+00:00"
+    },
+    {
+      "runId": "repeated-recovery:cam:order:0006",
+      "scope": "Order",
+      "result": "Failure",
+      "completedEventAt": "2026-09-23T14:00:06+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:06+00:00"
+    },
+    {
+      "runId": "repeated-recovery:cam:cycle:0008",
+      "scope": "Application",
+      "result": "Success",
+      "completedEventAt": "2026-09-23T14:00:11+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:11+00:00"
+    },
+    {
+      "runId": "repeated-recovery:cam:order:0009",
+      "scope": "Order",
+      "result": "Success",
+      "completedEventAt": "2026-09-23T14:00:10+00:00",
+      "completedProcessedAt": "2026-09-23T14:00:10+00:00"
+    }
+  ],
+  "ruleCoverage": [
+    {
+      "profileId": "cam",
+      "ruleKey": "cycle-begin",
+      "matchingEntries": 3,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "cycle-success",
+      "matchingEntries": 3,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "cycle-failure",
+      "matchingEntries": 0,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "order-begin",
+      "matchingEntries": 3,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "order-success",
+      "matchingEntries": 1,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "order-failure",
+      "matchingEntries": 2,
+      "winningEntries": 0
+    },
+    {
+      "profileId": "cam",
+      "ruleKey": "order-warning",
+      "matchingEntries": 2,
+      "winningEntries": 2
+    }
+  ],
+  "metrics": {
+    "successfulEvaluatedRuns": 4,
+    "totalEvaluatedRuns": 6,
+    "systemHealthPercentage": 66.67,
+    "completedOrderRunsProcessedToday": 3,
+    "fiveDayHistory": [
+      {
+        "date": "2026-09-19",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-20",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-21",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-22",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-23",
+        "completedOrderRunsProcessedCount": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "PendingModelChanges": false,
+  "MigrationTool": "EF Core 10.0.4",
+  "Files": [
+    {
+      "Path": "artifacts/phase3/migration.sql",
+      "SHA256": "831333292D8B091E788D7D90E6DE32D4BE2F8B161C403ADC31584D3DB79EDBDA"
+    },
+    {
+      "Path": "artifacts/phase3/upgrade.sql",
+      "SHA256": "F3451A6E0AB1A59F085034650FF98698910B5D18611E3918AC008143B5682A12"
+    },
+    {
+      "Path": "src/Sonda.Infrastructure/Persistence/Migrations/20260924023552_DurablePersistence.cs",
+      "SHA256": "796A0CB3BFAF358D81836F3506BE0513B6546A229504141963A93D486224EAAF"
+    },
+    {
+      "Path": "src/Sonda.Infrastructure/Persistence/Migrations/20260924023552_DurablePersistence.Designer.cs",
+      "SHA256": "6C411DB5FD2A39FECE9B87BBE3BE2F3AA57C77E34190677D77D0F633EF6CB768"
+    },
+    {
+      "Path": "src/Sonda.Infrastructure/Persistence/Migrations/001_initial.sql",
+      "SHA256": "108B9D0E7A0AA81F8C99586FD2796BFEBB333DF0FCAA513DCD1F1A3536A33E99"
+    }
+  ]
+}

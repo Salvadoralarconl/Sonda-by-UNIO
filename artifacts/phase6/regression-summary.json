@@ -1,0 +1,1999 @@
+{
+  "total": 398,
+  "passed": 398,
+  "accepted382Passed": 382,
+  "unchangedCoreAndTestFiles": 139,
+  "changed": [],
+  "cases": [
+    {
+      "name": "Sonda.Acquisition.Tests.WindowsFileTests.Real_file_append_and_truncation_are_read_only_observations",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Acquisition.Tests.SourceSafetyTests.Invalid_capacity_and_ambiguous_manifest_are_rejected_without_reading_sources",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Acquisition.Tests.FramingTests.Prior_complete_records_survive_later_decode_error_in_same_read",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Acquisition.Tests.FramingTests.Every_split_preserves_exact_bytes_offsets_and_partial_tail(kind: Utf16LittleEndian)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Acquisition.Tests.FramingTests.Every_split_preserves_exact_bytes_offsets_and_partial_tail(kind: Utf8)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Acquisition.Tests.SourceSafetyTests.Recursive_filters_and_root_containment_are_enforced",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Acquisition.Tests.FramingTests.Every_split_preserves_exact_bytes_offsets_and_partial_tail(kind: Utf16BigEndian)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Acquisition.Tests.SourceSafetyTests.Real_windows_junction_is_not_followed",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Acquisition.Tests.WindowsFileTests.Actual_windows_handle_survives_rename_but_recreation_is_distinct",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Acquisition.Tests.FramingTests.Byte_at_a_time_bom_and_code_units_do_not_emit_partial_records",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Acquisition.Tests.FramingTests.Malformed_or_wrong_bom_and_over_limit_fail_without_skipping",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Time_only_format_requires_explicit_date",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Numeric_specification_example_is_985_of_1006",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.BoundarySafetyTests.Ambiguous_or_nonexistent_source_time_is_not_guessed(timestamp: \"2026-03-08 02:30:00\", code: \"AmbiguousTimestamp\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.PriorityAndValidationTests.Different_targets_can_share_priority_and_predicate",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Unapproved_policies_stop_lane_without_guessing(lines: [\"CAM process started\", \"CAM process started\"])",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.PriorityAndValidationTests.Unknown_regex_intersection_is_reported_and_actual_tie_is_rejected",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Missing_identifier_does_not_invent_order",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.PriorityAndValidationTests.Multiple_alternatives_produce_one_rule_decision",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.BoundarySafetyTests.Oversized_evidence_is_quarantined_without_interpretation",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Markup_in_samples_is_escaped_in_human_report",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Unapproved_policies_stop_lane_without_guessing(lines: [\"CAM process started\", \"Finding order OrderID=A\", \"Order sent OrderID=A\", \"Finding order OrderID=A\"])",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.EngineAcceptanceTests.Problem_keys_are_exact_and_escape_component_boundaries",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Parsed_error_level_does_not_imply_error_classification",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.BoundarySafetyTests.Winning_ignore_plus_independent_failure_is_explicitly_deferred",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Ambiguous_identifier_is_not_guessed",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.PriorityAndValidationTests.Disabled_rules_do_not_compete",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.BoundarySafetyTests.Malformed_contracts_are_json_errors(json: \"{\\\"profiles\\\":null}\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.PriorityAndValidationTests.Unrelated_exact_rules_can_share_priority_in_the_same_scope",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.BoundarySafetyTests.Ambiguous_or_nonexistent_source_time_is_not_guessed(timestamp: \"2026-11-01 01:30:00\", code: \"AmbiguousTimestamp\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Volume_uses_processing_day_and_reprojection_does_not_double_count",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.EngineAcceptanceTests.Application_failure_recovers_without_order_volume",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.BoundarySafetyTests.Malformed_contracts_are_json_errors(json: \"{\\\"surprise\\\":1}\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.EngineAcceptanceTests.Sample_eof_does_not_close_runs",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.EngineAcceptanceTests.Different_identifiers_create_separate_incidents",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.PriorityAndValidationTests.Highest_priority_wins_without_severity_precedence(ignorePriority: 20, winner: Ignore, incidentCount: 0)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Deferred_timing_is_reported_without_fake_execution",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.EngineAcceptanceTests.Closing_cycle_finalizes_unfinished_order_as_undefined",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.BoundarySafetyTests.Both_outcomes_on_one_input_leave_state_unmodified",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.EngineAcceptanceTests.Same_identifier_in_another_profile_cannot_resolve_failure",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.BoundarySafetyTests.Regex_identifier_does_not_merge_case_variants",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Identifier_regex_preserves_case_and_leading_zeros",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.EngineAcceptanceTests.Mixed_orders_preserve_independent_parent_result_and_count_each_run",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Reports_are_deterministic_and_editing_inputs_invalidates_provenance",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.PriorityAndValidationTests.Proven_equal_priority_overlap_is_invalid",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.EngineAcceptanceTests.Explicit_end_waits_and_then_closes_orders",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.ParsingMetricsAndReportTests.Server_timezone_selects_date_not_utc_midnight",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.PriorityAndValidationTests.Invalid_pattern_is_reported(expression: \"\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.PriorityAndValidationTests.Invalid_pattern_is_reported(expression: \"(\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.PriorityAndValidationTests.Highest_priority_wins_without_severity_precedence(ignorePriority: 1, winner: Error, incidentCount: 1)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.EngineAcceptanceTests.Two_failed_occurrences_then_retry_resolve_one_exact_problem",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.BoundarySafetyTests.Malformed_contracts_are_json_errors(json: \"{\\\"profiles\\\":[null]}\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase1.Tests.BoundarySafetyTests.Source_entry_date_format_cannot_implicitly_take_machine_year",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[1].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"open-duplicate-begin\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.CommandTests.Availability_does_not_invent_green",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"success-without-end\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"failure-and-ignore\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.PolicyTests.Manual_resolution_is_confirmed_without_rewriting_history",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Expected_duration_only_is_overdue_without_finalization",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"deadline-date-0923\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Invalid_policy_configuration_cannot_activate(kind: \"order\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.PolicyTests.Successful_run_keeps_independent_diagnostic(severity: \"Error\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"explicit-end-conflicts\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"open-out-of-order\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.PolicyTests.Incomplete_end_is_undefined",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.PolicyTests.Legacy_profile_serialization_is_byte_compatible",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"manual-workflow\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"incomplete-explicit-end\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.CommandTests.Explicit_frontier_and_duplicate_clock_do_not_duplicate_completion",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Invalid_policy_configuration_cannot_activate(kind: \"fallback\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Old_evidence_after_frontier_uses_only_opted_in_diagnostic",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"incompatible-recovery-contract\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.PolicyTests.Ignore_does_not_erase_structural_failure",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Invalid_policy_configuration_cannot_activate(kind: \"overlap\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.CommandTests.Command_collision_is_rejected",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"versioned-recovery\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.PolicyTests.Successful_run_keeps_independent_diagnostic(severity: \"Warning\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"deadline-date-1101\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.CommandTests.Incompatible_activation_is_rejected_without_mutation",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.PolicyTests.Explicit_end_failure_dominates_separate_success(reverse: False)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"required-sources\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"late-terminal\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Invalid_policy_configuration_cannot_activate(kind: \"grace\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"recovery-causality\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"incompatible-transition\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"backlog-frontier\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Event_deadline_never_implicitly_uses_processing_time",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.CommandTests.Compatible_activation_pins_parent_and_new_child",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"warning-with-success\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Evidence_at_exact_deadline_wins_when_frontier_includes_it",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.CommandTests.Outside_cycle_incident_has_observation_without_invented_run",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Failure_incident_is_visible_before_explicit_end",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"outside-cycle\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"late-diagnostic\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"serial-begin-rejected\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.PolicyTests.Same_cycle_retry_preserves_failure_and_recovers",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Manual_only_diagnostic_survives_later_success",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Invalid_policy_configuration_cannot_activate(kind: \"severity\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"recurrence-episodes\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"deadline-date-0308\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"timing-disabled\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Invalid_policy_configuration_cannot_activate(kind: \"negative\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.CommandTests.Correlated_cycles_and_restore_preserve_independent_orders",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"serial-new-begin\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Automatic_resolution_then_failure_creates_new_episode",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"same-input-contradiction\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Revision2_cannot_downgrade_or_mutate_published_profile",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"pinned-version-transition\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"boundary-before-timer\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"failure-before-missing-end\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.PolicyTests.Deadline_closes_without_source_evidence_and_restore_retains_context",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"application-duration\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Manual_resolution_noop_and_reopening_are_explicit(investigating: True)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"order-fallback\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"later-clean-recovery\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"changed-diagnostic-key\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.PolicyTests.Unknown_policy_revision_is_rejected",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"manual-then-success\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"clock-and-date\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"manual-only-recovery\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"success-with-diagnostic\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Partition_error_survives_restart_without_blocking_other_cycle",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"missing-correlation\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"correlated-overlap\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"same-cycle-retry\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"availability\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.PolicyTests.Explicit_end_failure_dominates_separate_success(reverse: True)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.EdgePolicyTests.Manual_resolution_noop_and_reopening_are_explicit(investigating: False)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Phase3.Tests.AcceptanceMatrixTests.Approved_fixture_matches_independent_expectations(name: \"closed-correlation-reuse\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_49_net10.0[2].trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"C:/synthetic-logs\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Allowed_configuration_does_not_require_filesystem_access(path: \"C:\\\\synthetic-logs\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"C:\\\\synthetic-logs\\\\test.log:secret\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"C:\\\\synthetic-logs-other\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"\\\\\\\\fixture-server\\\\logs\\\\approved-extra\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"\\\\\\\\?\\\\C:\\\\synthetic-logs\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.ProvisioningTests.Member_cannot_provision_even_with_spoofed_role",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"C:\\\\synthetic-logs\\\\folder.\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.ProvisioningTests.Allowed_unc_configuration_does_not_claim_share_capability_and_edits_require_revision",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"\\\\\\\\.\\\\C:\\\\synthetic-logs\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.ProvisioningTests.Access_migration_does_not_change_core_chain",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"\\\\\\\\fixture-server\\\\other\\\\approved\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"C:\\\\synthetic-logs\\\\folder \")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.ProvisioningTests.Foreign_parent_is_indistinguishable_from_missing_parent",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Allowed_configuration_does_not_require_filesystem_access(path: \"\\\\\\\\fixture-server\\\\logs\\\\approved\\\\CAM\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Auxiliary_manifest_cannot_escape_allowlist",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.ProvisioningTests.Commit_then_lost_acknowledgment_replays_after_new_store_instance",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"C:\\\\synthetic-logs\\\\..\\\\private\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"C:synthetic-logs\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.RuntimeRoleTests.Least_privilege_role_can_provision_but_cannot_change_schema_and_audit_failure_rolls_back_core",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.ProvisioningTests.Conflicting_reuse_and_cross_actor_reuse_are_rejected",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.ProvisioningTests.Admin_creates_inactive_configuration_without_publication_or_runtime",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"\\\\\\\\other-server\\\\logs\\\\approved\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Allowed_configuration_does_not_require_filesystem_access(path: \"c:\\\\SYNTHETIC-LOGS\\\\CAM\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.ProvisioningTests.Concurrent_identical_commands_create_one_application_and_audit",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Rejects_ambiguous_or_outside_paths(path: \"C:\\\\synthetic-logs\\\\NUL.log\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.UpgradeTests.Access_migrations_preserve_populated_phase4_schema_hashes_receipts_runs_and_incidents",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Access.Tests.MonitoringPathTests.Empty_allowlist_fails_closed",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_50_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.QueryTests.Search_literal_text_identifier_result_and_incident_filters_use_persisted_links",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.WorkflowTests.Crash_retry_uses_durable_intent_pending_and_receipt_without_duplicate_history(boundary: \"after-core-commit\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.QueryTests.Late_processing_uses_processing_day_for_volume_and_event_day_for_health",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.WorkflowTests.Concurrent_workflow_commands_do_not_bypass_expected_revision",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.HomeBadgeTests.Unconfirmed_availability_prevents_unqualified_stable(availability: \"Disconnected\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.HostedMonitoringTests.Hosted_worker_reads_only_activated_synthetic_source_without_a_browser_and_does_not_duplicate_lines",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.QueryTests.Quarantined_evidence_is_searchable_by_processing_time_without_inventing_event_time_or_metrics",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.QueryTests.Legacy_incidents_remain_readable_but_live_workflow_does_not_upgrade_their_semantics",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.ScreenIntegrationTests.Real_browser_investigates_and_updates_incidents_and_preserves_evidence_grouping",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.QueryTests.Foreign_session_cannot_be_used_to_investigate_runs",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.HomeBadgeTests.Aggregate_is_current_business_state(a: \"Stable\", b: \"Warning\", expected: \"Warning\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Openapi_documents_cookie_csrf_and_admin_provisioning",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.HomeBadgeTests.Unconfirmed_availability_prevents_unqualified_stable(availability: \"Unknown\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.HomeBadgeTests.Aggregate_is_current_business_state(a: \"Warning\", b: \"Error\", expected: \"Error\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.AccountTests.Revocation_between_cookie_validation_and_command_admission_is_not_hidden_by_tracking",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.WorkflowTests.Standalone_owner_fence_and_wrong_host_cannot_be_bypassed_by_workflow",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Last_admin_cannot_disable_self",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.ProfileAcceptanceTests.Preview_replay_survives_draft_edit_but_stale_report_cannot_publish_and_publication_ack_loss_reconciles",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Missing_expected_revision_is_not_interpreted_as_zero",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Strict_filters_chunked_limits_and_null_configuration_fail_without_mutation",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.FrontendBrowserTests.Real_browser_uses_https_cookie_csrf_and_postgres_for_provisioning",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.New_configuration_requires_simulation_publication_and_explicit_activation",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Logout_revokes_durable_session_and_denies_next_request",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.QueryTests.Search_actual_parameterized_plan_is_captured_and_blocked_query_times_out",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Unknown_authority_fields_and_cross_origin_mutation_are_rejected",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Anonymous_provisioning_is_denied_and_login_requires_csrf",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.PresentationQueryTests.Application_overview_is_team_scoped_and_counts_all_unresolved_facts",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.AccountTests.Reset_grant_revokes_sessions_and_absolute_expiry_cannot_be_extended_by_activity",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.QueryTests.Availability_projection_retains_business_health_without_claiming_green_for_stale_failed_or_disabled_sources",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.PresentationQueryTests.Incident_evidence_chronology_is_explicit_and_cursor_cannot_change_order",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.HomeBadgeTests.Unconfirmed_availability_prevents_unqualified_stable(availability: \"NotObserved\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.AccountTests.Concurrent_invitation_redemption_consumes_token_once",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Admin_provisions_through_real_authenticated_pipeline_with_replay",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.WorkflowTests.Activation_recovers_reserved_file_input_and_pins_open_cycle_to_old_version",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Member_cannot_provision_and_disable_revokes_existing_cookie",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.QueryTests.Dashboard_matches_accepted_mixed_order_fixture",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.HomeBadgeTests.Unconfirmed_availability_prevents_unqualified_stable(availability: \"Stale\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.HttpsTests.Real_https_cookie_survives_process_restart_with_encrypted_keys_and_fails_without_keys",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Credential_rate_limit_is_enforced_with_generic_failures",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.QueryTests.Ignore_evidence_remains_searchable_and_invalid_windows_and_tampered_cursors_fail",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Foreign_and_missing_configuration_resources_are_indistinguishable",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.HomeBadgeTests.Empty_monitored_set_does_not_claim_stable",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.AccountTests.Concurrent_bootstrap_creates_one_admin_without_duplicate_identity",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.QueryTests.Dashboard_snapshot_does_not_mix_new_commits_into_old_counts",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.HomeBadgeTests.Aggregate_is_current_business_state(a: \"Stable\", b: \"Stable\", expected: \"Stable\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.ProfileAcceptanceTests.Concurrent_draft_edits_have_one_winner_and_oversize_or_canceled_preview_has_no_business_effect",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.PresentationQueryTests.Home_display_is_creation_evidence_and_does_not_change_metrics_or_incident_identity",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.AccountTests.Password_change_revokes_all_sessions_and_old_password",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Durable_idle_expiry_is_enforced_on_next_request",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SessionPresentationTests.Display_name_is_the_authenticated_accounts_login_and_existing_session_fields_are_preserved",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.AccountTests.Replaced_and_expired_grants_are_not_redeemable_and_tokens_are_not_stored",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.WorkflowTests.Crash_retry_uses_durable_intent_pending_and_receipt_without_duplicate_history(boundary: \"before-reservation\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.PresentationQueryTests.Parent_filter_is_bounded_and_bound_to_team_session_and_cursor",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.WorkflowTests.Crash_retry_uses_durable_intent_pending_and_receipt_without_duplicate_history(boundary: \"pending-before-interpretation\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.AccountTests.Lockout_is_durable_and_returns_same_failure_shape",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.QueryTests.Unregistered_simulator_data_does_not_appear_in_dashboard_or_search",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SecurityTests.Every_protected_route_denies_anonymous_access_before_resource_binding",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.SessionPresentationTests.Anonymous_request_cannot_obtain_a_display_name",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.WorkflowTests.Source_commit_ack_loss_replays_once_and_conflicting_revision_rolls_back",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.AccountTests.Concurrent_admin_self_demotions_leave_one_enabled_admin",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Api.Tests.QueryTests.Search_pages_once_per_evidence_and_rejects_filter_or_team_cursor_reuse",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_56_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_command_family_rolls_back_all_effects(kind: ActivateVersion, boundary: AfterEvidence)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Acquisition_process_exit_recovers_exact_contiguous_chain(mode: \"crash-after-reservation\", expectedExit: 75)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Actual_deferred_commit_failure_rolls_back_checkpoint_then_retries_pending",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"manual-only-recovery\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Invalid_or_incomplete_bytes_never_advance_their_range(kind: \"invalid\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_competing_retry_begins_cannot_duplicate_attempt",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_deadline_transaction_rollback_and_retry(boundary: BeforeCommit)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Real_byte_ingestion_restart_partial_append_and_simulator_parity(kind: Utf16BigEndian)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_commit_then_process_exit_retries_without_new_effects(kind: AdvanceTime)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Proven_frontier_submits_existing_deadline_once_and_preserves_physical_checkpoint",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.PostgreSQL_rejects_direct_checkpoint_corruption(change: \"wrong-receipt\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.PostgreSQL_storage_error_rolls_back_without_purging_reserved_work",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_command_family_rolls_back_all_effects(kind: AdvanceTime, boundary: AfterFacts)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Duplicate_business_identities_are_rejected_by_postgres(kind: \"cycle\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Committed_interpretation_rows_are_database_immutable(kind: \"fact\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Event_processing_completion_and_commit_clocks_remain_separate",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"deadline-date-1101\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"incompatible-transition\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.PostgreSQL_rejects_direct_checkpoint_corruption(change: \"stale-fence\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Durable_restart_and_replay_match_phase1(name: \"mixed-orders\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_command_family_rolls_back_all_effects(kind: AdvanceTime, boundary: AfterEvidence)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Actual_worker_console_starts_stops_restarts_and_validates_without_source_access",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"required-sources\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Duplicate_business_identities_are_rejected_by_postgres(kind: \"recovery\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_command_family_rolls_back_all_effects(kind: ActivateVersion, boundary: BeforeCommit)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Actual_hardlink_alias_is_one_physical_owner_and_overlapping_patterns_do_not_duplicate",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_persistence_matches_command_engine_and_replays(outside: False)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Dump_restore_preserves_open_state_receipts_and_recovery",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Two_sources_share_durable_admission_without_reusing_physical_keys",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_command_family_rolls_back_all_effects(kind: ActivateVersion, boundary: AfterRuns)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Restart_preserves_allocation_order_across_four_digit_boundary",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Byte_acquisition_uses_unchanged_legacy_engine",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"later-clean-recovery\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Identical_identifiers_in_two_profiles_remain_independent",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Backward_clock_does_not_poison_the_pending_slot",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Committed_interpretation_rows_are_database_immutable(kind: \"pattern\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Acquisition_domain_boundary_rollback_keeps_checkpoint_and_pending(boundary: AfterRuns)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_dump_restore_preserves_pinned_versions_deadlines_and_manual_confirmation",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"application-duration\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"failure-before-missing-end\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Committed_interpretation_rows_are_database_immutable(kind: \"version\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Pending_bytes_survive_fault_and_checkpoint_does_not_outrun_commit(boundary: AfterReservation)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Reapplying_migrations_is_noop_and_database_is_postgres18",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Real_rotation_rename_or_truncate_creates_no_duplicate_evidence(truncate: True)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_deadline_transaction_rollback_and_retry(boundary: AfterRuns)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Lost_unread_tail_or_rapid_regrowth_blocks_without_skipping(regrow: False)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_deadline_transaction_rollback_and_retry(boundary: AfterFacts)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_command_family_rolls_back_all_effects(kind: ChangeStatus, boundary: AfterRuns)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"incomplete-explicit-end\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Invalid_or_incomplete_bytes_never_advance_their_range(kind: \"bom\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_commit_then_process_exit_retries_without_new_effects(kind: ActivateVersion)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Acquisition_process_exit_recovers_exact_contiguous_chain(mode: \"crash-after-commit\", expectedExit: 73)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Duplicate_business_identities_are_rejected_by_postgres(kind: \"fact\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"incompatible-recovery-contract\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Frontier_is_revalidated_after_inventory_membership_or_pending_change(change: \"generation\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Unread_backlog_and_source_failure_invalidate_completeness",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Invalid_or_incomplete_bytes_never_advance_their_range(kind: \"unterminated\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Concurrent_duplicate_reads_produce_one_evidence_and_changed_bytes_conflict",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Evidence_and_timer_race_respects_declared_frontier(evidenceFirst: True)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_command_family_rolls_back_all_effects(kind: ChangeStatus, boundary: BeforeCommit)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_command_family_rolls_back_all_effects(kind: AdvanceTime, boundary: AfterRuns)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_actual_commit_rejection_is_atomic_and_retryable(kind: AdvanceTime)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"deadline-date-0308\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Physical_checkpoint_commits_with_engine_and_duplicate_bytes_are_idempotent",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_commit_then_process_exit_retries_without_new_effects(kind: ChangeStatus)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Versions_activate_only_at_temporary_safe_boundary_and_keep_history",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Failure_rolls_back_entire_input(boundary: AfterFacts)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Real_rotation_rename_or_truncate_creates_no_duplicate_evidence(truncate: False)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Disable_resume_and_source_revision_preserve_generation_configuration",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Ordered_daily_files_and_bounded_backlog_reconcile_without_watcher_events",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Application_failure_reconstructs_error_without_order_volume",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"closed-correlation-reuse\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Committed_interpretation_rows_are_database_immutable(kind: \"run\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Concurrent_status_edits_preserve_single_history_transition",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Evidence_contradicting_consumed_frontier_retains_late_policy_and_blocks_new_proof",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"failure-and-ignore\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Pending_bytes_survive_fault_and_checkpoint_does_not_outrun_commit(boundary: BeforeInterpretation)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Source_edit_does_not_mutate_published_source_configuration",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Commit_then_process_exit_before_response_retries_without_effects",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Local_sharing_denial_is_operational_only_then_read_recovers",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Earlier_bytes_cannot_arrive_after_a_committed_successor(append: False)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_command_family_rolls_back_all_effects(kind: AdvanceTime, boundary: BeforeCommit)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"recurrence-episodes\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Acquisition_dump_restore_recovers_reserved_bytes_open_run_checkpoint_and_proof",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Delivered_phase3_database_upgrades_with_all_prior_rows_and_hashes_unchanged",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Failure_rolls_back_entire_input(boundary: AfterEvidence)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Contending_and_stale_owners_cannot_commit_or_advance",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Acquisition_process_exit_recovers_exact_contiguous_chain(mode: \"crash-before-commit\", expectedExit: 74)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Duplicate_business_identities_are_rejected_by_postgres(kind: \"order\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"availability\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_actual_commit_rejection_is_atomic_and_retryable(kind: ActivateVersion)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Concurrent_draft_edits_do_not_lose_updates",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Evidence_and_timer_race_respects_declared_frontier(evidenceFirst: False)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_manual_and_recovery_lock_orders_preserve_resolution_origin(manualFirst: False)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"open-out-of-order\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Failure_rolls_back_entire_input(boundary: BeforeCommit)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Real_byte_ingestion_restart_partial_append_and_simulator_parity(kind: Utf8)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_persistence_matches_command_engine_and_replays(outside: True)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_command_family_rolls_back_all_effects(kind: ChangeStatus, boundary: AfterEvidence)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"same-cycle-retry\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"timing-disabled\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Committed_interpretation_rows_are_database_immutable(kind: \"rule\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"warning-with-success\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Concurrent_duplicate_requests_commit_once",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"versioned-recovery\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_duplicate_and_competing_workflow_commands_are_serialized",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Real_byte_ingestion_restart_partial_append_and_simulator_parity(kind: Utf16LittleEndian)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Durable_restart_and_replay_match_phase1(name: \"repeated-recovery\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.PostgreSQL_rejects_direct_checkpoint_corruption(change: \"backward\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_database_rejects_invalid_policy_context(kind: \"pinned\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_database_rejects_invalid_policy_context(kind: \"observation\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Initially_disabled_source_can_be_enabled_without_mutating_its_framing_revision",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"serial-begin-rejected\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Delivered_phase2_data_upgrades_without_changing_legacy_facts_or_replay(completed: False)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"success-without-end\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Lost_unread_tail_or_rapid_regrowth_blocks_without_skipping(regrow: True)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"late-diagnostic\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Legacy_lane_drains_then_uses_revision2_without_rewriting_old_receipts",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Application_sequence_capacity_stops_without_reservation_or_wrap",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Connection_termination_before_commit_is_recoverable",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_command_family_rolls_back_all_effects(kind: ActivateVersion, boundary: AfterFacts)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Database_commit_rejection_rolls_back_and_retry_succeeds",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_actual_commit_rejection_is_atomic_and_retryable(kind: ChangeStatus)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Delivered_phase2_data_upgrades_without_changing_legacy_facts_or_replay(completed: True)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"backlog-frontier\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Duplicate_business_identities_are_rejected_by_postgres(kind: \"incident\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Repeated_same_run_diagnostics_enrich_one_occurrence_and_retain_evidence",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"missing-correlation\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"manual-then-success\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Acquisition_domain_boundary_rollback_keeps_checkpoint_and_pending(boundary: AfterEvidence)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"changed-diagnostic-key\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Frontier_is_revalidated_after_inventory_membership_or_pending_change(change: \"membership\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"recovery-causality\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"late-terminal\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Commit_acknowledgment_loss_returns_durable_physical_receipt",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Frontier_is_revalidated_after_inventory_membership_or_pending_change(change: \"partial\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_manual_and_recovery_lock_orders_preserve_resolution_origin(manualFirst: True)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"order-fallback\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Frontier_is_revalidated_after_inventory_membership_or_pending_change(change: \"pending\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Acquisition_diagnostics_reconstruct_fresh_stale_failed_disabled_without_business_error",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Verified_copy_truncate_recovers_unread_archive_without_recounting_prefix",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"correlated-overlap\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"open-duplicate-begin\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Reader_failure_and_recovery_do_not_fabricate_business_failure",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Duplicate_business_identities_are_rejected_by_postgres(kind: \"occurrence\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.PostgreSQL_rejects_direct_checkpoint_corruption(change: \"jump\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Reprojection_is_repeatable_and_does_not_insert_facts",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Failure_rolls_back_entire_input(boundary: AfterRuns)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Activation_and_begin_race_obeys_command_order(activationFirst: False)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"success-with-diagnostic\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Pending_bytes_survive_fault_and_checkpoint_does_not_outrun_commit(boundary: AfterCheckpoint)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"boundary-before-timer\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.EOF_without_producer_proof_never_authorizes_deadline",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"outside-cycle\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Durable_restart_and_replay_match_phase1(name: \"priority-ignore\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Real_manifest_scheduler_defers_partial_then_preserves_boundary_success",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Concurrent_incident_status_writers_conflict_without_changing_metrics",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Cross_team_parent_cannot_be_inserted",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"same-input-contradiction\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Blocked_lane_survives_restart_without_fabricated_runs",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"clock-and-date\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"pinned-version-transition\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Pending_input_precedes_activation_and_open_run_remains_pinned",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"deadline-date-0923\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"serial-new-begin\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"explicit-end-conflicts\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Unavailable_database_cannot_advance_or_discard_pending_bytes",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Acquisition_process_exit_recovers_exact_contiguous_chain(mode: \"crash-after-read\", expectedExit: 76)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_database_rejects_invalid_policy_context(kind: \"episode\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Acquisition_domain_boundary_rollback_keeps_checkpoint_and_pending(boundary: BeforeCommit)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Invalid_or_incomplete_bytes_never_advance_their_range(kind: \"oversize\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Identical_text_at_distinct_offsets_is_distinct_physical_evidence",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_deadline_transaction_rollback_and_retry(boundary: AfterEvidence)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Revision2_full_fixture_has_postgres_parity_and_restart_replay(name: \"manual-workflow\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Earlier_bytes_cannot_arrive_after_a_committed_successor(append: True)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Activation_and_begin_race_obeys_command_order(activationFirst: True)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Problem_digest_collision_never_merges_exact_keys",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Policy_command_family_rolls_back_all_effects(kind: ChangeStatus, boundary: AfterFacts)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Committed_interpretation_rows_are_database_immutable(kind: \"recovery\")",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    },
+    {
+      "name": "Sonda.Persistence.Tests.PersistenceTests.Acquisition_domain_boundary_rollback_keeps_checkpoint_and_pending(boundary: AfterFacts)",
+      "outcome": "Passed",
+      "trx": "sapro_ASUSPROART_2026-09-24_17_24_59_net10.0.trx"
+    }
+  ]
+}

@@ -1,0 +1,980 @@
+{
+  "engineVersion": "phase3.1",
+  "requestHash": "3F652BD943D72CCA534141CE33EC7A9836318CE14593001FC5F5BFF715DDA039",
+  "complete": true,
+  "state": {
+    "seed": "manual-only-recovery",
+    "counter": 4,
+    "nextSequence": 6,
+    "lastProcessedAt": "2026-09-23T14:00:05+00:00",
+    "frontier": null,
+    "interpreter": {
+      "format": 1,
+      "profileId": "profile",
+      "cycleSequence": 2,
+      "runs": [
+        {
+          "id": "manual-only-recovery:profile:cycle:0001",
+          "profileId": "profile",
+          "scope": "Application",
+          "cycleSequence": 1,
+          "applicationRunId": null,
+          "identifier": null,
+          "attemptNumber": 1,
+          "startedEventAt": "2026-09-23T14:00:01+00:00",
+          "lifecycle": "Finalized",
+          "result": "Success",
+          "completedEventAt": "2026-09-23T14:00:03+00:00",
+          "completedProcessedAt": "2026-09-23T14:00:03+00:00",
+          "terminalReason": "ConfiguredCycleCompletion",
+          "evidenceLines": [
+            1,
+            2,
+            3
+          ],
+          "diagnosticProblemKeys": [
+            "problem:v1:[\u0022matrix-2f0444c69b664db6b9ffbfeaece6805f\u0022,\u0022application\u0022,\u0022profile\u0022,\u0022Application\u0022,\u0022default\u0022,null,null,\u0022diagnostic\u0022]"
+          ],
+          "observedSuccess": true,
+          "observedFailure": false,
+          "policyContext": {
+            "profileVersion": 1,
+            "recoveryCompatibility": "recovery-v1",
+            "correlationKey": null,
+            "previousAttemptId": null,
+            "startedSequence": 1,
+            "startedProcessedAt": "2026-09-23T14:00:01+00:00",
+            "deadlineAnchor": "2026-09-23T14:00:01+00:00",
+            "deadline": null,
+            "overdueAt": null,
+            "completionTimeKind": "Evidence",
+            "completedSequence": 3
+          }
+        },
+        {
+          "id": "manual-only-recovery:profile:cycle:0004",
+          "profileId": "profile",
+          "scope": "Application",
+          "cycleSequence": 2,
+          "applicationRunId": null,
+          "identifier": null,
+          "attemptNumber": 1,
+          "startedEventAt": "2026-09-23T14:00:04+00:00",
+          "lifecycle": "Finalized",
+          "result": "Success",
+          "completedEventAt": "2026-09-23T14:00:05+00:00",
+          "completedProcessedAt": "2026-09-23T14:00:05+00:00",
+          "terminalReason": "ConfiguredCycleCompletion",
+          "evidenceLines": [
+            4,
+            5
+          ],
+          "diagnosticProblemKeys": [],
+          "observedSuccess": true,
+          "observedFailure": false,
+          "policyContext": {
+            "profileVersion": 1,
+            "recoveryCompatibility": "recovery-v1",
+            "correlationKey": null,
+            "previousAttemptId": null,
+            "startedSequence": 4,
+            "startedProcessedAt": "2026-09-23T14:00:04+00:00",
+            "deadlineAnchor": "2026-09-23T14:00:04+00:00",
+            "deadline": null,
+            "overdueAt": null,
+            "completionTimeKind": "Evidence",
+            "completedSequence": 5
+          }
+        }
+      ],
+      "incidents": [
+        {
+          "id": "manual-only-recovery:profile:incident:0002",
+          "problem": {
+            "teamId": "matrix-2f0444c69b664db6b9ffbfeaece6805f",
+            "applicationId": "application",
+            "profileId": "profile",
+            "scope": "Application",
+            "streamKey": "default",
+            "identifierNamespace": null,
+            "identifier": null,
+            "conditionKey": "diagnostic",
+            "incidentKey": "problem:v1:[\u0022matrix-2f0444c69b664db6b9ffbfeaece6805f\u0022,\u0022application\u0022,\u0022profile\u0022,\u0022Application\u0022,\u0022default\u0022,null,null,\u0022diagnostic\u0022]"
+          },
+          "recoveryPolicy": "ManualOnly",
+          "severity": "Error",
+          "status": "Active",
+          "occurrences": [
+            {
+              "id": "manual-only-recovery:profile:occurrence:0003",
+              "runId": "manual-only-recovery:profile:cycle:0001",
+              "applicationRunId": "manual-only-recovery:profile:cycle:0001",
+              "cycleSequence": 1,
+              "result": null,
+              "severity": "Error",
+              "detectedAt": "2026-09-23T14:00:02+00:00",
+              "evidenceLines": [
+                1,
+                2
+              ]
+            }
+          ],
+          "recoveries": [],
+          "history": [
+            {
+              "from": null,
+              "to": "Active",
+              "at": "2026-09-23T14:00:02+00:00",
+              "reason": "First occurrence"
+            }
+          ],
+          "policyContext": {
+            "episode": 1,
+            "profileVersion": 1,
+            "recoveryCompatibility": "recovery-v1",
+            "revision": 0,
+            "resolutionKind": null,
+            "actor": null,
+            "reason": null,
+            "observations": []
+          }
+        }
+      ],
+      "versions": {
+        "activeVersion": 1,
+        "published": [
+          {
+            "policy": {
+              "revision": 2,
+              "undefinedApplicationSeverity": "Error",
+              "cycleMode": "Serial",
+              "unexpectedBegin": "RejectAmbiguousBegin",
+              "deadlineClock": "Processing",
+              "orderFallbackEnabled": false,
+              "correlationExpression": "",
+              "correlationCapture": "cycle",
+              "correlationEpoch": "",
+              "routingContract": "routing-v1",
+              "recoveryCompatibility": "recovery-v1",
+              "applicationWideRules": [],
+              "lateObservationRules": [],
+              "readFreshness": "00:02:00",
+              "runCadence": null
+            },
+            "teamId": "matrix-2f0444c69b664db6b9ffbfeaece6805f",
+            "applicationId": "application",
+            "id": "profile",
+            "version": 1,
+            "name": "Synthetic revision-2",
+            "streamKey": "default",
+            "completionMode": "TerminalMarker",
+            "parsing": {
+              "entryPattern": "",
+              "timestampFormat": "",
+              "timestampHasDate": true,
+              "timestampHasOffset": false,
+              "sourceTimeZoneId": "UTC"
+            },
+            "identifier": {
+              "kind": "KeyValue",
+              "name": "Transaction ID",
+              "namespace": "order",
+              "expression": "OrderID",
+              "captureName": "id",
+              "caseSensitive": false
+            },
+            "cycleFailureSeverity": "Error",
+            "orderFailureSeverity": "Warning",
+            "undefinedOrderSeverity": "Warning",
+            "cycleTiming": {
+              "expectedDuration": null,
+              "gracePeriod": null,
+              "fallbackTimeout": null,
+              "requested": false
+            },
+            "orderTiming": {
+              "expectedDuration": null,
+              "gracePeriod": null,
+              "fallbackTimeout": null,
+              "requested": false
+            },
+            "rules": [
+              {
+                "key": "b",
+                "role": "CycleBegin",
+                "target": "Application",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Contains",
+                    "expression": "APP BEGIN",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "s",
+                "role": "CycleSuccess",
+                "target": "Application",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Contains",
+                    "expression": "APP SUCCESS",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "f",
+                "role": "CycleFailure",
+                "target": "Application",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Contains",
+                    "expression": "APP FAILURE",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "e",
+                "role": "CycleEnd",
+                "target": "Application",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Contains",
+                    "expression": "APP END",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "ob",
+                "role": "OrderBegin",
+                "target": "Order",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Contains",
+                    "expression": "ORDER BEGIN",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "os",
+                "role": "OrderSuccess",
+                "target": "Order",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Contains",
+                    "expression": "ORDER SUCCESS",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "of",
+                "role": "OrderFailure",
+                "target": "Order",
+                "enabled": true,
+                "priority": 0,
+                "classification": null,
+                "conditionKey": "",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Contains",
+                    "expression": "ORDER FAILURE",
+                    "caseSensitive": false
+                  }
+                ]
+              },
+              {
+                "key": "diagnostic",
+                "role": "Detection",
+                "target": "Application",
+                "enabled": true,
+                "priority": 10,
+                "classification": "Error",
+                "conditionKey": "diagnostic",
+                "recovery": "ManualOnly",
+                "alternatives": [
+                  {
+                    "kind": "Contains",
+                    "expression": "DIAGNOSTIC",
+                    "caseSensitive": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "receipts": [
+      {
+        "id": "c0b0b6c4-804c-46d5-d8e3-49d20af0d874",
+        "fingerprint": "31FD817EF58990D472A13C51302CBD6972B35C1DD040627A7BD88F2B92A9FCEE",
+        "command": {
+          "id": "c0b0b6c4-804c-46d5-d8e3-49d20af0d874",
+          "sequence": 1,
+          "kind": "Evidence",
+          "processedAt": "2026-09-23T14:00:01+00:00",
+          "effectiveAt": "0001-01-01T00:00:00+00:00",
+          "raw": "APP BEGIN",
+          "evidenceKey": "fixture:1",
+          "sampleDate": null,
+          "frontier": null,
+          "incidentId": "",
+          "expectedRevision": 0,
+          "targetStatus": "Active",
+          "actor": "",
+          "reason": "",
+          "profile": null,
+          "source": "",
+          "readSuccess": false
+        },
+        "profileVersion": 1,
+        "disposition": "Applied",
+        "interpretation": {
+          "matches": [
+            {
+              "ruleKey": "b",
+              "role": "CycleBegin",
+              "target": "Application",
+              "priority": 0,
+              "classification": null,
+              "alternatives": [
+                0
+              ],
+              "selection": "Matched"
+            }
+          ],
+          "actions": [
+            "CycleStarted:manual-only-recovery:profile:cycle:0001"
+          ],
+          "problemDecisions": [],
+          "diagnostics": []
+        },
+        "diagnostics": [],
+        "partition": "serial",
+        "normalized": {
+          "line": 1,
+          "profileId": "profile",
+          "raw": "APP BEGIN",
+          "message": "APP BEGIN",
+          "eventAt": "2026-09-23T14:00:01+00:00",
+          "processedAt": "2026-09-23T14:00:01+00:00",
+          "timestampQuality": "ProcessingTimeFallback",
+          "fields": {},
+          "identifier": null
+        }
+      },
+      {
+        "id": "1f682214-5154-91c0-a55b-d6f66a304d77",
+        "fingerprint": "71AFF33A36680306E393B9A4E504E75FCCDFF40B9004DAD9DA751AD38A7DD4CC",
+        "command": {
+          "id": "1f682214-5154-91c0-a55b-d6f66a304d77",
+          "sequence": 2,
+          "kind": "Evidence",
+          "processedAt": "2026-09-23T14:00:02+00:00",
+          "effectiveAt": "0001-01-01T00:00:00+00:00",
+          "raw": "DIAGNOSTIC",
+          "evidenceKey": "fixture:2",
+          "sampleDate": null,
+          "frontier": null,
+          "incidentId": "",
+          "expectedRevision": 0,
+          "targetStatus": "Active",
+          "actor": "",
+          "reason": "",
+          "profile": null,
+          "source": "",
+          "readSuccess": false
+        },
+        "profileVersion": 1,
+        "disposition": "Applied",
+        "interpretation": {
+          "matches": [
+            {
+              "ruleKey": "diagnostic",
+              "role": "Detection",
+              "target": "Application",
+              "priority": 10,
+              "classification": "Error",
+              "alternatives": [
+                0
+              ],
+              "selection": "Winner"
+            }
+          ],
+          "actions": [],
+          "problemDecisions": [
+            {
+              "line": 2,
+              "incidentKey": "problem:v1:[\u0022matrix-2f0444c69b664db6b9ffbfeaece6805f\u0022,\u0022application\u0022,\u0022profile\u0022,\u0022Application\u0022,\u0022default\u0022,null,null,\u0022diagnostic\u0022]",
+              "incidentId": "manual-only-recovery:profile:incident:0002",
+              "action": "CreatedIncident",
+              "runId": "manual-only-recovery:profile:cycle:0001"
+            }
+          ],
+          "diagnostics": []
+        },
+        "diagnostics": [],
+        "partition": "serial",
+        "normalized": {
+          "line": 2,
+          "profileId": "profile",
+          "raw": "DIAGNOSTIC",
+          "message": "DIAGNOSTIC",
+          "eventAt": "2026-09-23T14:00:02+00:00",
+          "processedAt": "2026-09-23T14:00:02+00:00",
+          "timestampQuality": "ProcessingTimeFallback",
+          "fields": {},
+          "identifier": null
+        }
+      },
+      {
+        "id": "2a33dc4e-a2f8-ac42-fe10-4e8180605c0a",
+        "fingerprint": "87B2FD8D68E44EBB9140687EC7E051BCACC13E4ACEC0B79E84E1EC486CC44586",
+        "command": {
+          "id": "2a33dc4e-a2f8-ac42-fe10-4e8180605c0a",
+          "sequence": 3,
+          "kind": "Evidence",
+          "processedAt": "2026-09-23T14:00:03+00:00",
+          "effectiveAt": "0001-01-01T00:00:00+00:00",
+          "raw": "APP SUCCESS",
+          "evidenceKey": "fixture:3",
+          "sampleDate": null,
+          "frontier": null,
+          "incidentId": "",
+          "expectedRevision": 0,
+          "targetStatus": "Active",
+          "actor": "",
+          "reason": "",
+          "profile": null,
+          "source": "",
+          "readSuccess": false
+        },
+        "profileVersion": 1,
+        "disposition": "Applied",
+        "interpretation": {
+          "matches": [
+            {
+              "ruleKey": "s",
+              "role": "CycleSuccess",
+              "target": "Application",
+              "priority": 0,
+              "classification": null,
+              "alternatives": [
+                0
+              ],
+              "selection": "Matched"
+            }
+          ],
+          "actions": [
+            "CycleFinalized:manual-only-recovery:profile:cycle:0001:Success"
+          ],
+          "problemDecisions": [],
+          "diagnostics": []
+        },
+        "diagnostics": [],
+        "partition": "serial",
+        "normalized": {
+          "line": 3,
+          "profileId": "profile",
+          "raw": "APP SUCCESS",
+          "message": "APP SUCCESS",
+          "eventAt": "2026-09-23T14:00:03+00:00",
+          "processedAt": "2026-09-23T14:00:03+00:00",
+          "timestampQuality": "ProcessingTimeFallback",
+          "fields": {},
+          "identifier": null
+        }
+      },
+      {
+        "id": "08bbce1d-de2c-4284-afce-d5a5c3ee446e",
+        "fingerprint": "F3F1A37A1F566B95F70B9957568AFAF9A35CFEA4E8AC3A7C75BF3A5C7196F760",
+        "command": {
+          "id": "08bbce1d-de2c-4284-afce-d5a5c3ee446e",
+          "sequence": 4,
+          "kind": "Evidence",
+          "processedAt": "2026-09-23T14:00:04+00:00",
+          "effectiveAt": "0001-01-01T00:00:00+00:00",
+          "raw": "APP BEGIN",
+          "evidenceKey": "fixture:4",
+          "sampleDate": null,
+          "frontier": null,
+          "incidentId": "",
+          "expectedRevision": 0,
+          "targetStatus": "Active",
+          "actor": "",
+          "reason": "",
+          "profile": null,
+          "source": "",
+          "readSuccess": false
+        },
+        "profileVersion": 1,
+        "disposition": "Applied",
+        "interpretation": {
+          "matches": [
+            {
+              "ruleKey": "b",
+              "role": "CycleBegin",
+              "target": "Application",
+              "priority": 0,
+              "classification": null,
+              "alternatives": [
+                0
+              ],
+              "selection": "Matched"
+            }
+          ],
+          "actions": [
+            "CycleStarted:manual-only-recovery:profile:cycle:0004"
+          ],
+          "problemDecisions": [],
+          "diagnostics": []
+        },
+        "diagnostics": [],
+        "partition": "serial",
+        "normalized": {
+          "line": 4,
+          "profileId": "profile",
+          "raw": "APP BEGIN",
+          "message": "APP BEGIN",
+          "eventAt": "2026-09-23T14:00:04+00:00",
+          "processedAt": "2026-09-23T14:00:04+00:00",
+          "timestampQuality": "ProcessingTimeFallback",
+          "fields": {},
+          "identifier": null
+        }
+      },
+      {
+        "id": "aaf0dc09-b4db-2f04-6660-622c83b5ce30",
+        "fingerprint": "6EE7D9CEE7E344A53F363237BE154E75D851F57709B5F1705B250D28ACE03177",
+        "command": {
+          "id": "aaf0dc09-b4db-2f04-6660-622c83b5ce30",
+          "sequence": 5,
+          "kind": "Evidence",
+          "processedAt": "2026-09-23T14:00:05+00:00",
+          "effectiveAt": "0001-01-01T00:00:00+00:00",
+          "raw": "APP SUCCESS",
+          "evidenceKey": "fixture:5",
+          "sampleDate": null,
+          "frontier": null,
+          "incidentId": "",
+          "expectedRevision": 0,
+          "targetStatus": "Active",
+          "actor": "",
+          "reason": "",
+          "profile": null,
+          "source": "",
+          "readSuccess": false
+        },
+        "profileVersion": 1,
+        "disposition": "Applied",
+        "interpretation": {
+          "matches": [
+            {
+              "ruleKey": "s",
+              "role": "CycleSuccess",
+              "target": "Application",
+              "priority": 0,
+              "classification": null,
+              "alternatives": [
+                0
+              ],
+              "selection": "Matched"
+            }
+          ],
+          "actions": [
+            "CycleFinalized:manual-only-recovery:profile:cycle:0004:Success"
+          ],
+          "problemDecisions": [],
+          "diagnostics": []
+        },
+        "diagnostics": [],
+        "partition": "serial",
+        "normalized": {
+          "line": 5,
+          "profileId": "profile",
+          "raw": "APP SUCCESS",
+          "message": "APP SUCCESS",
+          "eventAt": "2026-09-23T14:00:05+00:00",
+          "processedAt": "2026-09-23T14:00:05+00:00",
+          "timestampQuality": "ProcessingTimeFallback",
+          "fields": {},
+          "identifier": null
+        }
+      }
+    ],
+    "observations": [],
+    "blockedPartitions": []
+  },
+  "results": [
+    {
+      "id": "c0b0b6c4-804c-46d5-d8e3-49d20af0d874",
+      "fingerprint": "31FD817EF58990D472A13C51302CBD6972B35C1DD040627A7BD88F2B92A9FCEE",
+      "command": {
+        "id": "c0b0b6c4-804c-46d5-d8e3-49d20af0d874",
+        "sequence": 1,
+        "kind": "Evidence",
+        "processedAt": "2026-09-23T14:00:01+00:00",
+        "effectiveAt": "0001-01-01T00:00:00+00:00",
+        "raw": "APP BEGIN",
+        "evidenceKey": "fixture:1",
+        "sampleDate": null,
+        "frontier": null,
+        "incidentId": "",
+        "expectedRevision": 0,
+        "targetStatus": "Active",
+        "actor": "",
+        "reason": "",
+        "profile": null,
+        "source": "",
+        "readSuccess": false
+      },
+      "profileVersion": 1,
+      "disposition": "Applied",
+      "interpretation": {
+        "matches": [
+          {
+            "ruleKey": "b",
+            "role": "CycleBegin",
+            "target": "Application",
+            "priority": 0,
+            "classification": null,
+            "alternatives": [
+              0
+            ],
+            "selection": "Matched"
+          }
+        ],
+        "actions": [
+          "CycleStarted:manual-only-recovery:profile:cycle:0001"
+        ],
+        "problemDecisions": [],
+        "diagnostics": []
+      },
+      "diagnostics": [],
+      "partition": "serial",
+      "normalized": {
+        "line": 1,
+        "profileId": "profile",
+        "raw": "APP BEGIN",
+        "message": "APP BEGIN",
+        "eventAt": "2026-09-23T14:00:01+00:00",
+        "processedAt": "2026-09-23T14:00:01+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      }
+    },
+    {
+      "id": "1f682214-5154-91c0-a55b-d6f66a304d77",
+      "fingerprint": "71AFF33A36680306E393B9A4E504E75FCCDFF40B9004DAD9DA751AD38A7DD4CC",
+      "command": {
+        "id": "1f682214-5154-91c0-a55b-d6f66a304d77",
+        "sequence": 2,
+        "kind": "Evidence",
+        "processedAt": "2026-09-23T14:00:02+00:00",
+        "effectiveAt": "0001-01-01T00:00:00+00:00",
+        "raw": "DIAGNOSTIC",
+        "evidenceKey": "fixture:2",
+        "sampleDate": null,
+        "frontier": null,
+        "incidentId": "",
+        "expectedRevision": 0,
+        "targetStatus": "Active",
+        "actor": "",
+        "reason": "",
+        "profile": null,
+        "source": "",
+        "readSuccess": false
+      },
+      "profileVersion": 1,
+      "disposition": "Applied",
+      "interpretation": {
+        "matches": [
+          {
+            "ruleKey": "diagnostic",
+            "role": "Detection",
+            "target": "Application",
+            "priority": 10,
+            "classification": "Error",
+            "alternatives": [
+              0
+            ],
+            "selection": "Winner"
+          }
+        ],
+        "actions": [],
+        "problemDecisions": [
+          {
+            "line": 2,
+            "incidentKey": "problem:v1:[\u0022matrix-2f0444c69b664db6b9ffbfeaece6805f\u0022,\u0022application\u0022,\u0022profile\u0022,\u0022Application\u0022,\u0022default\u0022,null,null,\u0022diagnostic\u0022]",
+            "incidentId": "manual-only-recovery:profile:incident:0002",
+            "action": "CreatedIncident",
+            "runId": "manual-only-recovery:profile:cycle:0001"
+          }
+        ],
+        "diagnostics": []
+      },
+      "diagnostics": [],
+      "partition": "serial",
+      "normalized": {
+        "line": 2,
+        "profileId": "profile",
+        "raw": "DIAGNOSTIC",
+        "message": "DIAGNOSTIC",
+        "eventAt": "2026-09-23T14:00:02+00:00",
+        "processedAt": "2026-09-23T14:00:02+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      }
+    },
+    {
+      "id": "2a33dc4e-a2f8-ac42-fe10-4e8180605c0a",
+      "fingerprint": "87B2FD8D68E44EBB9140687EC7E051BCACC13E4ACEC0B79E84E1EC486CC44586",
+      "command": {
+        "id": "2a33dc4e-a2f8-ac42-fe10-4e8180605c0a",
+        "sequence": 3,
+        "kind": "Evidence",
+        "processedAt": "2026-09-23T14:00:03+00:00",
+        "effectiveAt": "0001-01-01T00:00:00+00:00",
+        "raw": "APP SUCCESS",
+        "evidenceKey": "fixture:3",
+        "sampleDate": null,
+        "frontier": null,
+        "incidentId": "",
+        "expectedRevision": 0,
+        "targetStatus": "Active",
+        "actor": "",
+        "reason": "",
+        "profile": null,
+        "source": "",
+        "readSuccess": false
+      },
+      "profileVersion": 1,
+      "disposition": "Applied",
+      "interpretation": {
+        "matches": [
+          {
+            "ruleKey": "s",
+            "role": "CycleSuccess",
+            "target": "Application",
+            "priority": 0,
+            "classification": null,
+            "alternatives": [
+              0
+            ],
+            "selection": "Matched"
+          }
+        ],
+        "actions": [
+          "CycleFinalized:manual-only-recovery:profile:cycle:0001:Success"
+        ],
+        "problemDecisions": [],
+        "diagnostics": []
+      },
+      "diagnostics": [],
+      "partition": "serial",
+      "normalized": {
+        "line": 3,
+        "profileId": "profile",
+        "raw": "APP SUCCESS",
+        "message": "APP SUCCESS",
+        "eventAt": "2026-09-23T14:00:03+00:00",
+        "processedAt": "2026-09-23T14:00:03+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      }
+    },
+    {
+      "id": "08bbce1d-de2c-4284-afce-d5a5c3ee446e",
+      "fingerprint": "F3F1A37A1F566B95F70B9957568AFAF9A35CFEA4E8AC3A7C75BF3A5C7196F760",
+      "command": {
+        "id": "08bbce1d-de2c-4284-afce-d5a5c3ee446e",
+        "sequence": 4,
+        "kind": "Evidence",
+        "processedAt": "2026-09-23T14:00:04+00:00",
+        "effectiveAt": "0001-01-01T00:00:00+00:00",
+        "raw": "APP BEGIN",
+        "evidenceKey": "fixture:4",
+        "sampleDate": null,
+        "frontier": null,
+        "incidentId": "",
+        "expectedRevision": 0,
+        "targetStatus": "Active",
+        "actor": "",
+        "reason": "",
+        "profile": null,
+        "source": "",
+        "readSuccess": false
+      },
+      "profileVersion": 1,
+      "disposition": "Applied",
+      "interpretation": {
+        "matches": [
+          {
+            "ruleKey": "b",
+            "role": "CycleBegin",
+            "target": "Application",
+            "priority": 0,
+            "classification": null,
+            "alternatives": [
+              0
+            ],
+            "selection": "Matched"
+          }
+        ],
+        "actions": [
+          "CycleStarted:manual-only-recovery:profile:cycle:0004"
+        ],
+        "problemDecisions": [],
+        "diagnostics": []
+      },
+      "diagnostics": [],
+      "partition": "serial",
+      "normalized": {
+        "line": 4,
+        "profileId": "profile",
+        "raw": "APP BEGIN",
+        "message": "APP BEGIN",
+        "eventAt": "2026-09-23T14:00:04+00:00",
+        "processedAt": "2026-09-23T14:00:04+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      }
+    },
+    {
+      "id": "aaf0dc09-b4db-2f04-6660-622c83b5ce30",
+      "fingerprint": "6EE7D9CEE7E344A53F363237BE154E75D851F57709B5F1705B250D28ACE03177",
+      "command": {
+        "id": "aaf0dc09-b4db-2f04-6660-622c83b5ce30",
+        "sequence": 5,
+        "kind": "Evidence",
+        "processedAt": "2026-09-23T14:00:05+00:00",
+        "effectiveAt": "0001-01-01T00:00:00+00:00",
+        "raw": "APP SUCCESS",
+        "evidenceKey": "fixture:5",
+        "sampleDate": null,
+        "frontier": null,
+        "incidentId": "",
+        "expectedRevision": 0,
+        "targetStatus": "Active",
+        "actor": "",
+        "reason": "",
+        "profile": null,
+        "source": "",
+        "readSuccess": false
+      },
+      "profileVersion": 1,
+      "disposition": "Applied",
+      "interpretation": {
+        "matches": [
+          {
+            "ruleKey": "s",
+            "role": "CycleSuccess",
+            "target": "Application",
+            "priority": 0,
+            "classification": null,
+            "alternatives": [
+              0
+            ],
+            "selection": "Matched"
+          }
+        ],
+        "actions": [
+          "CycleFinalized:manual-only-recovery:profile:cycle:0004:Success"
+        ],
+        "problemDecisions": [],
+        "diagnostics": []
+      },
+      "diagnostics": [],
+      "partition": "serial",
+      "normalized": {
+        "line": 5,
+        "profileId": "profile",
+        "raw": "APP SUCCESS",
+        "message": "APP SUCCESS",
+        "eventAt": "2026-09-23T14:00:05+00:00",
+        "processedAt": "2026-09-23T14:00:05+00:00",
+        "timestampQuality": "ProcessingTimeFallback",
+        "fields": {},
+        "identifier": null
+      }
+    }
+  ],
+  "metrics": {
+    "successfulEvaluatedRuns": 2,
+    "totalEvaluatedRuns": 2,
+    "systemHealthPercentage": 100,
+    "completedOrderRunsProcessedToday": 0,
+    "fiveDayHistory": [
+      {
+        "date": "2026-09-19",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-20",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-21",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-22",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-23",
+        "completedOrderRunsProcessedCount": 0
+      }
+    ]
+  },
+  "availability": {
+    "businessHealth": "Error",
+    "availability": "Unknown",
+    "lastSuccessfulRead": null,
+    "lastRunCompleted": "2026-09-23T14:00:05+00:00",
+    "asOf": "2026-09-23T16:00:00+00:00",
+    "reason": "Required source coverage is incomplete.",
+    "healthyNow": false
+  },
+  "overdueRunIds": []
+}

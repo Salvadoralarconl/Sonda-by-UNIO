@@ -1,0 +1,22 @@
+{
+  "coreChain": [
+    "20260924023552_DurablePersistence",
+    "20260924032911_InterpretationPolicies",
+    "20260924044645_FileAcquisition"
+  ],
+  "accessChain": [
+    "20260924130738_AccessFoundation",
+    "20260924141909_AccessSecurityConstraints"
+  ],
+  "accessHistory": "sonda_access.__AccessMigrationsHistory",
+  "sql": "artifacts/phase5/access-migration.sql",
+  "sqlSha256": "60BDCF10C4FCBF59E0F13F0BF52A53F20C50580E6EC1C180F60A46D668E762AC",
+  "sqlMode": "EF idempotent script",
+  "pendingModelCheckOutput": "No changes have been made to the model since the last migration.",
+  "evidenceTests": [
+    "Access_migration_does_not_change_core_chain",
+    "Access_migrations_preserve_populated_phase4_schema_hashes_receipts_runs_and_incidents",
+    "Least_privilege_role_can_provision_but_cannot_change_schema_and_audit_failure_rolls_back_core",
+    "Real_https_cookie_survives_process_restart_with_encrypted_keys_and_fails_without_keys"
+  ]
+}

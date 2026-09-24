@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="74aaabe3-003f-4e10-ab40-46347cd48de0" name="sapro@ASUSPROART 2026-09-24 16:46:55" runUser="ASUSPROART\sapro" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-24T16:46:55.6635199-04:00" queuing="2026-09-24T16:46:55.6635207-04:00" start="2026-09-24T16:46:34.5156721-04:00" finish="2026-09-24T16:46:55.6728786-04:00" />
+  <TestSettings name="default" id="3ae76173-e566-40d5-83e7-2144b5da0197">
+    <Deployment runDeploymentRoot="sapro_ASUSPROART_2026-09-24_16_46_55" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="c5ee6d02-908a-498d-9b76-7f924e9ceede" testId="9053ea39-99a0-6272-0cfc-20fe81f7df85" testName="Sonda.Api.Tests.FrontendBrowserTests.Real_browser_uses_https_cookie_csrf_and_postgres_for_provisioning" computerName="ASUSPROART" duration="00:00:15.2808395" startTime="2026-09-24T16:46:39.9651759-04:00" endTime="2026-09-24T16:46:55.2370517-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c5ee6d02-908a-498d-9b76-7f924e9ceede">
+      <Output>
+        <ErrorInfo>
+          <Message>/api/v1/session 401 http_401
+/api/v1/profiles/be57ca9b0ff7408492a03f9a114048fc/publish 422 complete_simulation_required
+
+expect(locator).toHaveValue(expected) failed
+
+Locator:  getByLabel('Published version to activate', { exact: true })
+Expected: "1"
+Received: ""
+Timeout:  5000ms
+
+Call log:
+  - Expect "toHaveValue" getByLabel('Published version to activate', { exact: true }) with timeout 5000ms
+  - waiting for getByLabel('Published version to activate', { exact: true })
+    14 ├ù locator resolved to &lt;input min="1" value="" type="number"/&gt;
+       - unexpected value ""
+
+</Message>
+          <StackTrace>   at Sonda.Api.Tests.FrontendBrowserTests.Real_browser_uses_https_cookie_csrf_and_postgres_for_provisioning() in C:\SaProductions\Sonda\tests\Sonda.Api.Tests\FrontendBrowserTests.cs:line 43&#xD;
+   at Sonda.Api.Tests.FrontendBrowserTests.Real_browser_uses_https_cookie_csrf_and_postgres_for_provisioning() in C:\SaProductions\Sonda\tests\Sonda.Api.Tests\FrontendBrowserTests.cs:line 43&#xD;
+   at Sonda.Api.Tests.FrontendBrowserTests.Real_browser_uses_https_cookie_csrf_and_postgres_for_provisioning() in C:\SaProductions\Sonda\tests\Sonda.Api.Tests\FrontendBrowserTests.cs:line 43&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Sonda.Api.Tests.FrontendBrowserTests.Real_browser_uses_https_cookie_csrf_and_postgres_for_provisioning" storage="c:\saproductions\sonda\tests\sonda.api.tests\bin\release\net10.0\sonda.api.tests.dll" id="9053ea39-99a0-6272-0cfc-20fe81f7df85">
+      <Execution id="c5ee6d02-908a-498d-9b76-7f924e9ceede" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Release\net10.0\Sonda.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Api.Tests.FrontendBrowserTests" name="Real_browser_uses_https_cookie_csrf_and_postgres_for_provisioning" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="9053ea39-99a0-6272-0cfc-20fe81f7df85" executionId="c5ee6d02-908a-498d-9b76-7f924e9ceede" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" passed="0" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.1+bf6400fd51 (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.17]   Discovering: Sonda.Api.Tests&#xD;
+[xUnit.net 00:00:00.26]   Discovered:  Sonda.Api.Tests&#xD;
+[xUnit.net 00:00:00.30]   Starting:    Sonda.Api.Tests&#xD;
+info: Microsoft.Hosting.Lifetime[14]&#xD;
+      Now listening on: https://127.0.0.1:55595&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Testing&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\SaProductions\Sonda\src\Sonda.Server&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+warn: Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery[8]&#xD;
+      The 'Cache-Control' and 'Pragma' headers have been overridden and set to 'no-cache, no-store' and 'no-cache' respectively to prevent caching of this response. Any response that uses antiforgery should not be cached.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application is shutting down...&#xD;
+[xUnit.net 00:00:19.85]       /api/v1/session 401 http_401
+/api/v1/profiles/be57ca9b0ff7408492a03f9a114048fc/publish 422 complete_simulation_required
+
+expect(locator).toHaveValue(expected) failed
+
+Locator:  getByLabel('Published version to activate', { exact: true })
+Expected: "1"
+Received: ""
+Timeout:  5000ms
+
+Call log:
+  - Expect "toHaveValue" getByLabel('Published version to activate', { exact: true }) with timeout 5000ms
+  - waiting for getByLabel('Published version to activate', { exact: true })
+    14 ├ù locator resolved to &lt;input min="1" value="" type="number"/&gt;
+       - unexpected value ""
+
+&#xD;
+[xUnit.net 00:00:19.85]       Stack Trace:&#xD;
+[xUnit.net 00:00:19.85]         C:\SaProductions\Sonda\tests\Sonda.Api.Tests\FrontendBrowserTests.cs(43,0): at Sonda.Api.Tests.FrontendBrowserTests.Real_browser_uses_https_cookie_csrf_and_postgres_for_provisioning()&#xD;
+[xUnit.net 00:00:19.85]         C:\SaProductions\Sonda\tests\Sonda.Api.Tests\FrontendBrowserTests.cs(43,0): at Sonda.Api.Tests.FrontendBrowserTests.Real_browser_uses_https_cookie_csrf_and_postgres_for_provisioning()&#xD;
+[xUnit.net 00:00:19.85]         C:\SaProductions\Sonda\tests\Sonda.Api.Tests\FrontendBrowserTests.cs(43,0): at Sonda.Api.Tests.FrontendBrowserTests.Real_browser_uses_https_cookie_csrf_and_postgres_for_provisioning()&#xD;
+[xUnit.net 00:00:19.85]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:20.10]   Finished:    Sonda.Api.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="ASUSPROART" outcome="Error" timestamp="2026-09-24T16:46:55.2433738-04:00">
+        <Text>[xUnit.net 00:00:19.85]     Sonda.Api.Tests.FrontendBrowserTests.Real_browser_uses_https_cookie_csrf_and_postgres_for_provisioning [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

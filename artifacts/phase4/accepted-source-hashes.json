@@ -1,0 +1,126 @@
+[
+  {
+    "Path": "src/Sonda.Infrastructure/Persistence/Migrations\\SondaDbContextModelSnapshot.cs",
+    "Hash": "6337E788902AFC1966DDBDB7C7B1AA71509D017CE296BFAC96D9D4C32B344E3F"
+  },
+  {
+    "Path": "src/Sonda.Infrastructure/Persistence/Migrations\\20260924032911_InterpretationPolicies.Designer.cs",
+    "Hash": "375C343306D4D5482BF90566F706A044F51BA7EBF1DB29E71896E81B5E056ADB"
+  },
+  {
+    "Path": "src/Sonda.Infrastructure/Persistence/Migrations\\20260924032911_InterpretationPolicies.cs",
+    "Hash": "A0F025E0BC52823A37C992BA0A671892D40A1B01BD88582F3687D11B0CD7B749"
+  },
+  {
+    "Path": "src/Sonda.Infrastructure/Persistence/Migrations\\20260924023552_DurablePersistence.Designer.cs",
+    "Hash": "6C411DB5FD2A39FECE9B87BBE3BE2F3AA57C77E34190677D77D0F633EF6CB768"
+  },
+  {
+    "Path": "src/Sonda.Infrastructure/Persistence/Migrations\\20260924023552_DurablePersistence.cs",
+    "Hash": "796A0CB3BFAF358D81836F3506BE0513B6546A229504141963A93D486224EAAF"
+  },
+  {
+    "Path": "src/Sonda.Infrastructure/Persistence/Migrations\\002_policy_constraints.sql",
+    "Hash": "F168959C09BA60AE7EA4DB7097C6982C507DD746E5E012C9FA2AAF71356FD12F"
+  },
+  {
+    "Path": "src/Sonda.Infrastructure/Persistence/Migrations\\001_initial.sql",
+    "Hash": "108B9D0E7A0AA81F8C99586FD2796BFEBB333DF0FCAA513DCD1F1A3536A33E99"
+  },
+  {
+    "Path": "tests\\Sonda.Phase3.Tests\\AcceptanceMatrixTests.cs",
+    "Hash": "D5E5A6E036917470E2B6A799F63266D45D340C50C27178F257A8495A88CB6EFA"
+  },
+  {
+    "Path": "tests\\Sonda.Phase3.Tests\\PolicyTests.cs",
+    "Hash": "84CE4BC0FE9E9F8527EE9A06F7F83B45067AAD8146EB6D5334A1A796677D6ED8"
+  },
+  {
+    "Path": "tests\\Sonda.Phase3.Tests\\PolicyFixtureCatalog.cs",
+    "Hash": "DB85CCAD6E3564FF92C52F100A9F817E1734F0B0BAB848A765815827823818FF"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\RestoreTests.cs",
+    "Hash": "7E64F7ED7B2F7E712DBAC10D3A3AD936AE6F87CF56D66D3275FA20178F1F50F5"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\ReconstructionTests.cs",
+    "Hash": "AD6CA41CBD4FA604C8D92B02EF7755041064E30458ED6C450AD56FCE47934C0D"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\PostgresFixture.cs",
+    "Hash": "EAFE631A29D6AE92156C748274B21CA0DBBE26EA4C87E559FA7A2A120C40223D"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\Phase3UpgradeTests.cs",
+    "Hash": "AE19FC81C677B9FA18019953B8D6DA15701C6ADC953B8C700DD000299640A717"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\Phase3RestoreTests.cs",
+    "Hash": "24FD44A96715B8A88DE27CA350E1292612D9AD9EB7E0F2D1C10E02C712C8F6E0"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\Phase3RaceTests.cs",
+    "Hash": "1ADA44260A962907F6E661C663F27AD363A750BBB66DBC876D2E17E3F0044948"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\Phase3PolicyTests.cs",
+    "Hash": "86284E830449F3B3F748D709A5C579C2450F454597BE2F61A2B5E2D904B83D5C"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\Phase3MatrixTests.cs",
+    "Hash": "72953EDF2B650027855B6E1A94133DF4A70722967FCAA94B6DB83DB7E477B4DE"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\Phase3CrashTests.cs",
+    "Hash": "D821696971DC19087C9D29BDE38A4201D088C7CF06A8A1ED128A63A835815FBF"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\Phase3BoundaryTests.cs",
+    "Hash": "2C0024C50AD371B53A6C4AC1FC17CD7234967EA7FACB63EFE679E0DBA3B52EAD"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\PersistenceTests.cs",
+    "Hash": "BF9BAD6B7C44CF4632E7417268BF48C252A64D1F1389A7345D433B1F01DCCA8A"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\InvariantTests.cs",
+    "Hash": "AD0BA77DEF6086D9CCDE3B700C9128056CFC54A161AB41DF846BB9EB897CC8A7"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\CrashAndMigrationTests.cs",
+    "Hash": "2F82086C49ECBB6A66D6007494BC231B22022CEBC4FAA7D81B58B5BC9F109CCA"
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\ConcurrencyTests.cs",
+    "Hash": "1EF02D9CDBA3D47915DEFEF5D76C6069599B9C931F7F330F05DDA429636838FF"
+  },
+  {
+    "Path": "tests\\Sonda.Phase3.Tests\\EdgePolicyTests.cs",
+    "Hash": "7246F5FD8B6D8274B884A99B9849BFC01C4C9E46CBFC9FB9F29430B2B352FF81"
+  },
+  {
+    "Path": "tests\\Sonda.Phase3.Tests\\CommandTests.cs",
+    "Hash": "7441BDCFF483D90CC2086443142AFBB34970D64220D715851C714A608810D735"
+  },
+  {
+    "Path": "tests\\Sonda.Phase1.Tests\\TestSamples.cs",
+    "Hash": "8700B38ABA508F641EFCBEAE317441C14506E9373347F5517D860D46B2B1D043"
+  },
+  {
+    "Path": "tests\\Sonda.Phase1.Tests\\PriorityAndValidationTests.cs",
+    "Hash": "C5F2FFB26CAA63A0E76A61D780DF80639D4DE35B63E56E46A59BABB2DE03D778"
+  },
+  {
+    "Path": "tests\\Sonda.Phase1.Tests\\ParsingMetricsAndReportTests.cs",
+    "Hash": "5ACC4717295A8B7B588CC8CC4BC1EBD0D89A11BC04EBDAE8B53379C379DFE0AE"
+  },
+  {
+    "Path": "tests\\Sonda.Phase1.Tests\\BoundarySafetyTests.cs",
+    "Hash": "6A24DA057CC49F0E658F810583E7E6EF8054F11C0908E8E9D86E3A8FFF195875"
+  },
+  {
+    "Path": "tests\\Sonda.Phase1.Tests\\EngineAcceptanceTests.cs",
+    "Hash": "E6BA6F2FA4AE2D5F832EC06EF621A1730409392B505860190C6B9A4A9184A6A6"
+  }
+]

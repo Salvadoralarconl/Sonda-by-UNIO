@@ -1,0 +1,9 @@
+{
+  "kind": "ActivateVersion",
+  "childExit": 73,
+  "committedReceiptFound": true,
+  "retryStateUnchanged": true,
+  "runs": 1,
+  "incidents": 0,
+  "receipts": 2
+}

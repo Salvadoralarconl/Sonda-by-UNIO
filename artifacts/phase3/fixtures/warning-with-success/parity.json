@@ -1,0 +1,35 @@
+{
+  "fixture": "warning-with-success",
+  "isolatedTeam": "matrix-f498393ed56c47e09c1b35dc72cc57c2",
+  "tracesEqual": true,
+  "restartedAfterEveryCommand": true,
+  "replayUnchanged": true,
+  "expectedMetrics": {
+    "successfulEvaluatedRuns": 1,
+    "totalEvaluatedRuns": 1,
+    "systemHealthPercentage": 100,
+    "completedOrderRunsProcessedToday": 0,
+    "fiveDayHistory": [
+      {
+        "date": "2026-09-19",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-20",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-21",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-22",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-23",
+        "completedOrderRunsProcessedCount": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,154 @@
+Phase 3 is approved.
+The Phase 3 implementation, revision-2 policy behavior, legacy compatibility, 237 passing tests, PostgreSQL parity, crash/retry, migration, workflow, timing, routing, availability, and restore results are accepted.
+Preserve all 237 tests as regression gates.
+Do not begin Phase 4 implementation yet.
+Prepare a bounded Phase 4 proposal for production file monitoring and continuous ingestion.
+Phase 4 should connect SONDA’s existing interpretation engine and PostgreSQL persistence to real log files while preserving all idempotency, recovery, timing, routing, and Profile-version behavior already proven.
+1. Real file-source monitoring 
+   -  local Windows paths 
+   -  UNC/network shares 
+   -  multiple Log Sources per Profile 
+   -  enabled/disabled sources 
+   -  file glob/pattern matching 
+   -  optional recursive folders 
+2. Continuous tailing 
+   -  read only newly appended bytes 
+   -  never reread the entire file on every cycle 
+   -  persist byte offsets/checkpoints 
+   -  resume correctly after service restart 
+3. File identity 
+   -  distinguish file path from file identity 
+   -  detect replacement/rotation/truncation 
+   -  avoid treating a rotated file as continuation of the old file 
+   -  define generation IDs 
+4. Rotation handling 
+   -  rename rotation 
+   -  copy/truncate rotation 
+   -  daily new files 
+   -  deleted/recreated files 
+   -  partially written files 
+5. Encoding and framing 
+   -  UTF-8 
+   -  UTF-16 if needed 
+   -  configurable encoding 
+   -  line boundaries split across reads 
+   -  CRLF/LF 
+   -  BOM handling 
+   -  future multiline support boundary 
+6. Checkpoint durability 
+   -  byte position must advance only when corresponding evidence is safely committed 
+   -  crash before commit must not lose data 
+   -  crash after commit must not duplicate interpretation 
+7. At-least-once reading + exactly-once interpretation 
+   -  reader may redeliver 
+   -  persistence receipts must prevent duplicate business effects 
+8. Source identity and evidence key 
+   -  define stable source/file-generation/offset identity 
+   -  one physical log record must map to one durable Raw Evidence identity 
+9. Backlog processing 
+   -  if SONDA is offline for hours, safely catch up 
+   -  preserve source ordering 
+   -  process bounded batches 
+   -  expose backlog/lag 
+10. Ordering guarantees 
+    -  per source 
+    -  per Profile 
+    -  across multiple sources 
+    -  interaction with correlated cycles 
+11. Frontier generation 
+    -  replace trusted simulated frontiers with real monitored-source completeness 
+    -  define when it is safe to issue deadline/AdvanceTime evaluation 
+    -  never time out an order while unread earlier evidence may still exist 
+12. Production deadline scheduling 
+    -  use existing deterministic deadline semantics 
+    -  scheduler must feed explicit commands into the proven engine 
+    -  no business logic based directly on arbitrary wall-clock callbacks 
+13. Source observations 
+    -  successful read 
+    -  read failure 
+    -  missing file 
+    -  inaccessible share 
+    -  stale source 
+    -  recovery 
+    -  connect these to the existing availability model 
+14. Reader failure semantics 
+    -  source failure is an operational condition 
+    -  do not fabricate application Error/Failure because the reader could not access the file 
+15. Windows service behavior 
+    -  run independently of browser sessions 
+    -  start on server boot 
+    -  graceful shutdown 
+    -  resume from durable checkpoints 
+16. Multiple workers 
+    -  define whether Phase 4 stays single-host/single-reader-owner 
+    -  use existing locking so duplicate workers cannot process the same source simultaneously 
+    -  do not introduce distributed infrastructure unless required 
+17. Security 
+    -  dedicated service account 
+    -  read-only access to log directories 
+    -  database least privilege 
+    -  credentials outside source control 
+18. Retention interaction 
+    -  raw evidence retention 
+    -  checkpoint safety 
+    -  do not delete evidence needed for unresolved incidents or restart recovery 
+    -  no automatic purge unless explicitly approved 
+19. Operational diagnostics 
+    -  last successful read 
+    -  last evidence received 
+    -  bytes behind/current lag 
+    -  source error 
+    -  processing backlog 
+    -  current reader state 
+20. Real-log pilot preparation 
+    -  design a safe way to connect one real GiroSol log source first 
+    -  read-only 
+    -  no production side effects 
+    -  compare detected cycles/orders/incidents against manual inspection 
+21. Acceptance tests
+ Include scenarios for: 
+    -  append after checkpoint 
+    -  restart 
+    -  crash before commit 
+    -  crash after commit 
+    -  duplicate read 
+    -  file rename rotation 
+    -  truncate rotation 
+    -  daily new file 
+    -  partial final line 
+    -  encoding differences 
+    -  inaccessible network share 
+    -  source recovers 
+    -  backlog catch-up 
+    -  duplicate worker contention 
+    -  deadline waiting for unread backlog 
+    -  source observation availability transitions 
+22. Preserve architecture 
+    -  no second interpretation engine 
+    -  no changes to accepted business rules 
+    -  use the existing Domain/Application/PostgreSQL pipeline 
+23. Explicit exclusions 
+    -  no frontend implementation 
+    -  no accounts/auth UI 
+    -  no HTTP API 
+    -  no Canva Home/Search implementation 
+    -  no notifications 
+    -  no SaaS billing 
+    -  no remote collectors unless required by a demonstrated source-access limitation 
+24.  Provide: 
+    -  acquisition architecture 
+    -  source/checkpoint schema 
+    -  worker ownership model 
+    -  rotation algorithm 
+    -  checkpoint transaction semantics 
+    -  frontier strategy 
+    -  scheduler integration 
+    -  operational diagnostics 
+    -  acceptance matrix 
+    -  migration impact 
+    -  completion criteria 
+Stop after presenting the Phase 4 proposal for approval. Do not implement Phase 4 yet.
+Also preserve @Canva → Sonda Home Page Design as the approved visual authority for the later frontend phase.
+One thing I’d watch very closely when Phase 4 comes back is the checkpoint rule:
+SONDA must never advance the durable file offset farther than what is safely committed to PostgreSQL.
+That single rule is what prevents both data loss and duplicate processing after crashes.

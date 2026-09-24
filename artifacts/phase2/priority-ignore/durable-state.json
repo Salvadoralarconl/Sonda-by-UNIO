@@ -1,0 +1,35 @@
+{
+  "interpreter": {
+    "format": 1,
+    "profileId": "cam",
+    "cycleSequence": 1,
+    "runs": [
+      {
+        "id": "priority-ignore:cam:cycle:0001",
+        "profileId": "cam",
+        "scope": "Application",
+        "cycleSequence": 1,
+        "applicationRunId": null,
+        "identifier": null,
+        "attemptNumber": 1,
+        "startedEventAt": "2026-09-23T14:00:00+00:00",
+        "lifecycle": "Finalized",
+        "result": "Success",
+        "completedEventAt": "2026-09-23T14:00:02+00:00",
+        "completedProcessedAt": "2026-09-23T14:00:02+00:00",
+        "terminalReason": "ConfiguredCycleCompletion",
+        "evidenceLines": [
+          1,
+          2,
+          3
+        ],
+        "diagnosticProblemKeys": [],
+        "observedSuccess": true,
+        "observedFailure": false
+      }
+    ],
+    "incidents": []
+  },
+  "idCounter": 1,
+  "blocked": false
+}

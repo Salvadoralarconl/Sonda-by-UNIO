@@ -1,0 +1,38 @@
+{
+  "scope": {
+    "teamId": "policy-45ca52682aa14f158a7dcb6c404eb85e",
+    "sessionId": "2ccc81df-4a96-49a3-81c3-132a8c1cb983",
+    "applicationId": "app-cam"
+  },
+  "hostAuthority": "test-host",
+  "sources": [
+    {
+      "profileId": "cam",
+      "sourceKey": "file",
+      "revision": 1,
+      "root": "C:\\Users\\sapro\\AppData\\Local\\Temp\\sonda-synthetic-e9716e7fd2f5409c9e380d9252307e34\\not-created",
+      "include": [
+        "*.log"
+      ],
+      "exclude": [],
+      "recursive": false,
+      "enabled": false,
+      "required": true,
+      "encoding": "Utf8",
+      "rotation": "Rename",
+      "completeness": "None",
+      "producerContract": "",
+      "producerManifestPath": "",
+      "rotationContract": "",
+      "rotationManifestPath": "",
+      "fileOrderExpression": "",
+      "sampleDate": null,
+      "readBytes": 65536,
+      "visitBytes": 1048576,
+      "visitRecords": 256,
+      "maximumRecordBytes": 1048576,
+      "maximumFiles": 1024,
+      "pollInterval": "00:00:01"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "childExitCode": 73,
+  "boundary": "COMMIT succeeded; process exited before return",
+  "committedReceiptDetected": true,
+  "duplicateRuns": 0,
+  "duplicateOccurrences": 0,
+  "duplicateRecoveries": 0,
+  "duplicateMetricFacts": 0,
+  "runs": 6,
+  "occurrences": 2,
+  "recoveries": 1,
+  "metricFacts": 5
+}

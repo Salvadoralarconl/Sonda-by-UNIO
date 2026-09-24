@@ -1,0 +1,35 @@
+{
+  "fixture": "deadline-date-0308",
+  "isolatedTeam": "matrix-2b7d9af537a8473781c305e087196404",
+  "tracesEqual": true,
+  "restartedAfterEveryCommand": true,
+  "replayUnchanged": true,
+  "expectedMetrics": {
+    "successfulEvaluatedRuns": 0,
+    "totalEvaluatedRuns": 0,
+    "systemHealthPercentage": null,
+    "completedOrderRunsProcessedToday": 1,
+    "fiveDayHistory": [
+      {
+        "date": "2026-03-05",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-03-06",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-03-07",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-03-08",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-03-09",
+        "completedOrderRunsProcessedCount": 1
+      }
+    ]
+  }
+}

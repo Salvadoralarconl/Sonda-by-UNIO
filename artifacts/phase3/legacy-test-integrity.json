@@ -1,0 +1,86 @@
+[
+  {
+    "Path": "tests\\Sonda.Phase1.Tests\\BoundarySafetyTests.cs",
+    "OriginalHash": "6A24DA057CC49F0E658F810583E7E6EF8054F11C0908E8E9D86E3A8FFF195875",
+    "CurrentHash": "6A24DA057CC49F0E658F810583E7E6EF8054F11C0908E8E9D86E3A8FFF195875",
+    "Unchanged": true,
+    "OnlyApprovedMigrationAssertion": false
+  },
+  {
+    "Path": "tests\\Sonda.Phase1.Tests\\EngineAcceptanceTests.cs",
+    "OriginalHash": "E6BA6F2FA4AE2D5F832EC06EF621A1730409392B505860190C6B9A4A9184A6A6",
+    "CurrentHash": "E6BA6F2FA4AE2D5F832EC06EF621A1730409392B505860190C6B9A4A9184A6A6",
+    "Unchanged": true,
+    "OnlyApprovedMigrationAssertion": false
+  },
+  {
+    "Path": "tests\\Sonda.Phase1.Tests\\ParsingMetricsAndReportTests.cs",
+    "OriginalHash": "5ACC4717295A8B7B588CC8CC4BC1EBD0D89A11BC04EBDAE8B53379C379DFE0AE",
+    "CurrentHash": "5ACC4717295A8B7B588CC8CC4BC1EBD0D89A11BC04EBDAE8B53379C379DFE0AE",
+    "Unchanged": true,
+    "OnlyApprovedMigrationAssertion": false
+  },
+  {
+    "Path": "tests\\Sonda.Phase1.Tests\\PriorityAndValidationTests.cs",
+    "OriginalHash": "C5F2FFB26CAA63A0E76A61D780DF80639D4DE35B63E56E46A59BABB2DE03D778",
+    "CurrentHash": "C5F2FFB26CAA63A0E76A61D780DF80639D4DE35B63E56E46A59BABB2DE03D778",
+    "Unchanged": true,
+    "OnlyApprovedMigrationAssertion": false
+  },
+  {
+    "Path": "tests\\Sonda.Phase1.Tests\\TestSamples.cs",
+    "OriginalHash": "8700B38ABA508F641EFCBEAE317441C14506E9373347F5517D860D46B2B1D043",
+    "CurrentHash": "8700B38ABA508F641EFCBEAE317441C14506E9373347F5517D860D46B2B1D043",
+    "Unchanged": true,
+    "OnlyApprovedMigrationAssertion": false
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\ConcurrencyTests.cs",
+    "OriginalHash": "1EF02D9CDBA3D47915DEFEF5D76C6069599B9C931F7F330F05DDA429636838FF",
+    "CurrentHash": "1EF02D9CDBA3D47915DEFEF5D76C6069599B9C931F7F330F05DDA429636838FF",
+    "Unchanged": true,
+    "OnlyApprovedMigrationAssertion": false
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\CrashAndMigrationTests.cs",
+    "OriginalHash": "A4D64527301EE1A5C8648A44816E24202EA61166AB0D88EF3DEE559F04A3784F",
+    "CurrentHash": "2F82086C49ECBB6A66D6007494BC231B22022CEBC4FAA7D81B58B5BC9F109CCA",
+    "Unchanged": false,
+    "OnlyApprovedMigrationAssertion": true
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\InvariantTests.cs",
+    "OriginalHash": "AD0BA77DEF6086D9CCDE3B700C9128056CFC54A161AB41DF846BB9EB897CC8A7",
+    "CurrentHash": "AD0BA77DEF6086D9CCDE3B700C9128056CFC54A161AB41DF846BB9EB897CC8A7",
+    "Unchanged": true,
+    "OnlyApprovedMigrationAssertion": false
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\PersistenceTests.cs",
+    "OriginalHash": "BF9BAD6B7C44CF4632E7417268BF48C252A64D1F1389A7345D433B1F01DCCA8A",
+    "CurrentHash": "BF9BAD6B7C44CF4632E7417268BF48C252A64D1F1389A7345D433B1F01DCCA8A",
+    "Unchanged": true,
+    "OnlyApprovedMigrationAssertion": false
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\PostgresFixture.cs",
+    "OriginalHash": "EAFE631A29D6AE92156C748274B21CA0DBBE26EA4C87E559FA7A2A120C40223D",
+    "CurrentHash": "EAFE631A29D6AE92156C748274B21CA0DBBE26EA4C87E559FA7A2A120C40223D",
+    "Unchanged": true,
+    "OnlyApprovedMigrationAssertion": false
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\ReconstructionTests.cs",
+    "OriginalHash": "AD6CA41CBD4FA604C8D92B02EF7755041064E30458ED6C450AD56FCE47934C0D",
+    "CurrentHash": "AD6CA41CBD4FA604C8D92B02EF7755041064E30458ED6C450AD56FCE47934C0D",
+    "Unchanged": true,
+    "OnlyApprovedMigrationAssertion": false
+  },
+  {
+    "Path": "tests\\Sonda.Persistence.Tests\\RestoreTests.cs",
+    "OriginalHash": "7E64F7ED7B2F7E712DBAC10D3A3AD936AE6F87CF56D66D3275FA20178F1F50F5",
+    "CurrentHash": "7E64F7ED7B2F7E712DBAC10D3A3AD936AE6F87CF56D66D3275FA20178F1F50F5",
+    "Unchanged": true,
+    "OnlyApprovedMigrationAssertion": false
+  }
+]

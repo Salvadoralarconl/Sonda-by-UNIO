@@ -1,0 +1,7 @@
+# Original Canva artwork used in SONDA
+
+2026-09-24: four rendered image assets were obtained through the browser's pageAssets export from the approved Canva design, without changing it. Three sprite assets contain the same navigation sheet. The delivered `navigation.webp` is the observed sheet containing Home/Monitoring/Search/Settings. CSS crops the source sheet rather than replacing those icons. `configuration.png` is the observed Configuration artwork. Files are used only as integrated SONDA design components, not a stock library. No Canva font was extracted. Logo/utility/card icon extraction is still incomplete; temporary code-native approximations are not visual sign-off.
+
+Full reference export succeeded through Canva Share → Download → PNG, all pages, size 1, high quality. Export version 162, 2026-09-24. Preserved unchanged PNGs: `docs/reference/canva-phase6-export/`. Each export is **1366×736**; this settles screenshot framing despite API page metadata 1366×768. Original user-supplied Home PNG remains unchanged. The reference Home raster is additionally used as a CSS-clipped sprite solely for logo/avatar/utility/card icon artwork; no dynamic text is replaced by raster text, and no font software is extracted.
+
+The full Home export now supplies the remaining logo/avatar/utility/card raster artwork through CSS clipping. The earlier extraction-incomplete note is superseded for these assets. Navigation/configuration retain the original extracted artwork. No Canva font binary or dynamic rasterized text is served as typography.

@@ -1,0 +1,499 @@
+{
+  "purpose": "Read-only Phase 5 proposal baseline; no implementation changes",
+  "acceptedTests": 309,
+  "originalRegressionSubset": 237,
+  "files": [
+    {
+      "path": "src/Sonda.Application/Acquisition/ByteLineFramer.cs",
+      "sha256": "E0978C7DD6DEB713E066B056EF75D5E9C70A612249B6D946D8BF4BC77E7E7469"
+    },
+    {
+      "path": "src/Sonda.Application/Acquisition/Contracts.cs",
+      "sha256": "5FAB68E06A8791B39E70238DF5698328F700BFBC2008B534ABE1F3897E1508EB"
+    },
+    {
+      "path": "src/Sonda.Application/Acquisition/WorkerManifest.cs",
+      "sha256": "0EBB57B067819CCF1A436D7DEA0D44EB0298232677F71F59034218CE3EDE4B9B"
+    },
+    {
+      "path": "src/Sonda.Application/packages.lock.json",
+      "sha256": "7300B1DD49EB6324B49D2D2860E490335EB637F22BEFBCA3EBE5292A6AC3B9AA"
+    },
+    {
+      "path": "src/Sonda.Application/Persistence/Contracts.cs",
+      "sha256": "AECAB2157648243506CCCFC0B84935FFB6B82FC42819541F8A27F6AA73FC8E53"
+    },
+    {
+      "path": "src/Sonda.Application/Persistence/IConfigurationStore.cs",
+      "sha256": "B5921AEAB7AEC329FB6CBC07BFBF8D8C87C1BEDB77841EB233D4C2F8CB8DFADB"
+    },
+    {
+      "path": "src/Sonda.Application/Persistence/IPolicyProcessingStore.cs",
+      "sha256": "D3B0E023746BAE8F80EA2CE8956EFFC04CC57691686817E28D46BC55D6AA8F9E"
+    },
+    {
+      "path": "src/Sonda.Application/Processing/InterpretInput.cs",
+      "sha256": "279F0C9A8DF25EC0DAB774B7D5B78055371FAD629AAD6BF31B2151ECE9456D94"
+    },
+    {
+      "path": "src/Sonda.Application/Processing/PolicySession.cs",
+      "sha256": "962924D2247BA47FF65D3CD66AE5561BE206CBF3C2DFA6C6F8A0A1EAC83AE31F"
+    },
+    {
+      "path": "src/Sonda.Application/Simulation/Contracts.cs",
+      "sha256": "DAB7C809C0C240A44A8F2F28D36CD62E21AC4DAFD77C29895C840C1C8444C108"
+    },
+    {
+      "path": "src/Sonda.Application/Simulation/MarkdownReport.cs",
+      "sha256": "FAC5E956C624030F3BD13E0B1A17843A5A4C57CA7EC9FB333C96217A1A9CF1EC"
+    },
+    {
+      "path": "src/Sonda.Application/Simulation/PolicySimulationRunner.cs",
+      "sha256": "D296DCFBF4602CDD6ABBA02DE2DA96C41B962EDDB96A77D39AFAC1D053B07A3D"
+    },
+    {
+      "path": "src/Sonda.Application/Simulation/SimulationJson.cs",
+      "sha256": "D1585558CF605B63F37474B7BB26F8FF0FEE945F25BFFB90E3A999495C47A699"
+    },
+    {
+      "path": "src/Sonda.Application/Simulation/SimulationRunner.cs",
+      "sha256": "BAEFF539FB73AAC2BFB76EA43F0769DEF747FC5237E8F28D6695B7208F88EB23"
+    },
+    {
+      "path": "src/Sonda.Application/Sonda.Application.csproj",
+      "sha256": "E37782C7B162AFF39FC252CE1E56956FA42BEB75722C0DF258076A0D658FE269"
+    },
+    {
+      "path": "src/Sonda.Domain/Availability/AvailabilityProjection.cs",
+      "sha256": "9552EAFDA04B436873AD4826F7B41F773364B2400D6285789388189BE2494624"
+    },
+    {
+      "path": "src/Sonda.Domain/Detection/PatternMatcher.cs",
+      "sha256": "7E63F06B5D556BC62D7A1C95F74AEF8679EA939F0D847096FEEC076C57BB6140"
+    },
+    {
+      "path": "src/Sonda.Domain/Evidence/Contracts.cs",
+      "sha256": "BAD990B7B710E39AAAC075A433ECB55F0E7EBCE1988D99740B03B52E338AC140"
+    },
+    {
+      "path": "src/Sonda.Domain/Evidence/SampleParser.cs",
+      "sha256": "2FD2ED8A5D29572CE6F46B9939097D56313084F030ED5FFF0C6BE1EC012D5959"
+    },
+    {
+      "path": "src/Sonda.Domain/Incidents/IncidentModels.cs",
+      "sha256": "5A74D70841AD6D2492D6B89CD964B90AD650F07FC6D00E8E7B38E8202E57BA53"
+    },
+    {
+      "path": "src/Sonda.Domain/Incidents/ProblemIdentity.cs",
+      "sha256": "AFDE13235AF7F9EDF1FF7251312913957624A2C8AACC45A31C5281BC569AAFCC"
+    },
+    {
+      "path": "src/Sonda.Domain/Metrics/MetricCalculator.cs",
+      "sha256": "4CEBA4E7015B9871849D94A01A17BD18BD5058C551C768AC9593DCB21C323F11"
+    },
+    {
+      "path": "src/Sonda.Domain/packages.lock.json",
+      "sha256": "A4364D81A6DE2707D66FBCED18FBBC926C882AB96E1D1AEBBB17E871285B9D75"
+    },
+    {
+      "path": "src/Sonda.Domain/Processing/InterpreterState.cs",
+      "sha256": "EA875D74ED399906678A1752A3B329605934AE0FAC1EB779F4DD8252A2A1647E"
+    },
+    {
+      "path": "src/Sonda.Domain/Processing/ProfileInterpreter.cs",
+      "sha256": "BAC342A5719D40C335CD11FA4F148F511CDC94EA3D7CD4B389F6A6681F7271C6"
+    },
+    {
+      "path": "src/Sonda.Domain/Processing/ProfileInterpreter.Revision2.cs",
+      "sha256": "5AC8F0F9203DCF015D356559665436ACA6CAE5522AC83D661CDC2443FF2234B2"
+    },
+    {
+      "path": "src/Sonda.Domain/Processing/ProfileInterpreter.Routing.cs",
+      "sha256": "0051D8432BD5B7CE458016C4BA100D5B51E460628696805EA5F197E08BCBF65F"
+    },
+    {
+      "path": "src/Sonda.Domain/Processing/ProfileInterpreter.Versions.cs",
+      "sha256": "4D26A76B1DC2DBC0198F7F0E6F43C5AA987FA70280B24BDC1C3265A91BDBEFDC"
+    },
+    {
+      "path": "src/Sonda.Domain/Profiles/InterpretationPolicy.cs",
+      "sha256": "34C87DD607CDC9A99798C574D9C96C52B40C81E6E17BE66749498C8EB516DFCC"
+    },
+    {
+      "path": "src/Sonda.Domain/Profiles/Profile.cs",
+      "sha256": "3A240DD9937384952A57A61D690D3521150B3F50F218D6AEC1D4E01A71F7C140"
+    },
+    {
+      "path": "src/Sonda.Domain/Profiles/ProfileValidator.cs",
+      "sha256": "3337F91A7BFFD0B746FA1AD5DE35CBC7659C8C39055F95CF52C7B3AC450574FE"
+    },
+    {
+      "path": "src/Sonda.Domain/Runs/RunModels.cs",
+      "sha256": "19FEFE0596064A960F19C20EE3E9ADB7D3669A79DDDB460E2334014100A7B0DB"
+    },
+    {
+      "path": "src/Sonda.Domain/Sonda.Domain.csproj",
+      "sha256": "8D654C44B7BEBB6B31A9F2F606927F45B5072193ADC4EEF8CCE3F3CF3B278DF3"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Files/CopyTruncateReconciler.cs",
+      "sha256": "C13CBB1386375B5CC885E4B9CEBC1122545F52D9521AAD7AD1AC0C5E66DEE6F2"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Files/DeadlineScheduler.cs",
+      "sha256": "BFC3B8740BF965B7C93DFEEBF6AF65B9EA9144100E863EAA21ECACEE82897374"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Files/FileIngestionPump.cs",
+      "sha256": "FC86EF36E5DB3E472EBBC9AB51E9765398AE143485F9D28120C1034DB4A48588"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Files/WindowsFileSource.cs",
+      "sha256": "6F6EE1447BA8579C88CB3993353B2C68C746E46D421ED7DC002547CD32971618"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/packages.lock.json",
+      "sha256": "BF9B143821965A3FAFBFE38287E8FD29F6F4BB6BC47E813FD6A1EB2F598944F8"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/AcquisitionEntities.cs",
+      "sha256": "2DDA257A2F129A66EF77B9B0D53092F339BD4F43A59DAE274F0503BE32F86272"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/DesignTimeFactory.cs",
+      "sha256": "3771C811583AA4863B3FFA52878AE935FDF43A854DC8C691013B8110A238E881"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/Entities.cs",
+      "sha256": "9946265A561E0F592AF189F3E335625DDF81C0D5D72A5C208A1FD64E6A3D2463"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/IncidentRevisionStore.cs",
+      "sha256": "51250CA9412E8692E2AC98AED4F3C789060698DE2DD374845294857082E9C94B"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/Migrations/001_initial.sql",
+      "sha256": "108B9D0E7A0AA81F8C99586FD2796BFEBB333DF0FCAA513DCD1F1A3536A33E99"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/Migrations/002_policy_constraints.sql",
+      "sha256": "F168959C09BA60AE7EA4DB7097C6982C507DD746E5E012C9FA2AAF71356FD12F"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/Migrations/003_acquisition_constraints.sql",
+      "sha256": "F427E2F9E28E002420AF24F8FE99719A01056ABB65057E9D99DC4F3B0A126C4D"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/Migrations/20260924023552_DurablePersistence.cs",
+      "sha256": "796A0CB3BFAF358D81836F3506BE0513B6546A229504141963A93D486224EAAF"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/Migrations/20260924023552_DurablePersistence.Designer.cs",
+      "sha256": "6C411DB5FD2A39FECE9B87BBE3BE2F3AA57C77E34190677D77D0F633EF6CB768"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/Migrations/20260924032911_InterpretationPolicies.cs",
+      "sha256": "A0F025E0BC52823A37C992BA0A671892D40A1B01BD88582F3687D11B0CD7B749"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/Migrations/20260924032911_InterpretationPolicies.Designer.cs",
+      "sha256": "375C343306D4D5482BF90566F706A044F51BA7EBF1DB29E71896E81B5E056ADB"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/Migrations/20260924044645_FileAcquisition.cs",
+      "sha256": "54F131E90AC2AAE8259FDD6EBCEE3F5436787E8A97AB00112A68CAB597A984D5"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/Migrations/20260924044645_FileAcquisition.Designer.cs",
+      "sha256": "D509EB5F73287A52B2C27BFDE1D62BA80DA2EA686A8F6470D2535510047E99CA"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/Migrations/SondaDbContextModelSnapshot.cs",
+      "sha256": "B25EE87EE0D01FFEF39F195C8E2494FD7E4B4FB0308F3215C54F64DCCD60B4EE"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/PhysicalEvidenceOrigin.cs",
+      "sha256": "C6C51F62E54F64E6EC289477DBBDA1013E2EBEAD1D0217DE97835297FAD33740"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/PostgresConfigurationStore.cs",
+      "sha256": "1833D0A6099FA62043C4BD05D270BE6ED1A72347FFADDA596B05FBD530EF90E9"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/PostgresIngestionStore.Configuration.cs",
+      "sha256": "472C5121880BD91A544BB95A51E462B272869FA0769CF51821A0BAAFA15BA615"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/PostgresIngestionStore.cs",
+      "sha256": "6251BD2F1A5222A1255260B01EAA58F778FD04BA853646A30F59812DEA6B05DD"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/PostgresIngestionStore.Diagnostics.cs",
+      "sha256": "C49AAD44666CF9C02589F5C1CF686E5678CDC58DF426E12D4C9C851DF96D8706"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/PostgresIngestionStore.Files.cs",
+      "sha256": "2D182B3ACB5C43B41586F9DE45033F4D2CAE548184E77D7653CB2A30E9281407"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/PostgresIngestionStore.Frontiers.cs",
+      "sha256": "A9F894AEDF144D706DC014B6FE82E15780B4A7BE4633716F1765093574066F49"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/PostgresIngestionStore.Observations.cs",
+      "sha256": "40F69A7315957F8CC0E8B464EC643B841D17DA314865D97D4F6CE799B20DD184"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/PostgresIngestionStore.Rotation.cs",
+      "sha256": "9B4FC37F507C5CB6F0E84D4259C8A1112EDB6291A88C5ABF15B41D2887CAA779"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/PostgresPolicyStore.cs",
+      "sha256": "6E9945E49F9080D2410BB446900801965BFCAA889258793116241CF7D4DCCA98"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/PostgresProcessingStore.cs",
+      "sha256": "2BB2FE742B37961CEB1EAB105A016EB1B57047AB2374C1CE97377C69819FFF45"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Persistence/SondaDbContext.cs",
+      "sha256": "9E76E7FE80D9628776E3DF38F1D5CB6F2BBF5B1CBAF2C5FFFDC4A2AC05689629"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Properties/AssemblyInfo.cs",
+      "sha256": "46A042A15CC8B5114C692782E3AEDB608C884905C77AA7EE32A233D5BE84E523"
+    },
+    {
+      "path": "src/Sonda.Infrastructure/Sonda.Infrastructure.csproj",
+      "sha256": "531A91CB570E88BD78920E0A1427706B86546933D0E608B7EE98781CFE149A6B"
+    },
+    {
+      "path": "src/Sonda.Worker/packages.lock.json",
+      "sha256": "1BD1376FC5DCA0A410657B7EC5DF80E92C29222D4E24EA248D392C13F01CEB30"
+    },
+    {
+      "path": "src/Sonda.Worker/Program.cs",
+      "sha256": "0EF09D761E9B823A70EAA6FD30EE37CDCAC7D4546ED628346CAFAC00D7E59A21"
+    },
+    {
+      "path": "src/Sonda.Worker/Sonda.Worker.csproj",
+      "sha256": "C1CC121E90ABBD4A5EC4A073D58C77B5C054787FB3F1A7F8ACA91470F9B7C03D"
+    },
+    {
+      "path": "tests/Sonda.Acquisition.Tests/FramingTests.cs",
+      "sha256": "161FA9759656C94CAA9243FDCDB6C339166029E26252C6EE1402831C47C9535B"
+    },
+    {
+      "path": "tests/Sonda.Acquisition.Tests/packages.lock.json",
+      "sha256": "B4AED66FF068178693864CC8E6F74E3F85A10912CB8DD04B3F202D5C71DCA9E4"
+    },
+    {
+      "path": "tests/Sonda.Acquisition.Tests/Sonda.Acquisition.Tests.csproj",
+      "sha256": "430D5828677D629ABF18418C6A78BD955332E337E6F2B8AE08953912B68AF537"
+    },
+    {
+      "path": "tests/Sonda.Acquisition.Tests/SourceSafetyTests.cs",
+      "sha256": "8FECF6A3D9913C0D06A84DAABFC9B2D2DE9E140F523E07ABBA47F13F7F8B9C32"
+    },
+    {
+      "path": "tests/Sonda.Acquisition.Tests/WindowsFileTests.cs",
+      "sha256": "A461BDAD6055C1319D3BDC387F845A3430D6295B923E69AF4F9FB4AAF231E4E5"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/ConcurrencyTests.cs",
+      "sha256": "1EF02D9CDBA3D47915DEFEF5D76C6069599B9C931F7F330F05DDA429636838FF"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/CrashAndMigrationTests.cs",
+      "sha256": "606EDDE8D0176BDC87CF69A6232D98FEB186A5AD3A4C2E66DD077B0E1A625EFD"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/InvariantTests.cs",
+      "sha256": "AD0BA77DEF6086D9CCDE3B700C9128056CFC54A161AB41DF846BB9EB897CC8A7"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/packages.lock.json",
+      "sha256": "B4AED66FF068178693864CC8E6F74E3F85A10912CB8DD04B3F202D5C71DCA9E4"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/PersistenceTests.cs",
+      "sha256": "BF9BAD6B7C44CF4632E7417268BF48C252A64D1F1389A7345D433B1F01DCCA8A"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase3BoundaryTests.cs",
+      "sha256": "2C0024C50AD371B53A6C4AC1FC17CD7234967EA7FACB63EFE679E0DBA3B52EAD"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase3CrashTests.cs",
+      "sha256": "D821696971DC19087C9D29BDE38A4201D088C7CF06A8A1ED128A63A835815FBF"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase3MatrixTests.cs",
+      "sha256": "72953EDF2B650027855B6E1A94133DF4A70722967FCAA94B6DB83DB7E477B4DE"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase3PolicyTests.cs",
+      "sha256": "86284E830449F3B3F748D709A5C579C2450F454597BE2F61A2B5E2D904B83D5C"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase3RaceTests.cs",
+      "sha256": "1ADA44260A962907F6E661C663F27AD363A750BBB66DBC876D2E17E3F0044948"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase3RestoreTests.cs",
+      "sha256": "24FD44A96715B8A88DE27CA350E1292612D9AD9EB7E0F2D1C10E02C712C8F6E0"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase3UpgradeTests.cs",
+      "sha256": "EF52B5AFE2D9C5387658F2C729B5DEB1E70326316797E687C799391EDD4A2598"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase4AvailabilityTests.cs",
+      "sha256": "0C7009BC396A061F33045ADB14502DC5F682896299F71BD6EFEE2244E0CBC1ED"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase4ControlTests.cs",
+      "sha256": "C78F860EE59C73AD1675107D6CD654C7ECE7DB51C1432B9C98599B86BACDE14E"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase4CrashTests.cs",
+      "sha256": "5A3502EFB566636C2D392764A42D5B58BFA7A00137A022F62F535908E156C299"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase4FilePumpTests.cs",
+      "sha256": "BD972FF1743F5319E677AF34A0E049C8DFF1D5849D5C533E995C4D655656AE9D"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase4FileSafetyTests.cs",
+      "sha256": "7D47CDE4CE98330E8F86C2D62282FB678282446281B08BD0C5376B755235032B"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase4FrontierTests.cs",
+      "sha256": "59513253A998BEEF696CCB626310B1E831C54ED3CA58B9C8B38EAFFDC64954AE"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase4IngestionTests.cs",
+      "sha256": "E2FD7306A461A8A63B8D9C140BEAE3861BEB63E3147D8E98EB2699013A06A2EF"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase4LimitTests.cs",
+      "sha256": "5D615356BD1EE075C9A71F1789BED39A4E71543B0877B642B78741C10089933B"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase4ProducerTests.cs",
+      "sha256": "B37B2E0FEC84913181804E8870BF46DD9FDEEC4ED45FE84B88D788ADC43C2CC8"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase4RotationTests.cs",
+      "sha256": "DC35F68B5C81A173C2409E52875EFA53659B025C4BBC8795D764C98ABF406027"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase4UpgradeRestoreTests.cs",
+      "sha256": "7533FF48A7388CD712E4F9271220604F6690017834E32567F48CF5AC350356D4"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Phase4WorkerTests.cs",
+      "sha256": "876D84084CE1A94C7D1F47208BEAE4DBE5DC7006EAD5D74F72381ECA2DACEBDF"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/PostgresFixture.cs",
+      "sha256": "EAFE631A29D6AE92156C748274B21CA0DBBE26EA4C87E559FA7A2A120C40223D"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/ReconstructionTests.cs",
+      "sha256": "AD6CA41CBD4FA604C8D92B02EF7755041064E30458ED6C450AD56FCE47934C0D"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/RestoreTests.cs",
+      "sha256": "7E64F7ED7B2F7E712DBAC10D3A3AD936AE6F87CF56D66D3275FA20178F1F50F5"
+    },
+    {
+      "path": "tests/Sonda.Persistence.Tests/Sonda.Persistence.Tests.csproj",
+      "sha256": "244650812E40FA211EE17CBAF775BB65FA35DBA5A8668C35D63C03EC4CC41487"
+    },
+    {
+      "path": "tests/Sonda.Phase1.Tests/BoundarySafetyTests.cs",
+      "sha256": "6A24DA057CC49F0E658F810583E7E6EF8054F11C0908E8E9D86E3A8FFF195875"
+    },
+    {
+      "path": "tests/Sonda.Phase1.Tests/EngineAcceptanceTests.cs",
+      "sha256": "E6BA6F2FA4AE2D5F832EC06EF621A1730409392B505860190C6B9A4A9184A6A6"
+    },
+    {
+      "path": "tests/Sonda.Phase1.Tests/packages.lock.json",
+      "sha256": "D4858C909513E59C9FBB12FD6F17FD684EA2340BC443CCAD0FE8B0DC3BF2E792"
+    },
+    {
+      "path": "tests/Sonda.Phase1.Tests/ParsingMetricsAndReportTests.cs",
+      "sha256": "5ACC4717295A8B7B588CC8CC4BC1EBD0D89A11BC04EBDAE8B53379C379DFE0AE"
+    },
+    {
+      "path": "tests/Sonda.Phase1.Tests/PriorityAndValidationTests.cs",
+      "sha256": "C5F2FFB26CAA63A0E76A61D780DF80639D4DE35B63E56E46A59BABB2DE03D778"
+    },
+    {
+      "path": "tests/Sonda.Phase1.Tests/Sonda.Phase1.Tests.csproj",
+      "sha256": "E8E9557BBD6AC4C8BD08A4CD929DB00CCEB1C0350AFCB775EB859E609C3DF425"
+    },
+    {
+      "path": "tests/Sonda.Phase1.Tests/TestSamples.cs",
+      "sha256": "8700B38ABA508F641EFCBEAE317441C14506E9373347F5517D860D46B2B1D043"
+    },
+    {
+      "path": "tests/Sonda.Phase3.Tests/AcceptanceMatrixTests.cs",
+      "sha256": "D5E5A6E036917470E2B6A799F63266D45D340C50C27178F257A8495A88CB6EFA"
+    },
+    {
+      "path": "tests/Sonda.Phase3.Tests/CommandTests.cs",
+      "sha256": "7441BDCFF483D90CC2086443142AFBB34970D64220D715851C714A608810D735"
+    },
+    {
+      "path": "tests/Sonda.Phase3.Tests/EdgePolicyTests.cs",
+      "sha256": "7246F5FD8B6D8274B884A99B9849BFC01C4C9E46CBFC9FB9F29430B2B352FF81"
+    },
+    {
+      "path": "tests/Sonda.Phase3.Tests/packages.lock.json",
+      "sha256": "D4858C909513E59C9FBB12FD6F17FD684EA2340BC443CCAD0FE8B0DC3BF2E792"
+    },
+    {
+      "path": "tests/Sonda.Phase3.Tests/PolicyFixtureCatalog.cs",
+      "sha256": "DB85CCAD6E3564FF92C52F100A9F817E1734F0B0BAB848A765815827823818FF"
+    },
+    {
+      "path": "tests/Sonda.Phase3.Tests/PolicyTests.cs",
+      "sha256": "84CE4BC0FE9E9F8527EE9A06F7F83B45067AAD8146EB6D5334A1A796677D6ED8"
+    },
+    {
+      "path": "tests/Sonda.Phase3.Tests/Sonda.Phase3.Tests.csproj",
+      "sha256": "E8E9557BBD6AC4C8BD08A4CD929DB00CCEB1C0350AFCB775EB859E609C3DF425"
+    },
+    {
+      "path": "tools/Sonda.PersistenceHarness/packages.lock.json",
+      "sha256": "4773BDC016F5602A681EEBD141F7A113268423FA57EDDF690ACEF501078F3833"
+    },
+    {
+      "path": "tools/Sonda.PersistenceHarness/Program.cs",
+      "sha256": "E5E42205511E2F9B1A2474F406F8D2F82CF873AEC716D572188C1DD7374BDBD2"
+    },
+    {
+      "path": "tools/Sonda.PersistenceHarness/Sonda.PersistenceHarness.csproj",
+      "sha256": "2B55213FB947469036BC35669A5CD5AABA51812903B82B57858C3E685359D5C7"
+    },
+    {
+      "path": "tools/Sonda.Simulator/packages.lock.json",
+      "sha256": "3F3FEF2A08985267E0260A0CDD18222831BE4AB57515DDB821B36F2A4A05FAE4"
+    },
+    {
+      "path": "tools/Sonda.Simulator/Program.cs",
+      "sha256": "936F887DEB3B1DFA4968F6C9B0B6D26899195B87E9F82BF14DEEA89F7B19C4CC"
+    },
+    {
+      "path": "tools/Sonda.Simulator/Sonda.Simulator.csproj",
+      "sha256": "57F0C63940570CF9FF6FDB470C919A14E4C49DF8E377BC716B2B507E84F05420"
+    },
+    {
+      "path": "tools/Verify-Phase4Evidence.ps1",
+      "sha256": "7CC8B16A1BCF0471B2EF68237F54802270187838AF4E931F1745E34977C43561"
+    }
+  ]
+}

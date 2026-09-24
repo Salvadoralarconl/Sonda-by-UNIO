@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "transport": "real loopback HTTPS",
+  "database": "disposable PostgreSQL",
+  "apiResponsesMocked": false,
+  "checks": [
+    "server-timezone authenticated greeting with Tokyo browser",
+    "authoritative dashboard badges",
+    "Home Incident modal tabs and nested runs",
+    "lost acknowledgment then close/reopen and committed receipt reconciliation",
+    "history reflects real manual workflow",
+    "Home focus restoration without navigation",
+    "application-scoped popup",
+    "fullscreen permission failure fallback and exit",
+    "eight grouped Order Runs",
+    "neutral unmatched evidence",
+    "shared cycle-end evidence appears once with all three linked runs"
+  ]
+}

@@ -1,0 +1,13 @@
+  Sonda.Api.Contracts -> C:\SaProductions\Sonda\src\Sonda.Api.Contracts\bin\Release\net10.0\Sonda.Api.Contracts.dll
+  Sonda.Domain -> C:\SaProductions\Sonda\src\Sonda.Domain\bin\Release\net10.0\Sonda.Domain.dll
+  Sonda.Application -> C:\SaProductions\Sonda\src\Sonda.Application\bin\Release\net10.0\Sonda.Application.dll
+  Sonda.Infrastructure -> C:\SaProductions\Sonda\src\Sonda.Infrastructure\bin\Release\net10.0\Sonda.Infrastructure.dll
+  Sonda.Access -> C:\SaProductions\Sonda\src\Sonda.Access\bin\Release\net10.0\Sonda.Access.dll
+  Sonda.Server -> C:\SaProductions\Sonda\src\Sonda.Server\bin\Release\net10.0\Sonda.Server.dll
+  Sonda.Simulator -> C:\SaProductions\Sonda\tools\Sonda.Simulator\bin\Release\net10.0\Sonda.Simulator.dll
+  Sonda.Api.Tests -> C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Release\net10.0\Sonda.Api.Tests.dll
+Test run for C:\SaProductions\Sonda\tests\Sonda.Api.Tests\bin\Release\net10.0\Sonda.Api.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: C:\SaProductions\Sonda\artifacts\phase5\final-tests\api-final.trx
+
+Passed!  - Failed:     0, Passed:    45, Skipped:     0, Total:    45, Duration: 1 m 11 s - Sonda.Api.Tests.dll (net10.0)

@@ -1,0 +1,25 @@
+.tools/
+**/bin/
+**/obj/
+TestResults/
+artifacts/test-results/
+*.user
+*.suo
+**/node_modules/
+**/dist/
+**/*.tsbuildinfo
+**/playwright-report/
+**/test-results/
+
+# Machine-local credentials and database backups are never source artifacts.
+.env
+.env.*
+!.env.example
+!.env.template
+**/appsettings.Local.json
+**/appsettings.*.Local.json
+*.pfx
+*.p12
+*.key
+*.dump
+*.backup

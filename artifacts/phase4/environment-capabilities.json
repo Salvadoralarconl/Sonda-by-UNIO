@@ -1,0 +1,8 @@
+{
+  "isElevated": false,
+  "smbEnumeration": "Access denied ",
+  "controlledSmb": "Not available; no positive SMB test claimed",
+  "installedService": "Not installed; SCM/boot test requires an authorized elevated disposable Windows host",
+  "giroSolAccess": "Not attempted",
+  "consoleLifecycle": "See worker-lifecycle.json"
+}

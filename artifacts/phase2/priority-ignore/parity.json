@@ -1,0 +1,38 @@
+{
+  "fixture": "priority-ignore",
+  "originalFixtureHash": "4AB94612C0D0376B15224BC88C624EB8559F30E8D4EACEE1E01A70C46681B2F9",
+  "isolatedTeam": "test-6997b92f07e2487f8c1a3e446e01ae37",
+  "entryTracesEqual": true,
+  "runsEqual": true,
+  "incidentsEqual": true,
+  "metricsEqual": true,
+  "replayUnchanged": true,
+  "metrics": {
+    "successfulEvaluatedRuns": 1,
+    "totalEvaluatedRuns": 1,
+    "systemHealthPercentage": 100,
+    "completedOrderRunsProcessedToday": 0,
+    "fiveDayHistory": [
+      {
+        "date": "2026-09-19",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-20",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-21",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-22",
+        "completedOrderRunsProcessedCount": 0
+      },
+      {
+        "date": "2026-09-23",
+        "completedOrderRunsProcessedCount": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "seed": "mixed-orders",
+  "serverTimeZoneId": "America/New_York",
+  "asOf": "2026-09-23T16:00:00Z",
+  "sampleDate": "2026-09-23",
+  "profiles": [
+    {
+      "teamId": "team-demo",
+      "applicationId": "app-cam",
+      "id": "cam",
+      "name": "CAM synthetic sample",
+      "completionMode": "TerminalMarker",
+      "parsing": {
+        "entryPattern": "^(?<timestamp>\\d{2}:\\d{2}:\\d{2}) (?<message>.*)$",
+        "timestampFormat": "HH:mm:ss",
+        "timestampHasDate": false,
+        "sourceTimeZoneId": "America/New_York"
+      },
+      "identifier": { "kind": "KeyValue", "namespace": "cam-order-v1", "expression": "OrderID", "name": "Order ID" },
+      "rules": [
+        { "key": "cycle-begin", "role": "CycleBegin", "target": "Application", "alternatives": [{ "kind": "Exact", "expression": "CAM process started" }] },
+        { "key": "cycle-success", "role": "CycleSuccess", "target": "Application", "alternatives": [{ "kind": "Exact", "expression": "CAM process completed" }] },
+        { "key": "cycle-failure", "role": "CycleFailure", "target": "Application", "alternatives": [{ "kind": "Exact", "expression": "CAM process failed" }] },
+        { "key": "order-begin", "role": "OrderBegin", "target": "Order", "alternatives": [{ "kind": "Contains", "expression": "Finding order" }] },
+        { "key": "order-success", "role": "OrderSuccess", "target": "Order", "alternatives": [{ "kind": "Contains", "expression": "Order sent" }] },
+        { "key": "order-failure", "role": "OrderFailure", "target": "Order", "alternatives": [{ "kind": "Contains", "expression": "Unable to send order" }] },
+        { "key": "order-warning", "role": "Detection", "target": "Order", "classification": "Warning", "priority": 10, "conditionKey": "order-outcome", "recovery": "NextSuccessfulRun", "alternatives": [{ "kind": "Contains", "expression": "Unable to send order" }] }
+      ]
+    }
+  ],
+  "entries": [
+    { "profileId": "cam", "raw": "10:00:00 CAM process started", "processedAt": "2026-09-23T14:00:00Z" },
+    { "profileId": "cam", "raw": "10:00:01 Finding order OrderID=001", "processedAt": "2026-09-23T14:00:01Z" },
+    { "profileId": "cam", "raw": "10:00:02 Finding order OrderID=002", "processedAt": "2026-09-23T14:00:02Z" },
+    { "profileId": "cam", "raw": "10:00:03 Connecting to payer OrderID=001", "processedAt": "2026-09-23T14:00:03Z" },
+    { "profileId": "cam", "raw": "10:00:04 Order sent OrderID=001", "processedAt": "2026-09-23T14:00:04Z" },
+    { "profileId": "cam", "raw": "10:00:05 Unable to send order OrderID=002", "processedAt": "2026-09-23T14:00:05Z" },
+    { "profileId": "cam", "raw": "10:00:06 Finding order OrderID=003", "processedAt": "2026-09-23T14:00:06Z" },
+    { "profileId": "cam", "raw": "10:00:07 Order sent OrderID=003", "processedAt": "2026-09-23T14:00:07Z" },
+    { "profileId": "cam", "raw": "10:00:08 CAM process completed", "processedAt": "2026-09-23T14:00:08Z" }
+  ]
+}

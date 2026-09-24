@@ -1,0 +1,173 @@
+Phase 6 is approved with the following visual-fidelity requirement.
+I want the SONDA frontend to reproduce my existing @Canva → Sonda Home Page Design as accurately as technically possible.
+I do not want:
+-  a redesign inspired by Canva 
+-  a modernized interpretation 
+-  a generic dashboard using similar colors 
+-  rearranged cards 
+-  changed proportions 
+-  changed spacing because another layout is “cleaner” 
+-  substituted typography without first attempting to identify the Canva typography 
+-  additional Home/Search controls simply because they are convenient 
+I want the implementation to visually match the Canva design.
+Before writing the Home or Search frontend:
+Open @Canva → Sonda Home Page Design and inspect both pages directly.
+Page 1 = Home
+Page 2 = Search
+Capture/reference both pages and record the actual:
+-  page dimensions 
+-  rail width 
+-  content widths 
+-  right monitoring-panel width 
+-  gutters 
+-  card dimensions 
+-  card positions 
+-  table dimensions 
+-  typography/font family 
+-  font sizes 
+-  font weights 
+-  line heights 
+-  colors 
+-  border radii 
+-  shadows 
+-  icon sizes 
+-  icon positions 
+-  row heights 
+-  divider thickness 
+-  alignment 
+-  whitespace 
+Do not rely on approximate estimates from earlier screenshots if Canva exposes the actual values.
+If Canva access cannot provide an exact property, use the approved exported/reference image to measure it as closely as possible and document that value as an approximation.
+Reproduce the Canva Home page component-for-component and region-for-region.
+Preserve:
+-  the exact left rail 
+-  exact top utility area 
+-  greeting location and typography 
+-  three metric cards and their proportions 
+-  System Health card 
+-  Logs Today card and mini chart 
+-  Active Incidents card 
+-  Error Logs table 
+-  separate right-side Logs Monitored panel 
+-  application status indicator placement 
+-  whitespace distribution 
+-  visual density 
+Do not add additional cards, widgets or dashboard sections to Home.
+The backend determines the values shown inside the design, but the existing Canva layout determines where and how those values are presented.
+Reproduce Canva Page 2 with the same fidelity.
+Preserve its:
+-  shell 
+-  rail 
+-  search controls 
+-  table size 
+-  columns 
+-  spacing 
+-  typography 
+-  row density 
+-  positioning 
+Do not turn Search into a large enterprise filter dashboard.
+Additional supported filters may exist behind a subtle secondary/expanded control only if necessary, without changing the default approved Canva composition.
+The normal/default Search screen should visually match the Canva page.
+Use the existing Phase 5 API to populate the design.
+Do not change the layout because real API data differs from the mock values shown in Canva.
+Examples:
+- 97% becomes the real returned System Health percentage. 
+- 125,000 becomes the real Logs Today value. 
+-  the five illustrative bars become the five actual returned daily values. 
+-  the sample Error Logs rows become real Incident rows. 
+-  the sample monitored applications become real monitored applications. 
+Maintain the same visual presentation.
+Empty/loading/error states may replace the content inside the existing component footprint wherever practical instead of restructuring the page.
+Visual fidelity does not authorize fake business information.
+If Canva displays something for which the backend currently has no authoritative value, do not manufacture it client-side.
+Instead:
+1.  determine whether an existing API field can truthfully supply it; 
+2.  if not, use a narrowly scoped read-only projection where already approved; 
+3.  if it still requires a new business rule, stop and ask me before changing either behavior or the design. 
+The frontend must not create its own health thresholds, Incident rules, grouping logic or publication eligibility.
+I approve the two narrow read-only API additions proposed for Phase 6:
+1. Home Incident display projection
+Provide the deterministic application label, message/summary and defined time field needed to populate the existing Canva Error Logs table.
+This may not change Incident behavior, ordering, counts, grouping or history.
+2. Parent → child Order Run filter
+Add a bounded authorized filter allowing the investigation UI to retrieve Order Runs belonging to a selected Application Run without client-side full-history scanning.
+This exposes existing facts only.
+Preserve the greeting design from Canva.
+If the Canva design uses a personalized greeting such as:
+Good Morning, Salvador
+the final application should use the authenticated user's display/login name dynamically while preserving the exact typography, position and structure of the Canva greeting.
+If the current session API does not expose an appropriate display value, propose the smallest read-only account/session projection needed rather than replacing the greeting design with something visually different.
+Use the icons/assets from the approved Canva design where legally/technically accessible.
+Where implementation requires recreated SVG icons, reproduce their:
+-  stroke weight 
+-  dimensions 
+-  corner style 
+-  spacing 
+-  visual weight 
+Do not substitute a visually different third-party icon set merely for convenience.
+Canva currently defines Home and Search.
+Screens such as:
+-  Configuration 
+-  Profile editor 
+-  Simulation 
+-  Incident detail 
+-  Application/Run detail 
+-  Accounts 
+-  Members 
+-  Monitoring diagnostics 
+should use the same SONDA visual language, but they are not allowed to alter the approved Home or Search pages.
+For new screens, derive the visual system from:
+-  the same rail 
+-  typography 
+-  surfaces 
+-  shadows 
+-  radii 
+-  spacing 
+-  table style 
+-  field style 
+-  icon style 
+Keep them minimal and consistent with SONDA.
+Visual validation is required before Phase 6 is considered complete.
+For Home and Search:
+1.  run the frontend at the exact approved desktop viewport; 
+2.  capture deterministic screenshots; 
+3.  compare them side-by-side with the Canva references; 
+4.  create overlay comparisons; 
+5.  inspect major geometry manually; 
+6.  document every intentional visual difference. 
+Do not automatically approve a new screenshot baseline because the implementation generated it.
+The Canva references remain the authority.
+If a material difference exists in:
+-  positioning 
+-  dimensions 
+-  typography 
+-  spacing 
+-  card geometry 
+-  table geometry 
+-  shadows 
+-  colors 
+-  icons 
+correct the implementation rather than updating the baseline.
+Desktop fidelity takes priority.
+Responsive behavior must not alter the approved desktop layout.
+Smaller-screen adaptations may collapse/reflow elements only below the approved desktop breakpoint.
+With the requirements above, you are authorized to begin Phase 6 implementation.
+Preserve all 382 accepted backend tests as regression gates.
+Do not change backend business behavior to make frontend implementation easier.
+Do not begin Phase 7, deployment, real GiroSol access, notifications, remote collectors or AI functionality.
+At Phase 6 completion, stop and present:
+-  test results 
+-  Home Canva reference 
+-  implemented Home screenshot 
+-  Home overlay comparison 
+-  Search Canva reference 
+-  implemented Search screenshot 
+-  Search overlay comparison 
+-  documented visual deviations 
+-  responsive screenshots 
+-  accessibility results 
+-  Configuration/screenshots 
+-  simulation workflow screenshots 
+-  account workflow screenshots 
+-  known limitations 
+Do not call Phase 6 visually complete until Home and Search have been compared directly against my Canva design.

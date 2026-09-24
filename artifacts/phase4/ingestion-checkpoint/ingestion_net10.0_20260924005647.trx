@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="022b1579-5cdf-4bb7-8d31-9732998885ef" name="sapro@ASUSPROART 2026-09-24 00:56:44" runUser="ASUSPROART\sapro" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-09-24T00:56:44.5718123-04:00" queuing="2026-09-24T00:56:44.5718129-04:00" start="2026-09-24T00:56:36.2346410-04:00" finish="2026-09-24T00:56:47.4420661-04:00" />
+  <TestSettings name="default" id="47cfaefd-5a5e-480e-81da-c711129bf02b">
+    <Deployment runDeploymentRoot="sapro_ASUSPROART_2026-09-24_00_56_44" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="4952dd56-6cd2-44b9-b68e-b7929a0253e9" testId="4bd1b99e-86f4-0255-414d-3bf78592a32d" testName="Sonda.Persistence.Tests.PersistenceTests.Commit_acknowledgment_loss_returns_durable_physical_receipt" computerName="ASUSPROART" duration="00:00:00.2406074" startTime="2026-09-24T00:56:45.3133682-04:00" endTime="2026-09-24T00:56:45.5543605-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4952dd56-6cd2-44b9-b68e-b7929a0253e9" />
+    <UnitTestResult executionId="4eee84a1-2179-47d9-94d7-b8457046143f" testId="15fff49d-1bb5-2c0c-0a16-dc1eef1ecb8b" testName="Sonda.Persistence.Tests.PersistenceTests.Pending_bytes_survive_fault_and_checkpoint_does_not_outrun_commit(boundary: BeforeInterpretation)" computerName="ASUSPROART" duration="00:00:00.2442355" startTime="2026-09-24T00:56:44.5465771-04:00" endTime="2026-09-24T00:56:44.7654447-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4eee84a1-2179-47d9-94d7-b8457046143f" />
+    <UnitTestResult executionId="3d54deba-cffa-4f3d-ad55-133e722f5966" testId="93fe8804-670d-6851-d8bc-9634a4b8ffad" testName="Sonda.Persistence.Tests.PersistenceTests.Physical_checkpoint_commits_with_engine_and_duplicate_bytes_are_idempotent" computerName="ASUSPROART" duration="00:00:01.2884195" startTime="2026-09-24T00:56:45.7692457-04:00" endTime="2026-09-24T00:56:47.0585214-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d54deba-cffa-4f3d-ad55-133e722f5966" />
+    <UnitTestResult executionId="6de8fa7a-52f1-4ccc-b05f-ccfa4ffea60f" testId="e8db6a3a-3d40-6025-6b16-d428784392f6" testName="Sonda.Persistence.Tests.PersistenceTests.Identical_text_at_distinct_offsets_is_distinct_physical_evidence" computerName="ASUSPROART" duration="00:00:00.2846916" startTime="2026-09-24T00:56:45.0289849-04:00" endTime="2026-09-24T00:56:45.3129271-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6de8fa7a-52f1-4ccc-b05f-ccfa4ffea60f" />
+    <UnitTestResult executionId="a282fb6b-ea76-443d-b950-fbc5d7d000d8" testId="719c5a42-dbe9-e4c6-d060-c59388c55d84" testName="Sonda.Persistence.Tests.PersistenceTests.Contending_and_stale_owners_cannot_commit_or_advance" computerName="ASUSPROART" duration="00:00:00.2135575" startTime="2026-09-24T00:56:45.5547026-04:00" endTime="2026-09-24T00:56:45.7689067-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a282fb6b-ea76-443d-b950-fbc5d7d000d8" />
+    <UnitTestResult executionId="ecd0c872-8939-405c-abf5-c9c01e6863aa" testId="9e24f1de-6fde-9c37-8e47-98c4b91e49f4" testName="Sonda.Persistence.Tests.PersistenceTests.Pending_bytes_survive_fault_and_checkpoint_does_not_outrun_commit(boundary: AfterReservation)" computerName="ASUSPROART" duration="00:00:00.2580321" startTime="2026-09-24T00:56:44.7669624-04:00" endTime="2026-09-24T00:56:45.0243488-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ecd0c872-8939-405c-abf5-c9c01e6863aa" />
+    <UnitTestResult executionId="18198d11-a05d-437a-9400-28581a4e07f6" testId="bbc6cfd7-ae87-e847-20e7-e1216e234666" testName="Sonda.Persistence.Tests.PersistenceTests.Pending_bytes_survive_fault_and_checkpoint_does_not_outrun_commit(boundary: AfterCheckpoint)" computerName="ASUSPROART" duration="00:00:03.6103284" startTime="2026-09-24T00:56:40.9325088-04:00" endTime="2026-09-24T00:56:44.5188414-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="18198d11-a05d-437a-9400-28581a4e07f6" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Sonda.Persistence.Tests.PersistenceTests.Pending_bytes_survive_fault_and_checkpoint_does_not_outrun_commit(boundary: AfterReservation)" storage="c:\saproductions\sonda\tests\sonda.persistence.tests\bin\release\net10.0\sonda.persistence.tests.dll" id="9e24f1de-6fde-9c37-8e47-98c4b91e49f4">
+      <Execution id="ecd0c872-8939-405c-abf5-c9c01e6863aa" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Persistence.Tests\bin\Release\net10.0\Sonda.Persistence.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Persistence.Tests.PersistenceTests" name="Pending_bytes_survive_fault_and_checkpoint_does_not_outrun_commit" />
+    </UnitTest>
+    <UnitTest name="Sonda.Persistence.Tests.PersistenceTests.Commit_acknowledgment_loss_returns_durable_physical_receipt" storage="c:\saproductions\sonda\tests\sonda.persistence.tests\bin\release\net10.0\sonda.persistence.tests.dll" id="4bd1b99e-86f4-0255-414d-3bf78592a32d">
+      <Execution id="4952dd56-6cd2-44b9-b68e-b7929a0253e9" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Persistence.Tests\bin\Release\net10.0\Sonda.Persistence.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Persistence.Tests.PersistenceTests" name="Commit_acknowledgment_loss_returns_durable_physical_receipt" />
+    </UnitTest>
+    <UnitTest name="Sonda.Persistence.Tests.PersistenceTests.Pending_bytes_survive_fault_and_checkpoint_does_not_outrun_commit(boundary: AfterCheckpoint)" storage="c:\saproductions\sonda\tests\sonda.persistence.tests\bin\release\net10.0\sonda.persistence.tests.dll" id="bbc6cfd7-ae87-e847-20e7-e1216e234666">
+      <Execution id="18198d11-a05d-437a-9400-28581a4e07f6" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Persistence.Tests\bin\Release\net10.0\Sonda.Persistence.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Persistence.Tests.PersistenceTests" name="Pending_bytes_survive_fault_and_checkpoint_does_not_outrun_commit" />
+    </UnitTest>
+    <UnitTest name="Sonda.Persistence.Tests.PersistenceTests.Identical_text_at_distinct_offsets_is_distinct_physical_evidence" storage="c:\saproductions\sonda\tests\sonda.persistence.tests\bin\release\net10.0\sonda.persistence.tests.dll" id="e8db6a3a-3d40-6025-6b16-d428784392f6">
+      <Execution id="6de8fa7a-52f1-4ccc-b05f-ccfa4ffea60f" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Persistence.Tests\bin\Release\net10.0\Sonda.Persistence.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Persistence.Tests.PersistenceTests" name="Identical_text_at_distinct_offsets_is_distinct_physical_evidence" />
+    </UnitTest>
+    <UnitTest name="Sonda.Persistence.Tests.PersistenceTests.Physical_checkpoint_commits_with_engine_and_duplicate_bytes_are_idempotent" storage="c:\saproductions\sonda\tests\sonda.persistence.tests\bin\release\net10.0\sonda.persistence.tests.dll" id="93fe8804-670d-6851-d8bc-9634a4b8ffad">
+      <Execution id="3d54deba-cffa-4f3d-ad55-133e722f5966" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Persistence.Tests\bin\Release\net10.0\Sonda.Persistence.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Persistence.Tests.PersistenceTests" name="Physical_checkpoint_commits_with_engine_and_duplicate_bytes_are_idempotent" />
+    </UnitTest>
+    <UnitTest name="Sonda.Persistence.Tests.PersistenceTests.Pending_bytes_survive_fault_and_checkpoint_does_not_outrun_commit(boundary: BeforeInterpretation)" storage="c:\saproductions\sonda\tests\sonda.persistence.tests\bin\release\net10.0\sonda.persistence.tests.dll" id="15fff49d-1bb5-2c0c-0a16-dc1eef1ecb8b">
+      <Execution id="4eee84a1-2179-47d9-94d7-b8457046143f" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Persistence.Tests\bin\Release\net10.0\Sonda.Persistence.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Persistence.Tests.PersistenceTests" name="Pending_bytes_survive_fault_and_checkpoint_does_not_outrun_commit" />
+    </UnitTest>
+    <UnitTest name="Sonda.Persistence.Tests.PersistenceTests.Contending_and_stale_owners_cannot_commit_or_advance" storage="c:\saproductions\sonda\tests\sonda.persistence.tests\bin\release\net10.0\sonda.persistence.tests.dll" id="719c5a42-dbe9-e4c6-d060-c59388c55d84">
+      <Execution id="a282fb6b-ea76-443d-b950-fbc5d7d000d8" />
+      <TestMethod codeBase="C:\SaProductions\Sonda\tests\Sonda.Persistence.Tests\bin\Release\net10.0\Sonda.Persistence.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="Sonda.Persistence.Tests.PersistenceTests" name="Contending_and_stale_owners_cannot_commit_or_advance" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="4bd1b99e-86f4-0255-414d-3bf78592a32d" executionId="4952dd56-6cd2-44b9-b68e-b7929a0253e9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="15fff49d-1bb5-2c0c-0a16-dc1eef1ecb8b" executionId="4eee84a1-2179-47d9-94d7-b8457046143f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="93fe8804-670d-6851-d8bc-9634a4b8ffad" executionId="3d54deba-cffa-4f3d-ad55-133e722f5966" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e8db6a3a-3d40-6025-6b16-d428784392f6" executionId="6de8fa7a-52f1-4ccc-b05f-ccfa4ffea60f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="719c5a42-dbe9-e4c6-d060-c59388c55d84" executionId="a282fb6b-ea76-443d-b950-fbc5d7d000d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e24f1de-6fde-9c37-8e47-98c4b91e49f4" executionId="ecd0c872-8939-405c-abf5-c9c01e6863aa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bbc6cfd7-ae87-e847-20e7-e1216e234666" executionId="18198d11-a05d-437a-9400-28581a4e07f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="7" executed="7" passed="7" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.1+bf6400fd51 (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.18]   Discovering: Sonda.Persistence.Tests&#xD;
+[xUnit.net 00:00:00.28]   Discovered:  Sonda.Persistence.Tests&#xD;
+[xUnit.net 00:00:00.33]   Starting:    Sonda.Persistence.Tests&#xD;
+[xUnit.net 00:00:10.24]   Finished:    Sonda.Persistence.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
